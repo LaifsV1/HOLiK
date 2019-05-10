@@ -1,0 +1,2 @@
+main x =
+if not (x < 127) then 54 else 9

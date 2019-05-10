@@ -12,22 +12,22 @@ module HOREF-SYNTAX
                  | "int" Ref ":=" Int    ";" Block
                  | "main" KVar "=" Term
   syntax Term  ::= "assert" Term                         [strict(1)]
-                 | "fail" | "nil"
+                 | EVal
                  | Val
 		 | Lambda
  		 | "!" Ref
 		 | "fst"  Term                           [strict(1)]
 		 | "snd" Term                            [strict(1)]
 		 //start: arithmetic operations
-                 // | "not" Term                            [seqstrict(1), right]
+                 | "not" Term                            [seqstrict(1), right]
                  > Term "*" Term                         [seqstrict(1,2), left]
                  // | Term "/" Term                         [seqstrict(1,2), left]
                  > Term "+" Term                         [seqstrict(1,2), left]
 		 | Term "-" Term                         [seqstrict(1,2), left]
-                 // > Term "<" Term                         [seqstrict(1,2), left]
-		 // | Term "==" Term                        [seqstrict(1,2), left]
+                 > Term "<" Term                         [seqstrict(1,2), left]
+		 | Term "==" Term                        [seqstrict(1,2), left]
 		 // | Term "!=" Term                        [seqstrict(1,2), left]
-		 // > Term "&&" Term                        [seqstrict(1,2), left]
+		 > Term "&&" Term                        [seqstrict(1,2), left]
 		 // > Term "||" Term                        [seqstrict(1,2), left]
 		 //end: arithmetic operations
 		 > Ref ":=" Term                         [strict(2), right]
@@ -40,10 +40,11 @@ module HOREF-SYNTAX
                  | "(" Term ")"                          [bracket]
 
   syntax Val    ::= KVar | Int | Method | "()"
+  syntax EVal   ::= "fail" | "nil"
   syntax Method ::= KVar
   syntax Ref    ::= KVar
 
-  syntax Lambda ::= "fun" KVar "->" Term    [binder]
+  syntax Lambda ::= "fun" KVar "->" Term  [binder]
 endmodule
 
 module HOREF
@@ -60,13 +61,15 @@ module HOREF
                   | "(" "assert" SMTProp ")"
 		  | SMTLib SMTLib	            [left]
   syntax SMTProp ::= Bool | Val
-                   | "(" "*" Val Val ")"            [left]
+                   | "(" "<" Val Val ")"            [left]
+		   | "(" "*" Val Val ")"            [left]
                    | "(" "+" Val Val ")"            [left]
                    | "(" "-" Val Val ")"            [left]
                    | "(" "="   SMTProp SMTProp ")"  [left]
                    | "(" "and" SMTProp SMTProp ")"  [left]
                    | "(" "or"  SMTProp SMTProp ")"  [left]
 		   | "(" "not" SMTProp ")"          [right]
+                   | "(" "ite"  SMTProp SMTProp SMTProp ")" [left]
 
   configuration <T>
                   <k> $PGM:Prog </k>
@@ -103,8 +106,7 @@ module HOREF
 
   //---------------------------
   // TERM operational semantics
-  rule fail ~> T:KItem => fail [cool]
-  rule nil ~> T:KItem => nil   [cool]
+  rule E:EVal ~> K:KItem => E
   rule assert I:Int => () requires I =/=Int 0
   rule assert 0 => fail
   rule <k> ! R:Ref => T ... </k>
@@ -115,20 +117,20 @@ module HOREF
   rule snd (T1,T2) => T2
   
   //begin: arithmetic operations
-  // rule not 0 => 1
-  // rule not I => 0                    requires I =/=Int 0
+  rule not 0 => 1
+  rule not I => 0                    requires I =/=Int 0
   rule I1:Int * I2:Int => I1 *Int I2
   // rule I1:Int / I2:Int => I1 /Int I2 requires I2 =/=Int 0
   rule I1:Int - I2:Int => I1 -Int I2
   rule I1:Int + I2:Int => I1 +Int I2
-  // rule I1:Int < I2:Int => 1          requires I1 <Int I2
-  // rule I1:Int < I2:Int => 0          requires I1 >=Int I2
-  // rule I1:Int == I2:Int => 1         requires I1 ==Int I2
-  // rule I1:Int == I2:Int => 0         requires I1 =/=Int I2
+  rule I1:Int < I2:Int => 1          requires I1 <Int I2
+  rule I1:Int < I2:Int => 0          requires I1 >=Int I2
+  rule I1:Int == I2:Int => 1         requires I1 ==Int I2
+  rule I1:Int == I2:Int => 0         requires I1 =/=Int I2
   // rule I1:Int != I2:Int => 1         requires I1 =/=Int I2
   // rule I1:Int != I2:Int => 0         requires I1 ==Int I2
-  // rule I1:Int && I2:Int => 1         requires (I1 =/=Int 0) andBool (I2 =/=Int 0)
-  // rule I1:Int && I2:Int => 0         requires (I1 ==Int 0) orBool (I2 ==Int 0)
+  rule I1:Int && I2:Int => 1         requires (I1 =/=Int 0) andBool (I2 =/=Int 0)
+  rule I1:Int && I2:Int => 0         requires (I1 ==Int 0) orBool (I2 ==Int 0)
   // rule I1:Int || I2:Int => 1         requires (I1 =/=Int 0) orBool (I2 =/=Int 0)
   // rule 0 || 0 => 0
   //end: arithmetic operations
@@ -148,13 +150,13 @@ module HOREF
        <repo> ... M |-> (fun X -> T) ... </repo>
        <bound> I => I -Int 1 </bound> requires I =/=Int 0
   rule <k> M:KVar V:Val => nil ... </k>
-       <repo> ... M |-> (fun X -> T) ... </repo>  //something is wrong with this too
+       <repo> ... M |-> (fun X -> T) ... </repo>
        <bound> 0 </bound>
   rule <k> {| V:Val |} => V ... </k>
        <bound> I => I +Int 1 </bound>
 
   //symbolic non-deterministic transitions
-  rule <k>assert X:KVar => fail ... </k>       //something is wrong with this
+  rule <k>assert X:KVar => fail ... </k>
        <pc>PC => PC (assert (= X 0))</pc>                      [transition]
   rule <k>assert X:KVar => () ... </k>
        <pc>PC => PC (assert (not (= X 0)))</pc>                [transition]
@@ -163,6 +165,9 @@ module HOREF
   rule <k>if X:KVar then T1:Term else T0:Term => T1 ...</k>
        <pc>PC => PC (assert (not (= X 0)))</pc>                [transition]
   //symbolic deterministic transitions
+  rule <k> not X1:KVar => !X:KVar ... </k> //not
+       <state> Sigma => Sigma[!X <- not X1] </state>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (= X1 0) 1 0))) </sig>
   rule <k> X1:KVar + V2:Val => !X:KVar ... </k> //plus
        <state> Sigma => Sigma[!X <- X1 + V2] </state>
        <sig> SIG => SIG (declare-const !X Int) (assert (= !X (+ X1 V2))) </sig>
@@ -181,4 +186,22 @@ module HOREF
   rule <k> V1:Val * X2:KVar => !X:KVar ... </k>
        <state> Sigma => Sigma[!X <- V1 * X2] </state>
        <sig> SIG => SIG (declare-const !X Int) (assert (= !X (* V1 X2))) </sig>
+  rule <k> X1:KVar == V2:Val => !X:KVar ... </k> //equals
+       <state> Sigma => Sigma[!X <- X1 == V2] </state>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (= X1 V2) 1 0))) </sig>
+  rule <k> V1:Val == X2:KVar => !X:KVar ... </k>
+       <state> Sigma => Sigma[!X <- V1 == X2] </state>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (= V1 X2) 1 0))) </sig>
+  rule <k> X1:KVar < V2:Val => !X:KVar ... </k> //lessthan
+       <state> Sigma => Sigma[!X <- X1 < V2] </state>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (< X1 V2) 1 0))) </sig>
+  rule <k> V1:Val < X2:KVar => !X:KVar ... </k>
+       <state> Sigma => Sigma[!X <- V1 < X2] </state>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (< V1 X2) 1 0))) </sig>
+  rule <k> X1:KVar && V2:Val => !X:KVar ... </k> //and
+       <state> Sigma => Sigma[!X <- X1 && V2] </state>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (and (= X1 1) (= V2 1)) 1 0))) </sig>
+  rule <k> V1:Val && X2:KVar => !X:KVar ... </k>
+       <state> Sigma => Sigma[!X <- V1 && X2] </state>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (and (= V1 1) (= X2 1)) 1 0))) </sig>
 endmodule
