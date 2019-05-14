@@ -1,12 +1,10 @@
-# set-bounds 1 2 #
+# set-bounds 1 1 #
 import send
 import insert
 import remove
 
 public withdraw m = {
-    if not (!funds < m)
-    then send(m);
-         funds := !funds - m;
-	 assert(not (!funds < 0))
-    else ()};
+assert(not ((!funds) < 0));
+send(m)
+};
 int funds := 100;

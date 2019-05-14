@@ -11,6 +11,7 @@ module HOLIB-SYNTAX
 		 | "fun" Ref ":=" Method ";"
                  | "int" Ref ":=" Int    ";"
 		 | Block Block                           [right]
+		 | Term
   syntax Term  ::= "assert" Term                         [strict(1)]
                  | EVal
                  | Val
@@ -49,7 +50,7 @@ module HOLIB
   imports DOMAINS
   imports SUBSTITUTION
   imports SET
-  syntax KResult ::= Val | EVal
+  syntax KResult ::= Val
   syntax SMTLib ::= "(" "declare-const" KVar "Int" ")"
                   | "(" "declare-const" KVar "String" ")"
 		  | "(" "check-sat" ")"
@@ -157,7 +158,8 @@ module HOLIB
 
   //---------------------------
   // TERM operational semantics
-  rule E:EVal ~> K:KItem => E [structural]
+  rule E:EVal ~> K => E
+       requires K =/=K .K[structural]
   rule <k>assert I:Int => () ... </k>
        <kbound> K </kbound>
        <lbound> L </lbound>
@@ -369,14 +371,10 @@ module HOLIB
 
   // GAME SEMANTICS
   //---------------
-  rule <k> M:Prog => nil ...</k>
-       <kbound> K </kbound>
-       <lbound> L </lbound>
-       requires (K ==Int 0) orBool (L ==Int 0)
   rule <k> M:Term => nil ...</k>
        <kbound> K </kbound>
        <lbound> L </lbound>
-       requires (K ==Int 0) orBool (L ==Int 0)
+       requires ((K ==Int 0) orBool (L ==Int 0)) andBool notBool isEVal(M)
 
   // proponent question:
   rule <k> M:KVar X:KVar ~> E => !OPPONENT! </k>
