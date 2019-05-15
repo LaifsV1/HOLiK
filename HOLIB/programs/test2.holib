@@ -1,10 +1,11 @@
-# set-bounds 1 1 #
+# set-bounds 2 2 #
 import send
-import insert
-import remove
 
 public withdraw m = {
-assert(not ((!funds) < 0));
-send(m)
-};
+  if (not (!funds < m))
+  then
+         send(m);
+         funds := !funds - m;
+	 assert(not(!funds < 0))
+  else ()};
 int funds := 100;

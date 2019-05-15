@@ -158,8 +158,7 @@ module HOLIB
 
   //---------------------------
   // TERM operational semantics
-  rule E:EVal ~> K => E
-       requires K =/=K .K[structural]
+  rule E:EVal ~> K:KItem => E
   rule <k>assert I:Int => () ... </k>
        <kbound> K </kbound>
        <lbound> L </lbound>
@@ -173,7 +172,7 @@ module HOLIB
        <kbound> K </kbound>
        <lbound> L </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
-  rule <k> R:Ref := X => () ... </k>
+  rule <k> R:Ref := X:Val => () ... </k>
        <state> S => S[R <- X] </state> //Suspect we don't update sigma since references never appear in PC.
        <kbound> K </kbound>
        <lbound> L </lbound>
@@ -378,31 +377,39 @@ module HOLIB
 
   // proponent question:
   rule <k> M:KVar X:KVar ~> E => !OPPONENT! </k>
-       <eval> ES => (E)~>ES </eval>
+       <eval> ES => M~>(E)~>ES </eval>
        <repo> ... X |-> _ ... </repo>
        <abs> ... SetItem(M) ... </abs>
        <pub> P => SetItem(X) P </pub>
        <kbound> K </kbound>
        <lbound> I => L </lbound>
        <lzero>  L </lzero>
-       requires (K =/=Int 0) andBool (I =/=Int 0)
+       requires (K =/=Int 0)
+       	        andBool (I =/=Int 0)
+                andBool (ES =/=K .K)
        [transition]
   rule <k> M:KVar X:KVar ~> E => !OPPONENT! </k>
-       <eval> ES => (E)~>ES </eval>
+       <eval> ES => M~>(E)~>ES </eval>
        <repo> R </repo>
        <abs> ... SetItem(M) ... </abs>
        <kbound> K </kbound>
        <lbound> I => L </lbound>
        <lzero>  L </lzero>
-       requires notBool (X in_keys(R)) andBool (I =/=Int 0) andBool (K =/=Int 0)
+       requires notBool (X in_keys(R))
+                andBool (I =/=Int 0)
+                andBool (K =/=Int 0)
+                andBool (ES =/=K .K)
        [transition]
   rule <k> M:KVar V:Val ~> E => !OPPONENT! </k>
-       <eval> ES => (E)~>ES </eval>
+       <eval> ES => M~>(E)~>ES </eval>
        <abs> ... SetItem(M) ... </abs>
        <kbound> K </kbound>
        <lbound> _ => L </lbound>
        <lzero>  L </lzero>
-       requires notBool isKVar(V) andBool (L =/=Int 0) andBool (K =/=Int 0)
+       requires notBool isKVar(V)
+                andBool (L =/=Int 0)
+                andBool (K =/=Int 0)
+                andBool (ES =/=K .K)
        [transition]
   // proponent answer:
   rule <k> M:KVar => !OPPONENT! </k>
@@ -432,6 +439,7 @@ module HOLIB
        <eval> ES => (L -Int 1)~>(M:KVar)~>ES </eval>
        <abs> A => SetItem(!X) A </abs>
        <pub> ... SetItem(M) ... </pub>
+       <sig> SIG => SIG (declare-const !X Int) </sig> //WE NEED TYPE INFERENCE
        <kbound> K </kbound>
        <lbound> L:Int </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
@@ -440,6 +448,7 @@ module HOLIB
   rule <k> !OPPONENT! => !X:KVar ~> E </k>
        <eval> (M:KVar)~>(E)~>ES => ES </eval>
        <abs> A => SetItem(!X) A </abs>
+       <sig> SIG => SIG (declare-const !X Int) </sig> //NEEDS TYPE INFERENCE
        <kbound> K </kbound>
        <lbound> L </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
