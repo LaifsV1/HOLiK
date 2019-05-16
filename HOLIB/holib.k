@@ -5,9 +5,9 @@ module HOLIB-SYNTAX
   imports SUBSTITUTION
 
   syntax Prog  ::= "#" "set-bounds" Int Int "#" Lib | Lib
-  syntax Lib   ::= Block | "import" Method Lib
-  syntax Block ::= "public"  Method KVar "=" "{" Term "}" ";"
-                 | "private" Method KVar "=" "{" Term "}" ";"
+  syntax Lib   ::= Block | "import" Method ":" Type Lib
+  syntax Block ::= "public"  Method TVar TOut "=" "{" Term "}" ";"
+                 | "private" Method TVar TOut "=" "{" Term "}" ";"
 		 | "fun" Ref ":=" Method ";"
                  | "int" Ref ":=" Int    ";"
 		 | Block Block                           [right]
@@ -17,8 +17,8 @@ module HOLIB-SYNTAX
                  | Val
 		 | Lambda
  		 | "!" Ref
-		 | "fst"  Term                           [strict(1)]
-		 | "snd" Term                            [strict(1)]
+		 | "fst" Term TOut                       [strict(1)]
+		 | "snd" Term TOut                       [strict(1)]
 		 //start: arithmetic operations
                  | "not" Term                            [seqstrict(1),  right]
                  > Term "*" Term                         [seqstrict(1,2), left]
@@ -32,9 +32,9 @@ module HOLIB-SYNTAX
 		 > Term "," Term                         [strict(1,2), left]
 		 > Term Term                             [strict(2,1)]
 		 > "if" Term "then" Term "else" Term     [strict(1)]
-		 | "let" KVar "=" Term "in" Term         [binder, strict(2)]
+		 | "let" TVar "=" Term "in" Term         [binder, strict(2)]
 		 | Term ";" Term                         [strict(1),  right]
-		 | "letrec" KVar KVar "=" Term "in" Term [binder]
+		 | "letrec" Method TVar TOut "=" Term "in" Term [binder]
                  | "(" Term ")"                          [bracket]
 
   syntax Val    ::= KVar | Int | Method | "()"
@@ -42,7 +42,14 @@ module HOLIB-SYNTAX
   syntax Method ::= KVar
   syntax Ref    ::= KVar
 
-  syntax Lambda ::= "fun" KVar "->" Term  [binder]
+  syntax Lambda ::= "fun" TVar TOut "->" Term  [binder]
+
+  syntax Type ::= "int" | "unit"
+                | Type "*"  Type [left]
+		| Type "->" Type [right]
+		| "(" Type ")"   [bracket]
+  syntax TVar ::= "(" KVar ":" Type ")"
+  syntax TOut ::= ":" "(" Type ")"
 endmodule
 
 module HOLIB
