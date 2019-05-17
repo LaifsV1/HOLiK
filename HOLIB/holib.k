@@ -5,7 +5,7 @@ module HOLIB-SYNTAX
   imports SUBSTITUTION
 
   syntax Prog  ::= "#" "set-bounds" Int Int "#" Lib | Lib
-  syntax Lib   ::= Block | "import" Method ":" Type Lib
+  syntax Lib   ::= Block | "import" Method TOut Lib
   syntax Block ::= "public"  Method TVar TOut "=" "{" Term "}" ";"
                  | "private" Method TVar TOut "=" "{" Term "}" ";"
 		 | "fun" Ref ":=" Method ";"
@@ -32,7 +32,7 @@ module HOLIB-SYNTAX
 		 > Term "," Term                         [strict(1,2), left]
 		 > Term Term                             [strict(2,1)]
 		 > "if" Term "then" Term "else" Term     [strict(1)]
-		 | "let" TVar "=" Term "in" Term         [binder, strict(2)]
+		 | "let" KVar "=" Term "in" Term         [binder, strict(2)]
 		 | Term ";" Term                         [strict(1),  right]
 		 | "letrec" Method TVar TOut "=" Term "in" Term [binder]
                  | "(" Term ")"                          [bracket]
@@ -50,6 +50,7 @@ module HOLIB-SYNTAX
 		| "(" Type ")"   [bracket]
   syntax TVar ::= "(" KVar ":" Type ")"
   syntax TOut ::= ":" "(" Type ")"
+  syntax TMethod ::= Method ":" Type
 endmodule
 
 module HOLIB
@@ -104,8 +105,8 @@ module HOLIB
 
   //--------------------------
   // LIB operational semantics
-  rule <k> import M:KVar L => L ... </k>
-       <abs> A => SetItem(M) A </abs>
+  rule <k> import M:KVar : ( TYPE ) L => L ... </k>
+       <abs> ... .Set => SetItem(M : TYPE) ... </abs>
        <kbound> K </kbound>
        <lbound> I </lbound>
        requires (K =/=Int 0) andBool (I =/=Int 0)
@@ -126,16 +127,16 @@ module HOLIB
        <lbound> L </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
        [structural]
-  rule <k> public M:Method X:KVar = { T:Term } ; B => B ... </k>
-       <repo> ... .Map => (M |-> (fun X -> T)) ... </repo>
-       <pub> P => SetItem(M) P</pub>
+  rule <k> public M:Method (X : XTYPE) :(OTYPE) = { T:Term } ; B => B ... </k>
+       <repo> ... .Map => (M |-> (fun (X : XTYPE) :(OTYPE) -> T)) ... </repo>
+       <pub> ... .Set => SetItem(M : XTYPE->OTYPE) ...</pub>
        <kbound> K </kbound>
        <lbound> L </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
        [structural]
        //todo PUBLIC names
-  rule <k> private M:Method X:KVar = { T:Term } ; B => B ... </k>
-       <repo> ... .Map => (M |-> (fun X -> T)) ... </repo>
+  rule <k> private M:Method X:TVar OTYPE = { T:Term } ; B => B ... </k>
+       <repo> ... .Map => (M |-> (fun X OTYPE -> T)) ... </repo>
        <kbound> K </kbound>
        <lbound> L </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
@@ -148,15 +149,16 @@ module HOLIB
        <lbound> L </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
        [structural]
-  rule <k> public M:Method X:KVar = { T:Term } ; => !OPPONENT! </k>
-       <repo> ... .Map => (M |-> (fun X -> T)) ... </repo>
+  rule <k> public M:Method (X : XTYPE) :(OTYPE) = { T:Term } ; => !OPPONENT! </k>
+       <repo> ... .Map => (M |-> (fun (X : XTYPE) :(OTYPE) -> T)) ... </repo>
+       <pub> ... .Set => SetItem(M : XTYPE->OTYPE) ...</pub>
        <kbound> K </kbound>
        <lbound> L </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
        [structural]
        //todo PUBLIC names
-  rule <k> private M:Method X:KVar = { T:Term } ; => !OPPONENT! </k>
-       <repo> ... .Map => (M |-> (fun X -> T)) ... </repo>
+  rule <k> private M:Method X:TVar OTYPE = { T:Term } ; => !OPPONENT! </k>
+       <repo> ... .Map => (M |-> (fun X OTYPE -> T)) ... </repo>
        <kbound> K </kbound>
        <lbound> L </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
@@ -184,11 +186,11 @@ module HOLIB
        <kbound> K </kbound>
        <lbound> L </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
-  rule <k>fst (T1,T2) => T1 ... </k>
+  rule <k>fst (T1,T2) OTYPE => T1 ... </k>
        <kbound> K </kbound>
        <lbound> L </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
-  rule <k>snd (T1,T2) => T2 ... </k>
+  rule <k>snd (T1,T2) OTYPE => T2 ... </k>
        <kbound> K </kbound>
        <lbound> L </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
@@ -255,8 +257,8 @@ module HOLIB
        <kbound> K </kbound>
        <lbound> L </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
-  rule <k> letrec F:KVar X:KVar = T1:Term in T2:Term => T2[!N:KVar/F] ... </k>
-       <repo> ... .Map => (!N |-> (fun X:KVar -> (T1[!N/F]))) ... </repo>
+  rule <k> letrec F:KVar X:TVar OTYPE = T1:Term in T2:Term => T2[!N:KVar/F] ... </k>
+       <repo> ... .Map => (!N |-> (fun X OTYPE -> (T1[!N/F]))) ... </repo>
        <kbound> K </kbound>
        <lbound> L </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
@@ -264,7 +266,7 @@ module HOLIB
   //method application and evaluation boxes
   syntax Term ::= "{|" Term "|}" [strict(1)]
   rule <k> M:KVar V:Val => {| T[V/X] |} ... </k>
-       <repo> ... M |-> (fun X -> T) ... </repo>
+       <repo> ... M |-> (fun (X : ATYPE) OTYPE -> T) ... </repo>
        <kbound> K => K -Int 1 </kbound>
        <lbound> L </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
@@ -383,11 +385,11 @@ module HOLIB
        requires ((K ==Int 0) orBool (L ==Int 0)) andBool notBool isEVal(M)
 
   // proponent question:
-  rule <k> M:KVar X:KVar ~> E => !OPPONENT! </k>
-       <eval> ES => M~>(E)~>ES </eval>
-       <repo> ... X |-> _ ... </repo>
-       <abs> ... SetItem(M) ... </abs>
-       <pub> P => SetItem(X) P </pub>
+  rule <k> M:Method X:KVar ~> E => !OPPONENT! </k>
+       <eval> ES => M~>E~>ES </eval>
+       <repo> ... X |-> (fun (A:ATYPE) :(OTYPE) -> T) ... </repo>
+       <abs> ... SetItem(M : _) ... </abs>
+       <pub> ... .Set => SetItem(X : ATYPE) ... </pub>
        <kbound> K </kbound>
        <lbound> I => L </lbound>
        <lzero>  L </lzero>
@@ -395,10 +397,10 @@ module HOLIB
        	        andBool (I =/=Int 0)
                 andBool (ES =/=K .K)
        [transition]
-  rule <k> M:KVar X:KVar ~> E => !OPPONENT! </k>
-       <eval> ES => M~>(E)~>ES </eval>
+  rule <k> M:Method X:KVar ~> E => !OPPONENT! </k>
+       <eval> ES => M~>E~>ES </eval>
        <repo> R </repo>
-       <abs> ... SetItem(M) ... </abs>
+       <abs> ... SetItem( M : S ) ... </abs>
        <kbound> K </kbound>
        <lbound> I => L </lbound>
        <lzero>  L </lzero>
@@ -407,9 +409,9 @@ module HOLIB
                 andBool (K =/=Int 0)
                 andBool (ES =/=K .K)
        [transition]
-  rule <k> M:KVar V:Val ~> E => !OPPONENT! </k>
-       <eval> ES => M~>(E)~>ES </eval>
-       <abs> ... SetItem(M) ... </abs>
+  rule <k> M:Method V:Val ~> E => !OPPONENT! </k>
+       <eval> ES => M~>E~>ES </eval>
+       <abs> ... SetItem(M : _ ) ... </abs>
        <kbound> K </kbound>
        <lbound> _ => L </lbound>
        <lzero>  L </lzero>
@@ -421,8 +423,8 @@ module HOLIB
   // proponent answer:
   rule <k> M:KVar => !OPPONENT! </k>
        <eval> (L:Int)~>(M:KVar)~>ES => ES </eval>
-       <repo> ... M |-> _ ... </repo>
-       <pub> P => SetItem(M) P </pub>
+       <repo> ... M |-> (fun (A:ATYPE) :(OTYPE) -> T ) ... </repo>
+       <pub> P => SetItem(M : (ATYPE->OTYPE)) P </pub>
        <kbound> K </kbound>
        <lbound> I => L </lbound>
        requires (I =/=Int 0) andBool (K =/=Int 0)
@@ -444,8 +446,9 @@ module HOLIB
   // opponent question:
   rule <k> !OPPONENT! => M !X:KVar </k>
        <eval> ES => (L -Int 1)~>(M:KVar)~>ES </eval>
-       <abs> A => SetItem(!X) A </abs>
-       <pub> ... SetItem(M) ... </pub>
+       <repo> ... M |-> (fun (X : int) OTYPE -> T) ... </repo>
+       <abs> ... .Set => SetItem(!X : int) ... </abs>
+       <pub> ... SetItem(M : MTYPE) ... </pub>
        <sig> SIG => SIG (declare-const !X Int) </sig> //WE NEED TYPE INFERENCE
        <kbound> K </kbound>
        <lbound> L:Int </lbound>
@@ -454,11 +457,14 @@ module HOLIB
   // opponent answer:
   rule <k> !OPPONENT! => !X:KVar ~> E </k>
        <eval> (M:KVar)~>(E)~>ES => ES </eval>
-       <abs> A => SetItem(!X) A </abs>
+       <abs> ... .Set => SetItem(!X : int) ... </abs>
+       <pub> ... SetItem(M : (int->OTYPE)) ...</pub>
        <sig> SIG => SIG (declare-const !X Int) </sig> //NEEDS TYPE INFERENCE
        <kbound> K </kbound>
        <lbound> L </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
        [transition]
+       //TODO add declare-const for other types
   //TODO: check if you need to do k=/=0 for every rule.
+  //TODO: check if adding all variables into ABS is fine.
 endmodule

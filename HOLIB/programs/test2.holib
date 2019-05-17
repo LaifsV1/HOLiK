@@ -1,11 +1,5 @@
 # set-bounds 2 2 #
-import send
+import send :(int -> unit)
 
-public withdraw m = {
-  if (not (!funds < m))
-  then
-         send(m);
-         funds := !funds - m;
-	 assert(not(!funds < 0))
-  else ()};
-int funds := 100;
+public withdraw (m:int) :(unit) = {
+send(m)};
