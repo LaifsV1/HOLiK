@@ -1,0 +1,3447 @@
+  Result ==K <T>
+    <k>
+      100 < _1 ~> #freezernot__HOLIB-SYNTAX0_ ( ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _1 ; funds := ! funds - _1 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      100 < _5 ~> #freezernot__HOLIB-SYNTAX0_ ( ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _5 ; funds := ! funds - _5 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      100 ~> #freezer_<__HOLIB-SYNTAX1_ ( _1 ) ~> #freezernot__HOLIB-SYNTAX0_ ( ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _1 ; funds := ! funds - _1 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      100 ~> #freezer_<__HOLIB-SYNTAX1_ ( _5 ) ~> #freezernot__HOLIB-SYNTAX0_ ( ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _5 ; funds := ! funds - _5 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      ! funds < _1 ~> #freezernot__HOLIB-SYNTAX0_ ( ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _1 ; funds := ! funds - _1 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      ! funds < _4 ~> #freezernot__HOLIB-SYNTAX0_ ( ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _4 ; funds := ! funds - _4 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _1 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _4 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( not ( = _3 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      ! funds < _5 ~> #freezernot__HOLIB-SYNTAX0_ ( ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _5 ; funds := ! funds - _5 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      ! funds < _8 ~> #freezernot__HOLIB-SYNTAX0_ ( ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _8 ; funds := ! funds - _8 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _5 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) ) ( declare-const _8 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( not ( = _7 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      ! funds ~> #freezer_<__HOLIB-SYNTAX1_ ( _1 ) ~> #freezernot__HOLIB-SYNTAX0_ ( ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _1 ; funds := ! funds - _1 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      ! funds ~> #freezer_<__HOLIB-SYNTAX1_ ( _4 ) ~> #freezernot__HOLIB-SYNTAX0_ ( ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _4 ; funds := ! funds - _4 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _1 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _4 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( not ( = _3 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      ! funds ~> #freezer_<__HOLIB-SYNTAX1_ ( _5 ) ~> #freezernot__HOLIB-SYNTAX0_ ( ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _5 ; funds := ! funds - _5 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      ! funds ~> #freezer_<__HOLIB-SYNTAX1_ ( _8 ) ~> #freezernot__HOLIB-SYNTAX0_ ( ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _8 ; funds := ! funds - _8 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _5 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) ) ( declare-const _8 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( not ( = _7 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      !OPPONENT!
+    </k>
+    <eval>
+      .
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( = _7 0 ) )
+    </pc>
+    <kbound>
+      2
+    </kbound>
+    <lbound>
+      0
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw ~> ret withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      !OPPONENT!
+    </k>
+    <eval>
+      .
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) )
+    </pc>
+    <kbound>
+      2
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      !OPPONENT!
+    </k>
+    <eval>
+      .
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      2
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      .
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      !OPPONENT!
+    </k>
+    <eval>
+      send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _1 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( not ( = _3 0 ) ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> call send
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      !OPPONENT!
+    </k>
+    <eval>
+      send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _5 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( not ( = _7 0 ) ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw ~> call send
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      # set-bounds 2 2 # import send : ( int -> unit ) public withdraw ( m : int ) : ( unit ) = { if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else () } ; int funds := 100 ;
+    </k>
+    <eval>
+      .
+    </eval>
+    <repo>
+      .Map
+    </repo>
+    <state>
+      .Map
+    </state>
+    <abs>
+      .Map
+    </abs>
+    <pub>
+      .Map
+    </pub>
+    <sig>
+      ( assert true )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      4
+    </kbound>
+    <lbound>
+      4
+    </lbound>
+    <kzero>
+      4
+    </kzero>
+    <lzero>
+      4
+    </lzero>
+    <trace>
+      .
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      ()
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( = _7 0 ) )
+    </pc>
+    <kbound>
+      2
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      ()
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) )
+    </pc>
+    <kbound>
+      2
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      () ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( = _7 0 ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      () ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      _1 ~> #freezer___HOLIB-SYNTAX0_ ( withdraw )
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      2
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      _2 ~> #freezernot__HOLIB-SYNTAX0_ ( ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _1 ; funds := ! funds - _1 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      _3 ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _1 ; funds := ! funds - _1 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      _4 ~> #freezer___HOLIB-SYNTAX0_ ( withdraw )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _1 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _4 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( not ( = _3 0 ) ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      _5 ~> #freezer___HOLIB-SYNTAX0_ ( withdraw )
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) )
+    </pc>
+    <kbound>
+      2
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      _6 ~> #freezernot__HOLIB-SYNTAX0_ ( ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _5 ; funds := ! funds - _5 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      _7 ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _5 ; funds := ! funds - _5 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      _8 ~> #freezer___HOLIB-SYNTAX0_ ( withdraw )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _5 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) ) ( declare-const _8 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( not ( = _7 0 ) ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      if _3 then send _1 ; funds := ! funds - _1 ; assert not ( ! funds < 0 ) else () ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      if _7 then send _5 ; funds := ! funds - _5 ; assert not ( ! funds < 0 ) else () ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      if not ( ! funds < _1 ) then send _1 ; funds := ! funds - _1 ; assert not ( ! funds < 0 ) else () ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      if not ( ! funds < _4 ) then send _4 ; funds := ! funds - _4 ; assert not ( ! funds < 0 ) else () ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _1 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _4 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( not ( = _3 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      if not ( ! funds < _5 ) then send _5 ; funds := ! funds - _5 ; assert not ( ! funds < 0 ) else () ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      if not ( ! funds < _8 ) then send _8 ; funds := ! funds - _8 ; assert not ( ! funds < 0 ) else () ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _5 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) ) ( declare-const _8 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( not ( = _7 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      import send : ( int -> unit ) public withdraw ( m : int ) : ( unit ) = { if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else () } ; int funds := 100 ;
+    </k>
+    <eval>
+      .
+    </eval>
+    <repo>
+      .Map
+    </repo>
+    <state>
+      .Map
+    </state>
+    <abs>
+      .Map
+    </abs>
+    <pub>
+      .Map
+    </pub>
+    <sig>
+      ( assert true )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      2
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      .
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      int funds := 100 ;
+    </k>
+    <eval>
+      .
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      .Map
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      2
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      .
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      nil
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _1 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _4 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( not ( = _3 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      nil
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _5 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) ) ( declare-const _8 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( not ( = _7 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      nil
+    </k>
+    <eval>
+      .
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( = _7 0 ) )
+    </pc>
+    <kbound>
+      2
+    </kbound>
+    <lbound>
+      0
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw ~> ret withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      nil ~> #freezer_<__HOLIB-SYNTAX1_ ( _4 ) ~> #freezernot__HOLIB-SYNTAX0_ ( ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _4 ; funds := ! funds - _4 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _1 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _4 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( not ( = _3 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      nil ~> #freezer_<__HOLIB-SYNTAX1_ ( _8 ) ~> #freezernot__HOLIB-SYNTAX0_ ( ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _8 ; funds := ! funds - _8 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _5 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) ) ( declare-const _8 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( not ( = _7 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      nil ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _4 ; funds := ! funds - _4 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _1 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _4 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( not ( = _3 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      nil ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _8 ; funds := ! funds - _8 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _5 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) ) ( declare-const _8 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( not ( = _7 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      nil ~> #freezernot__HOLIB-SYNTAX0_ ( ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _4 ; funds := ! funds - _4 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _1 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _4 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( not ( = _3 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      nil ~> #freezernot__HOLIB-SYNTAX0_ ( ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _8 ; funds := ! funds - _8 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _5 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) ) ( declare-const _8 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( not ( = _7 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      nil ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _1 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _4 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( not ( = _3 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      nil ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _5 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) ) ( declare-const _8 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( not ( = _7 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      not ( ! funds < _1 ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _1 ; funds := ! funds - _1 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      not ( ! funds < _4 ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _4 ; funds := ! funds - _4 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _1 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _4 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( not ( = _3 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      not ( ! funds < _5 ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _5 ; funds := ! funds - _5 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      not ( ! funds < _8 ) ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _8 ; funds := ! funds - _8 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _5 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) ) ( declare-const _8 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( not ( = _7 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      not _2 ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _1 ; funds := ! funds - _1 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      not _6 ~> #freezerif_then_else__HOLIB-SYNTAX1_ ( send _5 ; funds := ! funds - _5 ; assert not ( ! funds < 0 ) , () ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      opp_val int ~> #freezer___HOLIB-SYNTAX0_ ( withdraw )
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) )
+    </pc>
+    <kbound>
+      2
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      opp_val int ~> #freezer___HOLIB-SYNTAX0_ ( withdraw )
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      2
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      opp_val int ~> #freezer___HOLIB-SYNTAX0_ ( withdraw )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _1 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( not ( = _3 0 ) ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      opp_val int ~> #freezer___HOLIB-SYNTAX0_ ( withdraw )
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _5 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( not ( = _7 0 ) ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      public withdraw ( m : int ) : ( unit ) = { if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else () } ; int funds := 100 ;
+    </k>
+    <eval>
+      .
+    </eval>
+    <repo>
+      .Map
+    </repo>
+    <state>
+      .Map
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      .Map
+    </pub>
+    <sig>
+      ( assert true )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      2
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      .
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      send _1 ; funds := ! funds - _1 ; assert not ( ! funds < 0 ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( not ( = _3 0 ) ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      send _1 ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _1 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( not ( = _3 0 ) ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      send _5 ; funds := ! funds - _5 ; assert not ( ! funds < 0 ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( not ( = _7 0 ) ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      send _5 ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _5 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( )
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( not ( = _7 0 ) ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      withdraw _1
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      2
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      withdraw _4
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _1 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _4 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( not ( = _3 0 ) ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      withdraw _5
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) )
+    </pc>
+    <kbound>
+      2
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      withdraw _8
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _5 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) ) ( declare-const _8 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( not ( = _7 0 ) ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      withdraw opp_val int
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) )
+    </pc>
+    <kbound>
+      2
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      withdraw opp_val int
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      2
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      withdraw opp_val int
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _1 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( not ( = _3 0 ) ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      withdraw opp_val int
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _5 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( not ( = _7 0 ) ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      {| () |}
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( = _7 0 ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      {| () |}
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      {| if not ( ! funds < _1 ) then send _1 ; funds := ! funds - _1 ; assert not ( ! funds < 0 ) else () |}
+    </k>
+    <eval>
+      1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int )
+    </sig>
+    <pc>
+      ( assert true )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      {| if not ( ! funds < _4 ) then send _4 ; funds := ! funds - _4 ; assert not ( ! funds < 0 ) else () |}
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _1 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 1 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _4 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( not ( = _3 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      {| if not ( ! funds < _5 ) then send _5 ; funds := ! funds - _5 ; assert not ( ! funds < 0 ) else () |}
+    </k>
+    <eval>
+      0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) )
+    </pc>
+    <kbound>
+      1
+    </kbound>
+    <lbound>
+      1
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw
+    </trace>
+  </T>
+#Or
+  Result ==K <T>
+    <k>
+      {| if not ( ! funds < _8 ) then send _8 ; funds := ! funds - _8 ; assert not ( ! funds < 0 ) else () |}
+    </k>
+    <eval>
+      1 ~> withdraw ~> send ~> #freezer_;__HOLIB-SYNTAX1_ ( funds := ! funds - _5 ; assert not ( ! funds < 0 ) ) ~> #freezer{|_|}_HOLIB0_ ( ) ~> 0 ~> withdraw
+    </eval>
+    <repo>
+      withdraw |-> fun ( m : int ) : ( unit ) -> if not ( ! funds < m ) then send m ; funds := ! funds - m ; assert not ( ! funds < 0 ) else ()
+    </repo>
+    <state>
+      _2 |-> 100 < _1
+      _3 |-> not _2
+      _6 |-> 100 < _5
+      _7 |-> not _6
+      funds |-> 100
+    </state>
+    <abs>
+      send |-> int -> unit
+    </abs>
+    <pub>
+      withdraw |-> int -> unit
+    </pub>
+    <sig>
+      ( assert true ) ( declare-const _1 Int ) ( declare-const _2 Int ) ( assert ( = _2 ( ite ( < 100 _1 ) 1 0 ) ) ) ( declare-const _3 Int ) ( assert ( = _3 ( ite ( = _2 0 ) 1 0 ) ) ) ( declare-const _5 Int ) ( declare-const _6 Int ) ( assert ( = _6 ( ite ( < 100 _5 ) 1 0 ) ) ) ( declare-const _7 Int ) ( assert ( = _7 ( ite ( = _6 0 ) 1 0 ) ) ) ( declare-const _8 Int )
+    </sig>
+    <pc>
+      ( assert true ) ( assert ( = _3 0 ) ) ( assert ( not ( = _7 0 ) ) )
+    </pc>
+    <kbound>
+      0
+    </kbound>
+    <lbound>
+      2
+    </lbound>
+    <kzero>
+      2
+    </kzero>
+    <lzero>
+      2
+    </lzero>
+    <trace>
+      call withdraw ~> ret withdraw ~> call withdraw ~> call send ~> call withdraw
+    </trace>
+  </T>
