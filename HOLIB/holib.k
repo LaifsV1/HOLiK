@@ -78,7 +78,8 @@ module HOLIB
                    | "(" "ite"  SMTProp SMTProp SMTProp ")" [left]
   syntax Prog ::= "!OPPONENT!"
   syntax Move ::= "call" KVar | "ret" KVar
-
+  syntax K ::= "Context" K
+  
   configuration <T>
                   <k> $PGM:Prog </k>
 		  <eval> .K </eval>
@@ -426,7 +427,7 @@ module HOLIB
   // proponent question://////////////////////////////////
   // arg X is a method name
   rule <k> M:KVar X:KVar ~> E => !OPPONENT! </k>
-       <eval> ES => M~>E~>ES </eval>
+       <eval> ES => M~>(Context E)~>ES </eval>
        <repo> ... X |-> (fun (A:ATYPE) :(OTYPE) -> T) ... </repo>
        <abs> ... (M |-> _) ... </abs>
        <pub> P => P[X <- ATYPE] </pub>
@@ -440,7 +441,7 @@ module HOLIB
        [transition]
   // arg X is a ground-type variable
   rule <k> M:KVar X:KVar ~> E => !OPPONENT! </k>
-       <eval> ES => M~>E~>ES </eval>
+       <eval> ES => M~>(Context E)~>ES </eval>
        <repo> R </repo>
        <abs> ... (M |-> _) ... </abs>
        <kbound> K </kbound>
@@ -454,7 +455,7 @@ module HOLIB
        [transition]
   // arg V is a concrete value (TODO: traverse pairs and add methods to PUB)
   rule <k> M:KVar V:Val ~> E => !OPPONENT! </k>
-       <eval> ES => M~>E~>ES </eval>
+       <eval> ES => M~>(Context E)~>ES </eval>
        <abs> ... (M |-> _ ) ... </abs>
        <kbound> K </kbound>
        <lbound> I => L </lbound>
@@ -519,8 +520,7 @@ module HOLIB
        [transition]
   // opponent answer://////////////////////////////////
   rule <k> !OPPONENT! => (opp_val unit) ~> E </k>
-       <eval> M:KVar ~> E ~> ES => ES </eval>
-       <pub> ... M |-> (XTYPE->OTYPE) ... </pub>
+       <eval> M:KVar ~> (Context E) ~> ES => ES </eval>
        <kbound> K </kbound>
        <lbound> L </lbound>
        <trace> TAU => TAU ~> ret M </trace>
