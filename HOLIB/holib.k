@@ -8,15 +8,15 @@ module HOLIB-SYNTAX
   syntax Lib   ::= Block | "import" KVar TOut Lib
   syntax Block ::= "public"  KVar TVar TOut "=" "{" Term "}" ";"
                  | "private" KVar TVar TOut "=" "{" Term "}" ";"
-		 | "fun" Ref ":=" KVar ";"
-                 | "int" Ref ":=" Int    ";"
+		 | "fun" KVar ":=" KVar ";"
+                 | "int" KVar ":=" Int    ";"
 		 | Block Block                           [right]
 		 | Term
   syntax Term  ::= "assert" Term                         [strict(1)]
                  | EVal
                  | Val
 		 | Lambda
- 		 | "!" Ref
+ 		 | "!" KVar
 		 | "fst" Term                            [strict(1)]
 		 | "snd" Term                            [strict(1)]
 		 //start: arithmetic operations
@@ -28,7 +28,7 @@ module HOLIB-SYNTAX
 		 | Term "==" Term                        [seqstrict(1,2), left]
 		 > Term "&&" Term                        [seqstrict(1,2), left]
 		 //end: arithmetic operations
-		 > Ref ":=" Term                         [strict(2),  right]
+		 > KVar ":=" Term                         [strict(2),  right]
 		 > Term "," Term                         [strict(1,2), left]
 		 > Term Term                             [strict(2,1)]
 		 > "if" Term "then" Term "else" Term     [strict(1)]
@@ -39,8 +39,6 @@ module HOLIB-SYNTAX
 
   syntax Val    ::= KVar | Int | KVar | "()" | Val "," Val | "(" Val ")" [bracket]
   syntax EVal   ::= "fail" | "nil"
-  syntax Ref    ::= KVar
-
   syntax Lambda ::= "fun" TVar TOut "->" Term  [binder]
 
   syntax Type ::= "int" | "unit"
@@ -117,13 +115,13 @@ module HOLIB
 
   //----------------------------
   // BLOCK operational semantics
-  rule <k> fun R:Ref := M:KVar ; B => B ... </k>
+  rule <k> fun R:KVar := M:KVar ; B => B ... </k>
        <state> ... .Map => (R |-> M) ... </state>
        <kbound> K </kbound>
        <lbound> L </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
        [structural]
-  rule <k> int R:Ref := I:Int ; B => B ... </k>
+  rule <k> int R:KVar := I:Int ; B => B ... </k>
        <state> ... .Map => (R |-> I) ... </state>
        <kbound> K </kbound>
        <lbound> L </lbound>
@@ -145,7 +143,7 @@ module HOLIB
        [structural]
        //todo ABSTRACT names
   //terminal BLOCK
-  rule <k> int R:Ref := I:Int ; => !OPPONENT! </k>
+  rule <k> int R:KVar := I:Int ; => !OPPONENT! </k>
        <state> ... .Map => (R |-> I) ... </state>
        <kbound> K </kbound>
        <lbound> L </lbound>
@@ -180,13 +178,13 @@ module HOLIB
        <lbound> L </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
        [structural]
-  rule <k> ! R:Ref => T ... </k>
+  rule <k> ! R:KVar => T ... </k>
        <state> ... R |-> T ... </state>
        <kbound> K </kbound>
        <lbound> L </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
        [structural]
-  rule <k> R:Ref := X:Val => () ... </k>
+  rule <k> R:KVar := X:Val => () ... </k>
        <state> S => S[R <- X] </state> //Suspect we don't update sigma since references never appear in PC.
        <kbound> K </kbound>
        <lbound> L </lbound>
