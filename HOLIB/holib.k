@@ -55,6 +55,7 @@ module HOLIB
   imports DOMAINS
   imports SUBSTITUTION
   imports SET
+  imports COLLECTIONS
   syntax KResult ::= Val
   syntax SMTLib ::= "(" "declare-const" KVar "Int" ")"
                   | "(" "declare-const" KVar "String" ")"
@@ -508,17 +509,35 @@ module HOLIB
   rule <k> opp_val unit => () ...</k>
        <sig> SIG => SIG (declare-const !X Int) </sig>
   // opponent question://////////////////////////////////
-  rule <k> !OPPONENT! => M (opp_val XTYPE) </k>
+  syntax Prog ::= "opp_question" Map
+  rule <k> !OPPONENT! => opp_question P </k>
+       <pub> P </pub>
+       <kbound> K </kbound>
+       <lbound> L:Int </lbound>
+       requires (K =/=Int 0) andBool (L =/=Int 0)
+       [transition,structural]
+  rule <k> opp_question ((M |-> (XTYPE->OTYPE)) P:Map) => M (opp_val XTYPE) </k>
        <eval> ES => (L -Int 1)~>(M:KVar)~>ES </eval>
-       <pub> ... M |-> (XTYPE->OTYPE) ... </pub>
+       <kbound> K </kbound>
+       <lbound> L:Int </lbound>
+       <trace> TAU => TAU ~> call M </trace>
+       requires (K =/=Int 0) andBool (L =/=Int 0) andBool (P =/=K .Map)
+       [transition]
+  rule <k> opp_question ((M |-> T) P:Map) => opp_question P </k>
+       <kbound> K </kbound>
+       <lbound> L:Int </lbound>
+       requires (K =/=Int 0) andBool (L =/=Int 0) andBool (P =/=K .Map)
+       [transition,structural]
+  rule <k> opp_question ((M |-> (XTYPE->OTYPE)) .Map) => M (opp_val XTYPE) </k>
+       <eval> ES => (L -Int 1)~>(M:KVar)~>ES </eval>
        <kbound> K </kbound>
        <lbound> L:Int </lbound>
        <trace> TAU => TAU ~> call M </trace>
        requires (K =/=Int 0) andBool (L =/=Int 0)
-       [transition]
   // opponent answer://////////////////////////////////
-  rule <k> !OPPONENT! => (opp_val unit) ~> E </k>
-       <eval> M:KVar ~> (Context E) ~> ES => ES </eval>
+  rule <k> !OPPONENT! => (opp_val OTYPE) ~> E </k>
+       <eval> M ~> (Context E) ~> ES => ES </eval>
+       <abs> ... M |-> (XTYPE->OTYPE) ... </abs>
        <kbound> K </kbound>
        <lbound> L </lbound>
        <trace> TAU => TAU ~> ret M </trace>
