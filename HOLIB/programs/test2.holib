@@ -1,4 +1,4 @@
-# set-bounds 3 2 #
+# set-bounds 2 1 #
 import send :(int -> unit)
 
 public withdraw (m:int) :(unit) = {
