@@ -28,7 +28,7 @@ module HOLIB-SYNTAX
 		 | Term "==" Term                        [seqstrict(1,2), left]
 		 > Term "&&" Term                        [seqstrict(1,2), left]
 		 //end: arithmetic operations
-		 > KVar ":=" Term                         [strict(2),  right]
+		 > KVar ":=" Term                        [strict(2),  right]
 		 > Term "," Term                         [strict(1,2), left]
 		 > Term Term                             [strict(2,1)]
 		 > "if" Term "then" Term "else" Term     [strict(1)]
@@ -76,7 +76,7 @@ module HOLIB
 		   | "(" "not" SMTProp ")"          [right]
                    | "(" "ite"  SMTProp SMTProp SMTProp ")" [left]
   syntax Prog ::= "!OPPONENT!"
-  syntax Move ::= "call" KVar | "ret" KVar
+  syntax Move ::= "call" Term | "ret" Term
   syntax K ::= "Context" K
   
   configuration <T>
@@ -90,7 +90,6 @@ module HOLIB
 		  <pc>  (assert true):SMTLib </pc>
 		  <kbound> 4 </kbound>
 		  <lbound> 4 </lbound>
-		  <kzero>  4 </kzero>
 		  <lzero>  4 </lzero>
 		  <trace> .K </trace>
 	        </T>
@@ -100,7 +99,6 @@ module HOLIB
   rule <k> # set-bounds I1 I2 # L => L </k>
        <kbound> _ => I1 </kbound>
        <lbound> _ => I2 </lbound>
-       <kzero>  _ => I1 </kzero>
        <lzero>  _ => I2 </lzero>
        [structural]
 
@@ -433,7 +431,7 @@ module HOLIB
        <kbound> K </kbound>
        <lbound> I => L </lbound>
        <lzero>  L </lzero>
-       <trace> TAU => TAU ~> call M </trace>
+       <trace> TAU => TAU ~> call (M X) </trace>
        requires (K =/=Int 0)
        	        andBool (I =/=Int 0)
                 andBool (ES =/=K .K)
@@ -446,7 +444,7 @@ module HOLIB
        <kbound> K </kbound>
        <lbound> I => L </lbound>
        <lzero>  L </lzero>
-       <trace> TAU => TAU ~> call M </trace>
+       <trace> TAU => TAU ~> call (M X) </trace>
        requires notBool (X in_keys(R))
                 andBool (I =/=Int 0)
                 andBool (K =/=Int 0)
@@ -459,7 +457,7 @@ module HOLIB
        <kbound> K </kbound>
        <lbound> I => L </lbound>
        <lzero>  L </lzero>
-       <trace> TAU => TAU ~> call M </trace>
+       <trace> TAU => TAU ~> call (M V) </trace>
        requires notBool isKVar(V)
                 andBool (I =/=Int 0)
                 andBool (K =/=Int 0)
@@ -467,13 +465,13 @@ module HOLIB
        [transition]
   // proponent answer://////////////////////////////////
   // return value M is a method name
-  rule <k> M:KVar => !OPPONENT! </k>
+  rule <k> X:KVar => !OPPONENT! </k>
        <eval> (L:Int)~>(M:KVar)~>ES => ES </eval>
-       <repo> ... M |-> (fun (A:ATYPE) :(OTYPE) -> T ) ... </repo>
-       <pub> P => P[M <- (ATYPE->OTYPE)] </pub>
+       <repo> ... X |-> (fun (A:ATYPE) :(OTYPE) -> T ) ... </repo>
+       <pub> P => P[X <- (ATYPE->OTYPE)] </pub>
        <kbound> K </kbound>
        <lbound> I => L </lbound>
-       <trace> TAU => TAU ~> ret M </trace>
+       <trace> TAU => TAU ~> ret M X </trace>
        requires (I =/=Int 0) andBool (K =/=Int 0)
        [transition] //TODO? refresh names
   // return value X is a variable of ground type
@@ -482,7 +480,7 @@ module HOLIB
        <eval> (L:Int)~>(M:KVar)~>ES => ES </eval>
        <kbound> K </kbound>
        <lbound> I => L </lbound>
-       <trace> TAU => TAU ~> ret M </trace>
+       <trace> TAU => TAU ~> ret M X </trace>
        requires (I =/=Int 0)
                 andBool (K =/=Int 0)
                 andBool notBool (X in_keys(R))
@@ -492,7 +490,7 @@ module HOLIB
        <eval> (L:Int)~>(M:KVar)~>ES => ES </eval>
        <kbound> K </kbound>
        <lbound> I => L </lbound>
-       <trace> TAU => TAU ~> ret M </trace>
+       <trace> TAU => TAU ~> ret M V </trace>
        requires (I =/=Int 0)
        		andBool (K =/=Int 0)
                 andBool notBool isKVar(V)
@@ -516,34 +514,33 @@ module HOLIB
        <lbound> L:Int </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0)
        [transition,structural]
-  rule <k> opp_question ((M |-> (XTYPE->OTYPE)) P:Map) => M (opp_val XTYPE) </k>
+  syntax Prog ::= "in_question" KVar Term  [strict(2)]
+  rule <k> opp_question ((M |-> (XTYPE->OTYPE)) P:Map) => in_question M (opp_val XTYPE) </k>
        <eval> ES => (L -Int 1)~>(M:KVar)~>ES </eval>
        <kbound> K </kbound>
        <lbound> L:Int </lbound>
-       <trace> TAU => TAU ~> call M </trace>
-       requires (K =/=Int 0) andBool (L =/=Int 0) andBool (P =/=K .Map)
-       [transition]
+       requires (K =/=Int 0) andBool (L =/=Int 0)
+       [transition,structural]
+  rule <k> in_question M V:Val => M V </k>
+       <trace> TAU => TAU ~> call M V </trace>
+       [structural]
   rule <k> opp_question ((M |-> T) P:Map) => opp_question P </k>
        <kbound> K </kbound>
        <lbound> L:Int </lbound>
        requires (K =/=Int 0) andBool (L =/=Int 0) andBool (P =/=K .Map)
        [transition,structural]
-  rule <k> opp_question ((M |-> (XTYPE->OTYPE)) .Map) => M (opp_val XTYPE) </k>
-       <eval> ES => (L -Int 1)~>(M:KVar)~>ES </eval>
-       <kbound> K </kbound>
-       <lbound> L:Int </lbound>
-       <trace> TAU => TAU ~> call M </trace>
-       requires (K =/=Int 0) andBool (L =/=Int 0)
   // opponent answer://////////////////////////////////
-  rule <k> !OPPONENT! => (opp_val OTYPE) ~> E </k>
+  syntax Prog ::= "in_answer" KVar Term  [strict(2)]
+  rule <k> !OPPONENT! => in_answer M (opp_val OTYPE) ~> E </k>
        <eval> M ~> (Context E) ~> ES => ES </eval>
        <abs> ... M |-> (XTYPE->OTYPE) ... </abs>
        <kbound> K </kbound>
        <lbound> L </lbound>
-       <trace> TAU => TAU ~> ret M </trace>
        requires (K =/=Int 0) andBool (L =/=Int 0)
-       [transition]
-       //TODO add declare-const for other types
+       [transition,structural]
+  rule <k> in_answer M V:Val ~> E => V ~> E </k>
+       <trace> TAU => TAU ~> ret M V </trace>
+       [structural]
   //TODO: check if you need to do k=/=0 for every rule.
   //TODO: check if adding all variables into ABS is fine.
 
