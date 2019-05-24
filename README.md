@@ -3,7 +3,7 @@ K-Framework semantics of HORef and HOLib for symbolic execution.
 
 HORef and HOLib are toy languages used as a proof of concept for higher-order symbolic execution with free variables of arbitrary order.
 
-- HoRef is a Higher-Order functional language with references.
+- HoRef is a higher-order functional language with references.
 - HOLib is a language to define libraries of higher-order stateful methods written in HORef.
 
 In the `/HOREF` directory, we have the semantics to perform symbolic execution of higher-order open terms where free variables are of ground type. That is, symbolic execution of higher-order programs where no undefined methods are being called at compile time.
