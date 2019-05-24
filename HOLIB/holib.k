@@ -1,4 +1,5 @@
 require "substitution.k"
+require "z3.k"
 
 module HOLIB-SYNTAX
   imports DOMAINS-SYNTAX
@@ -37,7 +38,7 @@ module HOLIB-SYNTAX
 		 | "letrec" KVar TVar TOut "=" Term "in" Term [binder]
                  | "(" Term ")"                          [bracket]
 
-  syntax Val    ::= KVar | Int | KVar | "()" | Val "," Val | "(" Val ")" [bracket]
+  syntax Val    ::= KVar | Int | "()" | Val "," Val | "(" Val ")" [bracket]
   syntax EVal   ::= "fail" | "nil"
   syntax Lambda ::= "fun" TVar TOut "->" Term  [binder]
 
@@ -56,29 +57,17 @@ module HOLIB
   imports SUBSTITUTION
   imports SET
   imports COLLECTIONS
+  imports Z3
+  
   syntax KResult ::= Val
-  syntax SMTLib ::= "(" "declare-const" KVar "Int" ")"
-                  | "(" "declare-const" KVar "String" ")"
-		  | "(" "check-sat" ")"
-		  | "(" "get-model" ")"
-		  | "(" "display" SMTProp ")"
-		  | "(" "simplify" SMTProp ")"
-                  | "(" "assert" SMTProp ")"
-		  | SMTLib SMTLib	            [left]
-  syntax SMTProp ::= Bool | Val
-                   | "(" "<" Val Val ")"            [left]
-		   | "(" "*" Val Val ")"            [left]
-                   | "(" "+" Val Val ")"            [left]
-                   | "(" "-" Val Val ")"            [left]
-                   | "(" "="   SMTProp SMTProp ")"  [left]
-                   | "(" "and" SMTProp SMTProp ")"  [left]
-                   | "(" "or"  SMTProp SMTProp ")"  [left]
-		   | "(" "not" SMTProp ")"          [right]
-                   | "(" "ite"  SMTProp SMTProp SMTProp ")" [left]
   syntax Prog ::= "!OPPONENT!"
   syntax Move ::= "call" Term | "ret" Term
   syntax K ::= "Context" K
-  
+
+  syntax SMTVal ::= ValToSMT(Val)  [function]
+  rule ValToSMT(X:KVar) => X
+  rule ValToSMT(I:Int)  => I
+
   configuration <T>
                   <k> $PGM:Prog </k>
 		  <eval> .K </eval>
@@ -92,7 +81,6 @@ module HOLIB
 		  <lbound> 4 </lbound>
 		  <lzero>  4 </lzero>
 		  <trace> .K </trace>
-		  <z3> .K </z3>
 	        </T>
 
   ////////////////////
@@ -221,16 +209,24 @@ module HOLIB
 
   //symbolic non-deterministic transitions
   rule <k>assert X:KVar => fail ... </k>
+       <sig> SIG </sig>
        <pc>PC => PC (assert (= X 0))</pc>
+       requires CheckSAT(SIG PC (assert (= X 0)))
        [transition]
   rule <k>assert X:KVar => () ... </k>
+       <sig> SIG </sig>
        <pc>PC => PC (assert (not (= X 0)))</pc>
+       requires CheckSAT(SIG PC (assert (not (= X 0))))
        [transition]
   rule <k>if X:KVar then T1:Term else T0:Term => T0 ...</k>
+       <sig> SIG </sig>
        <pc>PC => PC (assert (= X 0))</pc>
+       requires CheckSAT(SIG PC (assert (= X 0)))
        [transition]
   rule <k>if X:KVar then T1:Term else T0:Term => T1 ...</k>
+       <sig> SIG </sig>
        <pc>PC => PC (assert (not (= X 0)))</pc>
+       requires CheckSAT(SIG PC (assert (not (= X 0))))
        [transition]
 
   //symbolic deterministic transitions
@@ -240,51 +236,51 @@ module HOLIB
        [structural]
   rule <k> X1:KVar + V2:Val => !X:KVar ... </k> //plus
        <state> Sigma => Sigma[!X <- X1 + V2] </state>
-       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (+ X1 V2))) </sig>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (+ X1 ValToSMT(V2)))) </sig>
        [structural]
   rule <k> V1:Val + X2:KVar => !X:KVar ... </k>
        <state> Sigma => Sigma[!X <- V1 + X2] </state>
-       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (+ V1 X2))) </sig>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (+ ValToSMT(V1) X2))) </sig>
        [structural]
   rule <k> X1:KVar - V2:Val => !X:KVar ... </k> //minus
        <state> Sigma => Sigma[!X <- X1 - V2] </state>
-       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (- X1 V2))) </sig>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (- X1 ValToSMT(V2)))) </sig>
        [structural]
   rule <k> V1:Val - X2:KVar => !X:KVar ... </k>
        <state> Sigma => Sigma[!X <- V1 - X2] </state>
-       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (- V1 X2))) </sig>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (- ValToSMT(V1) X2))) </sig>
        [structural]
   rule <k> X1:KVar * V2:Val => !X:KVar ... </k> //times
        <state> Sigma => Sigma[!X <- X1 * V2] </state>
-       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (* X1 V2))) </sig>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (* X1 ValToSMT(V2)))) </sig>
        [structural]
   rule <k> V1:Val * X2:KVar => !X:KVar ... </k>
        <state> Sigma => Sigma[!X <- V1 * X2] </state>
-       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (* V1 X2))) </sig>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (* ValToSMT(V1) X2))) </sig>
        [structural]
   rule <k> X1:KVar == V2:Val => !X:KVar ... </k> //equals
        <state> Sigma => Sigma[!X <- X1 == V2] </state>
-       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (= X1 V2) 1 0))) </sig>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (= X1 ValToSMT(V2)) 1 0))) </sig>
        [structural]
   rule <k> V1:Val == X2:KVar => !X:KVar ... </k>
        <state> Sigma => Sigma[!X <- V1 == X2] </state>
-       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (= V1 X2) 1 0))) </sig>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (= ValToSMT(V1) X2) 1 0))) </sig>
        [structural]
   rule <k> X1:KVar < V2:Val => !X:KVar ... </k> //lessthan
        <state> Sigma => Sigma[!X <- X1 < V2] </state>
-       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (< X1 V2) 1 0))) </sig>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (< X1 ValToSMT(V2)) 1 0))) </sig>
        [structural]
   rule <k> V1:Val < X2:KVar => !X:KVar ... </k>
        <state> Sigma => Sigma[!X <- V1 < X2] </state>
-       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (< V1 X2) 1 0))) </sig>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (< ValToSMT(V1) X2) 1 0))) </sig>
        [structural]
   rule <k> X1:KVar && V2:Val => !X:KVar ... </k> //and
        <state> Sigma => Sigma[!X <- X1 && V2] </state>
-       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (and (= X1 1) (= V2 1)) 1 0))) </sig>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (and (= X1 1) (= ValToSMT(V2) 1)) 1 0))) </sig>
        [structural]
   rule <k> V1:Val && X2:KVar => !X:KVar ... </k>
        <state> Sigma => Sigma[!X <- V1 && X2] </state>
-       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (and (= V1 1) (= X2 1)) 1 0))) </sig>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (and (= ValToSMT(V1) 1) (= X2 1)) 1 0))) </sig>
        [structural]
 
   ////////////////////
