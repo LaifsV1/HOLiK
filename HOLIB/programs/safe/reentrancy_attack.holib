@@ -3,8 +3,8 @@ import send :(int -> unit)
 
 public withdraw (m:int) :(unit) = {
   if (not (!funds < m))
-  then send(m);
-       funds := !funds - m;
+  then funds := !funds - m;
+       send(m);
        assert(not(!funds < 0))
   else ()};
 int funds := 100;
