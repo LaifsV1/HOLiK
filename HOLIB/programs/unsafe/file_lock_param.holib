@@ -1,0 +1,8 @@
+# set-bounds 1 100 #
+
+int readMAX := 100;
+
+public read (u:unit) :(unit) = {
+  readMAX := !readMAX - 1;
+  assert(0 < !readMAX)
+};
