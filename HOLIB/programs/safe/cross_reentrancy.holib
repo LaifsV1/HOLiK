@@ -2,10 +2,10 @@
 import send :(int -> unit)
 
 private transfer (m:int) :(unit) = {
-  if (not (!funds < m))
-  then funds := !funds - m;
+  if (not (!balance < m))
+  then balance := !balance - m;
        send m;
-       assert(not(!funds < 0))
+       assert(not(!balance < 0))
   else ()};
 
 public claimBonus (u:unit) :(unit) = {
@@ -15,5 +15,5 @@ public claimBonus (u:unit) :(unit) = {
        assert(not(!bonus < 0))
   else ()};
 
-int funds := 100;
+int balance := 100;
 int bonus := 1;

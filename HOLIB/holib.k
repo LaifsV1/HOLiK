@@ -313,7 +313,7 @@ module HOLIB
        <eval> ES => M~>(Context E)~>ES </eval>
        <repo> ... X |-> (fun (A:ATYPE) :(OTYPE) -> T) ... </repo>
        <abs> ... (M |-> _) ... </abs>
-       <pub> P => P[X <- ATYPE] </pub>
+       <pub> P => P[X <- (ATYPE->OTYPE)] </pub>
        <lbound> I => L </lbound>
        <lzero>  L </lzero>
        <trace> TAU => TAU ~> call (M X) </trace>
