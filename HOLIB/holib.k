@@ -21,13 +21,14 @@ module HOLIB-SYNTAX
 		 | "fst" Term                            [strict(1)]
 		 | "snd" Term                            [strict(1)]
 		 //start: arithmetic operations
-                 | "not" Term                            [seqstrict(1),  right]
+                 | "not" Term                            [seqstrict(1)]
                  > Term "*" Term                         [seqstrict(1,2), left]
                  > Term "+" Term                         [seqstrict(1,2), left]
 		 | Term "-" Term                         [seqstrict(1,2), left]
                  > Term "<" Term                         [seqstrict(1,2), left]
 		 | Term "==" Term                        [seqstrict(1,2), left]
-		 > Term "&&" Term                        [seqstrict(1,2), left]
+		 > Term "&&" Term                        [seqstrict(1,2), right]
+		 > Term "||" Term                        [seqstrict(1,2), right]
 		 //end: arithmetic operations
 		 > KVar ":=" Term                        [strict(2),  right]
 		 > Term "," Term                         [strict(1,2), left]
@@ -176,6 +177,12 @@ module HOLIB
   rule <k>I1:Int && I2:Int => 0 ...</k>
        requires ((I1 ==Int 0) orBool (I2 ==Int 0))
        [structural]
+  rule <k>I1:Int || I2:Int => 1 ...</k>
+       requires (I1 =/=Int 0) orBool (I2 =/=Int 0)
+       [structural]
+  rule <k>I1:Int || I2:Int => 0 ...</k>
+       requires ((I1 ==Int 0) andBool (I2 ==Int 0))
+       [structural]
   //end: arithmetic operations
   
   rule <k> F:Lambda => !N:KVar ... </k>
@@ -281,6 +288,14 @@ module HOLIB
   rule <k> V1:Val && X2:KVar => !X:KVar ... </k>
        <state> Sigma => Sigma[!X <- V1 && X2] </state>
        <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (and (= ValToSMT(V1) 1) (= X2 1)) 1 0))) </sig>
+       [structural]
+  rule <k> X1:KVar || V2:Val => !X:KVar ... </k> //or
+       <state> Sigma => Sigma[!X <- X1 || V2] </state>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (or (= X1 1) (= ValToSMT(V2) 1)) 1 0))) </sig>
+       [structural]
+  rule <k> V1:Val || X2:KVar => !X:KVar ... </k>
+       <state> Sigma => Sigma[!X <- V1 || X2] </state>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (or (= ValToSMT(V1) 1) (= X2 1)) 1 0))) </sig>
        [structural]
 
   ////////////////////
