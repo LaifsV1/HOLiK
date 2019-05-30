@@ -20,8 +20,9 @@ module HOLIB-SYNTAX
  		 | "!" KVar
 		 | "fst" Term                            [strict(1)]
 		 | "snd" Term                            [strict(1)]
+		 > Term Term                             [strict(2,1)]
 		 //start: arithmetic operations
-                 | "not" Term                            [seqstrict(1)]
+                 > "not" Term                            [seqstrict(1)]
                  > Term "*" Term                         [seqstrict(1,2), left]
                  > Term "+" Term                         [seqstrict(1,2), left]
 		 | Term "-" Term                         [seqstrict(1,2), left]
@@ -32,7 +33,6 @@ module HOLIB-SYNTAX
 		 //end: arithmetic operations
 		 > KVar ":=" Term                        [strict(2),  right]
 		 > Term "," Term                         [strict(1,2), left]
-		 > Term Term                             [strict(2,1)]
 		 > "if" Term "then" Term "else" Term     [strict(1)]
 		 | "let" KVar "=" Term "in" Term         [binder, strict(2)]
 		 | Term ";" Term                         [strict(1),  right]
