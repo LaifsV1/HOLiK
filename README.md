@@ -8,7 +8,7 @@ HORef and HOLib are toy languages used as a proof of concept for higher-order sy
 
 In the `/HOREF` directory, we have the semantics to perform symbolic execution of higher-order open terms where free variables are of ground type. That is, symbolic execution of higher-order programs where no undefined methods are being called at compile time.
 
-In the `/HOLIB` directory, we have the game semantics to perform symbolic execution of higher-order open methods, which may contain free variables of arbitrary order. That is, symbolic execution of libraries which may contain undefined methods. More concretely, given a library `L` wrriten in `HOLIB`, executing the `HOLIB` semantics will perform a bounded model checking to find whether it is possible to call `L` such that assertions are violated.
+In the `/HOLIB` directory, we have the game semantics to perform symbolic execution of higher-order open methods, which may contain free variables of arbitrary order. That is, symbolic execution of libraries which may contain undefined methods.
 
 ## Usage
 For `HOLIB` we require `z3` to be present in the PATH environment variable.
