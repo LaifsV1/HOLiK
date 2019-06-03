@@ -1,0 +1,14 @@
+# set-bounds 2 1 #
+import send_confirmation :(unit -> unit)
+
+int seats_remaining := 10;
+
+public reserve (x:int) :(unit) = {
+  if (x - 1) < !seats_remaining
+  then send_confirmation();
+       seats_remaining := !seats_remaining - x;
+       assert(0 < (!seats_remaining + 1))
+  else ()
+};
+
+// trace: call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation ()

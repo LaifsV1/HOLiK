@@ -1,0 +1,29 @@
+# set-bounds 2 2 #
+import get_ext :(unit -> int)
+import set_ext :(int -> unit)
+
+int local  := 0;
+int remote := 0;
+int error  := 0;
+
+public remoteUpdate (u:unit) :(unit) = {
+  let tmp = !local in
+  remoteSet(tmp);
+  assert(if !error then 1 else tmp == remoteGet())
+};
+
+public localUpdate (i:int) :(unit) = {
+  local := i
+};
+
+private remoteSet (i:int) :(unit) = {
+  remote := i;
+  set_ext(i)
+};
+
+private remoteGet (u:unit) :(int) = {
+  let tmp = get_ext() in
+  if not(tmp == !remote)
+  then error := 1; tmp
+  else tmp
+};
