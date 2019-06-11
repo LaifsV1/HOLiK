@@ -11,4 +11,5 @@ public openFile (u:unit) :(unit) = {
        userExec(write);
        lock := 0};
 
+// this example tests consecutive opponent questions
 // error trace: call openFile () ~> call userExec _2 ~> ret userExec () ~> ret openFile () ~> call _2 ()

@@ -14,3 +14,5 @@ public withdraw (m:int) :(unit) = {
             assert(-1 < !balance)
        else ()
   else ()};
+
+// this example shows a reentrancy error occuring in the condition

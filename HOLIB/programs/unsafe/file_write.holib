@@ -27,3 +27,6 @@ public read (u:unit) :(unit) = {
   closeFile();
   assert((!read_only) == secret)
 };
+
+// tests whether K can find how to abuse other functions in the library to access private functions
+// here, opening and closing the file are private, but read gives the opponent access to these functions

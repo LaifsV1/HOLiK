@@ -10,5 +10,6 @@ public withdraw (m:int) :(unit) = {
 int balance := 100;
 int param   := 13;
 
+// this is a parametrised reentrancy example
 // k:     2   , 3  , 5  , 8
 // param: 100 , 50 , 25 , 13

@@ -23,3 +23,6 @@ private getRemote (u:unit) :(int) = {
   then tmp
   else error := 1; tmp
 };
+
+// this is a second attempt at a synchronisation library
+// a reentrancy bug in calling getRemote causes data to desynchronise

@@ -37,7 +37,7 @@ public initialise (u:unit) :(unit) = {
 
 
 
-// innermost reentrant call is successful but assigns does not free. middle reentrant call then frees. outermost call then double frees.
+// innermost reentrant call is successful but assigns and does not free. middle reentrant call then frees. outermost call then double frees.
 // call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> ret getInput _11 ~> ret initialise () ~> ret getInput _15 ~> ret initialise () ~> ret getInput _29
 
 // internal reentrant call successfully frees, but outer call double frees.
