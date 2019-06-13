@@ -1,0 +1,10 @@
+# set-bounds 4 5 #
+import send :(int -> unit)
+
+public withdraw (m:int) :(unit) = {
+  if (not (!balance < m))
+  then balance := !balance - m;
+       send(m);
+       assert(not(!balance < 0))
+  else ()};
+int balance := 100;

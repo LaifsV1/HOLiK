@@ -1,0 +1,28 @@
+# set-bounds 5 1 #
+import get_ext :(unit -> int)
+
+int local  := 0;
+int remote := 0;
+int error  := 0;
+int tmp    := -1;
+
+public updateRemote (u:unit) :(unit) = {
+  let tmp2 = !local in
+  remote := tmp2;
+  tmp := getRemote();
+  assert(if !error then 1 else (!tmp == tmp2))
+};
+
+public updateLocal (i:int) :(unit) = {
+  local := i
+};
+
+private getRemote (u:unit) :(int) = {
+  let tmp = get_ext() in
+  if tmp == !remote
+  then tmp
+  else error := 1; tmp
+};
+
+// this is a second attempt at a synchronisation library
+// a reentrancy bug in calling getRemote causes data to desynchronise

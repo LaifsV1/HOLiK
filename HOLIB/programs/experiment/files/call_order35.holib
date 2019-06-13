@@ -1,0 +1,39 @@
+# set-bounds 3 5 #
+import syscall :(int -> unit)
+
+int a := 0;
+int b := 0;
+int c := 0;
+int d := 0;
+
+public isNone (i:int) :(unit) = {
+  if not(!a || !b || !c || !d)
+  then a := 1; syscall 0
+  else ()
+};
+
+public isA (i:int) :(unit) = {
+  if !a && not(!b || !c || !d)
+  then b := 1; syscall 1
+  else ()
+};
+
+public isAB (i:int) :(unit) = {
+  if !a && !b && not(!c || !d)
+  then c := 1; syscall 2
+  else ()
+};
+
+public isABC (i:int) :(unit) = {
+  if !a && !b && !c && not(!d)
+  then d := 1; syscall 3
+  else ()
+};
+
+public isABCD (i:int) :(unit) = {
+  if !a && !b && !c && !d
+  then assert(0)
+  else ()
+};
+
+// K lists one way to cause the error

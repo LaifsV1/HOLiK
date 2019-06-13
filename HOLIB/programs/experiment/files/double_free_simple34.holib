@@ -1,0 +1,16 @@
+# set-bounds 3 4 #
+import getInput :(unit -> int)
+
+int addr := 0; // 0 is analogous to `null`
+
+private allocate (u:unit) :(unit) = { if not(!addr) then addr := 1 else () };
+
+private free (u:unit) :(unit) = { assert(!addr); addr := 0 };
+
+private doSthing (i:int) :(unit) = { () };  // does something locally, does not free
+
+public run (u:unit) :(unit) = {
+  allocate(); 
+  doSthing(getInput ());
+  free()
+};

@@ -1,0 +1,13 @@
+# set-bounds 3 4 #
+
+int x := 0;
+
+public run (f:unit->unit) :(unit) = { x := 0; f(); x := 1; f(); x := !x - 1; assert(!x == 0) };
+
+//  Adapted from Pitts and Stark's awkward example
+//  presented by Dreyer, Neis and Birkedal in
+//  "The Impact of Higher-Order State and Control Effects 
+//  on Local Relational Reasoning" page 5.
+//  This is an inequivalence with call/cc.
+//
+//  Unsafe variant with x being decreased athough "it was 1 anyway"
