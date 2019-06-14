@@ -1,0 +1,25 @@
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> ret file_stream _12 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> ret file_stream _12 ~> ret check_access () ~> ret file_stream _40 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> ret file_stream _12 ~> ret check_access () ~> ret file_stream _40 ~> ret check_access () ~> ret file_stream _82 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> ret file_stream _12 ~> ret check_access () ~> ret file_stream _40 ~> ret check_access () ~> ret file_stream _83 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> ret file_stream _12 ~> ret check_access () ~> ret file_stream _41 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> ret file_stream _12 ~> ret check_access () ~> ret file_stream _41 ~> ret check_access () ~> ret file_stream _84 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> ret file_stream _12 ~> ret check_access () ~> ret file_stream _41 ~> ret check_access () ~> ret file_stream _85 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> ret file_stream _4 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> ret file_stream _4 ~> ret check_access () ~> ret file_stream _34 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> ret file_stream _4 ~> ret check_access () ~> ret file_stream _35 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> ret file_stream _2 )
+
+real	0m6.189s
+user	0m16.988s
+sys	0m0.667s

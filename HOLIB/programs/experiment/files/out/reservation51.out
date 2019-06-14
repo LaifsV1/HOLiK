@@ -1,0 +1,35 @@
+  T ==K ( call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> call reserve _13 ~> call send_confirmation () ~> call reserve _24 ~> call send_confirmation () ~> call reserve _38 ~> call send_confirmation () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> call reserve _13 ~> call send_confirmation () ~> call reserve _24 ~> call send_confirmation () ~> call reserve _38 ~> call send_confirmation () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> call reserve _13 ~> call send_confirmation () ~> call reserve _24 ~> call send_confirmation () ~> call reserve _38 ~> call send_confirmation () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> call reserve _13 ~> call send_confirmation () ~> call reserve _24 ~> call send_confirmation () ~> call reserve _38 ~> call send_confirmation () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> call reserve _13 ~> call send_confirmation () ~> call reserve _24 ~> call send_confirmation () ~> call reserve _38 ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> call reserve _13 ~> call send_confirmation () ~> call reserve _24 ~> call send_confirmation () ~> call reserve _38 ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> call reserve _13 ~> call send_confirmation () ~> call reserve _24 ~> call send_confirmation () ~> call reserve _38 ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> call reserve _13 ~> call send_confirmation () ~> call reserve _24 ~> call send_confirmation () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> call reserve _13 ~> call send_confirmation () ~> call reserve _24 ~> call send_confirmation () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> call reserve _13 ~> call send_confirmation () ~> call reserve _24 ~> call send_confirmation () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> call reserve _13 ~> call send_confirmation () ~> call reserve _24 ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> call reserve _13 ~> call send_confirmation () ~> call reserve _24 ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> call reserve _13 ~> call send_confirmation () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> call reserve _13 ~> call send_confirmation () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> call reserve _13 ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+
+real	0m6.347s
+user	0m18.346s
+sys	0m0.637s

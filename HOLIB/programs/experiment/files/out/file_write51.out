@@ -1,0 +1,11 @@
+  T ==K ( call read () ~> call send 100 ~> call read () ~> call send 100 ~> call read () ~> call send 100 ~> call read () ~> call send 100 ~> call write _20 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call read () ~> call send 100 ~> call read () ~> call send 100 ~> call write _13 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call read () ~> call send 100 ~> call write _8 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _4 ~> ret write () ~> ret send () )
+
+real	0m5.688s
+user	0m15.442s
+sys	0m0.569s

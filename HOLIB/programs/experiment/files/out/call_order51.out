@@ -1,0 +1,5 @@
+T ==K ( call isNone _4 ~> call syscall 0 ~> call isA _8 ~> call syscall 1 ~> call isAB _21 ~> call syscall 2 ~> call isABC _28 ~> call syscall 3 ~> call isABCD _46 )
+
+real	0m5.753s
+user	0m15.854s
+sys	0m0.494s
