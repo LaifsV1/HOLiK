@@ -283,19 +283,19 @@ module HOLIB
        [structural]
   rule <k> X1:KVar && V2:Val => !X:KVar ... </k> //and
        <state> Sigma => Sigma[!X <- X1 && V2] </state>
-       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (and (= X1 1) (= ValToSMT(V2) 1)) 1 0))) </sig>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (or (= X1 0) (= ValToSMT(V2) 0)) 0 1))) </sig>
        [structural]
   rule <k> V1:Val && X2:KVar => !X:KVar ... </k>
        <state> Sigma => Sigma[!X <- V1 && X2] </state>
-       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (and (= ValToSMT(V1) 1) (= X2 1)) 1 0))) </sig>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (or (= ValToSMT(V1) 0) (= X2 0)) 0 1))) </sig>
        [structural]
   rule <k> X1:KVar || V2:Val => !X:KVar ... </k> //or
        <state> Sigma => Sigma[!X <- X1 || V2] </state>
-       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (or (= X1 1) (= ValToSMT(V2) 1)) 1 0))) </sig>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (and (= X1 0) (= ValToSMT(V2) 0)) 0 1))) </sig>
        [structural]
   rule <k> V1:Val || X2:KVar => !X:KVar ... </k>
        <state> Sigma => Sigma[!X <- V1 || X2] </state>
-       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (or (= ValToSMT(V1) 1) (= X2 1)) 1 0))) </sig>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (and (= ValToSMT(V1) 0) (= X2 0)) 0 1))) </sig>
        [structural]
 
   ////////////////////
