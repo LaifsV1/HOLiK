@@ -1,7 +1,0 @@
-  T ==K ( call run _1 ~> call _1 () ~> call run _3 ~> call _3 () ~> ret _3 () ~> call _3 () ~> ret _3 () ~> ret run () ~> ret _1 () ~> call _1 () ~> call run _17 ~> call _17 () ~> ret _17 () ~> call _17 () ~> ret _17 () ~> ret run () ~> ret _1 () )
-#Or
-  T ==K ( call run _1 ~> call _1 () ~> ret _1 () ~> call _1 () ~> call run _6 ~> call _6 () ~> ret _6 () ~> call _6 () ~> ret _6 () ~> ret run () ~> ret _1 () )
-
-real	0m5.509s
-user	0m14.529s
-sys	0m0.543s

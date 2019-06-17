@@ -14,6 +14,7 @@ module Z3-SYNTAX
 		  | SMTLib SMTLib	                    [left]
   syntax SMTProp ::= Bool | SMTVal
                    | "(" "<" SMTVal SMTVal ")"              [left]
+                   | "(" "/" SMTVal SMTVal ")"              [left]
 		   | "(" "*" SMTVal SMTVal ")"              [left]
                    | "(" "+" SMTVal SMTVal ")"              [left]
                    | "(" "-" SMTVal SMTVal ")"              [left]
@@ -34,6 +35,7 @@ module Z3-SYNTAX
 
   rule PropToString( ( < V1 V2 ) ) => "( < " +String XToString(V1) +String " " +String XToString(V2) +String " )"
   rule PropToString( ( * V1 V2 ) ) => "( * " +String XToString(V1) +String " " +String XToString(V2) +String " )"
+  rule PropToString( ( / V1 V2 ) ) => "( / " +String XToString(V1) +String " " +String XToString(V2) +String " )"
   rule PropToString( ( + V1 V2 ) ) => "( + " +String XToString(V1) +String " " +String XToString(V2) +String " )"
   rule PropToString( ( - V1 V2 ) ) => "( - " +String XToString(V1) +String " " +String XToString(V2) +String " )"
   rule PropToString( ( = P1 P2 ) ) => "( = " +String PropToString(P1) +String " " +String PropToString(P2) +String " )"

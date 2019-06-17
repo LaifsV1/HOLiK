@@ -1,4 +1,4 @@
-# set-bounds 8 1 #
+# set-bounds 3 1 #
 import send :(int -> unit)
 
 public withdraw (m:int) :(unit) = {
@@ -8,7 +8,7 @@ public withdraw (m:int) :(unit) = {
        assert(not(!balance < 0))
   else ()};
 int balance := 100;
-int param   := 13;
+int param   := 50;
 
 // this is a parametrised reentrancy example
 // k:     2   , 3  , 5  , 8

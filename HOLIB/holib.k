@@ -24,6 +24,7 @@ module HOLIB-SYNTAX
 		 //start: arithmetic operations
                  > "not" Term                            [seqstrict(1)]
                  > Term "*" Term                         [seqstrict(1,2), left]
+                 | Term "/" Term                         [seqstrict(1,2), left]
                  > Term "+" Term                         [seqstrict(1,2), left]
 		 | Term "-" Term                         [seqstrict(1,2), left]
                  > Term "<" Term                         [seqstrict(1,2), left]
@@ -264,6 +265,14 @@ module HOLIB
   rule <k> V1:Val * X2:KVar => !X:KVar ... </k>
        <state> Sigma => Sigma[!X <- V1 * X2] </state>
        <sig> SIG => SIG (declare-const !X Int) (assert (= !X (* ValToSMT(V1) X2))) </sig>
+       [structural]
+  rule <k> X1:KVar / V2:Val => !X:KVar ... </k> //times
+       <state> Sigma => Sigma[!X <- X1 * V2] </state>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (/ X1 ValToSMT(V2)))) (assert (not (= ValToSMT(V2) 0)))</sig>
+       [structural]
+  rule <k> V1:Val / X2:KVar => !X:KVar ... </k>
+       <state> Sigma => Sigma[!X <- V1 * X2] </state>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (/ ValToSMT(V1) X2))) (assert (not (= X2 0)))</sig>
        [structural]
   rule <k> X1:KVar == V2:Val => !X:KVar ... </k> //equals
        <state> Sigma => Sigma[!X <- X1 == V2] </state>
