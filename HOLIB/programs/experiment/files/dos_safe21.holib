@@ -1,0 +1,13 @@
+# set-bounds 2 1 #
+import refund :(int -> unit)
+
+public bid (m:int) :(unit) = {
+  if (!currentbid < m)
+  then refund(m);
+       currentbid := m;
+       assert(!currentbid == m)
+  else ()};
+  
+int currentbid := 100;
+
+// won't find bugs in the event of external functions failing

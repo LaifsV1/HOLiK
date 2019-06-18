@@ -1,0 +1,17 @@
+# set-bounds 5 1 #
+import userExec :((unit -> unit) -> unit)
+
+int lock := 0; 
+
+private doSthing(x:unit) :(unit) = { () };
+
+public openFile (u:unit) :(unit) = {
+  if (!lock)
+  then ()
+  else lock := 1;
+       let write = fun (x:unit) :(unit) -> (assert(!lock); doSthing()) in
+       userExec(write);
+       lock := 0};
+
+// this example tests consecutive opponent questions
+// error trace: call openFile () ~> call userExec _2 ~> ret userExec () ~> ret openFile () ~> call _2 ()

@@ -1,0 +1,44 @@
+# set-bounds 5 3 #
+import getInput :(unit -> int)
+
+int address := 0; // 0 is analogous to `null`
+
+private allocate (u:unit) :(unit) = {
+  assert(not(!address));
+  address := 1
+};
+
+private free (u:unit) :(unit) = {
+  assert(!address);
+  address := 0
+};
+
+private update (i:int) :(unit) = {
+  assert(!address);
+  address := i
+};
+
+private read (u:int) :(int) = {
+  assert(!address);
+  !address
+};
+
+public initialise (u:unit) :(unit) = {
+  (if !address
+  then ()
+  else allocate()); 
+  let user_input = getInput () in
+  if 0 < user_input
+  then update(user_input);
+       assert(read() == user_input)
+       free()
+  else ()
+};
+
+
+
+// innermost reentrant call is successful but assigns and does not free. middle reentrant call then frees. outermost call then double frees.
+// call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> ret getInput _11 ~> ret initialise () ~> ret getInput _15 ~> ret initialise () ~> ret getInput _29
+
+// internal reentrant call successfully frees, but outer call double frees.
+// call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> ret getInput _5 ~> ret initialise () ~> ret getInput _23
