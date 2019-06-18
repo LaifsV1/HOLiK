@@ -1,5 +1,0 @@
-T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> ret getInput _4 ~> ret initialise () ~> ret getInput _10 )
-
-real	0m5.589s
-user	0m15.569s
-sys	0m0.571s

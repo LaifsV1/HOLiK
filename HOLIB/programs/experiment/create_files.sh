@@ -3,7 +3,7 @@ for file in *.holib
 do
   for i in 2 3 4 5
   do
-    for j in 1 2 3 4 5
+    for j in 1 2 3
     do
       file2=files/${file%.*}$i$j.holib
       cp $file $file2
