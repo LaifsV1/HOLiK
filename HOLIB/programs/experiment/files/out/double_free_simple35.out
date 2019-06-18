@@ -1,0 +1,53 @@
+  T ==K ( call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _4 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _11 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _22 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _37 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _56 ~> ret run () ~> ret getInput _66 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _4 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _11 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _22 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _37 ~> ret run () ~> ret getInput _46 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _4 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _11 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _22 ~> ret run () ~> ret getInput _29 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _4 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _11 ~> ret run () ~> ret getInput _16 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _4 ~> ret run () ~> ret getInput _7 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _12 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _23 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _38 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _57 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _75 ~> ret run () ~> ret getInput _83 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _12 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _23 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _38 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _57 ~> ret run () ~> ret getInput _67 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _12 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _23 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _38 ~> ret run () ~> ret getInput _47 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _12 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _23 ~> ret run () ~> ret getInput _30 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _12 ~> ret run () ~> ret getInput _17 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _9 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _24 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _39 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _58 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _76 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _90 ~> ret run () ~> ret getInput _96 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _9 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _24 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _39 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _58 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _76 ~> ret run () ~> ret getInput _84 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _9 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _24 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _39 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _58 ~> ret run () ~> ret getInput _68 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _9 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _24 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _39 ~> ret run () ~> ret getInput _48 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _9 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _24 ~> ret run () ~> ret getInput _31 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _9 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _20 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _40 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _59 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _77 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _91 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _101 ~> ret run () ~> ret getInput _105 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _9 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _20 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _40 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _59 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _77 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _91 ~> ret run () ~> ret getInput _97 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _9 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _20 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _40 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _59 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _77 ~> ret run () ~> ret getInput _85 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _9 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _20 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _40 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _59 ~> ret run () ~> ret getInput _69 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _9 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _20 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _40 ~> ret run () ~> ret getInput _49 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _9 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _20 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _35 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _60 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _78 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _92 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _102 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _108 ~> ret run () ~> ret getInput _110 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _9 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _20 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _35 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _60 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _78 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _92 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _102 ~> ret run () ~> ret getInput _106 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _9 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _20 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _35 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _60 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _78 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _92 ~> ret run () ~> ret getInput _98 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _9 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _20 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _35 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _60 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _78 ~> ret run () ~> ret getInput _86 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _9 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _20 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _35 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _60 ~> ret run () ~> ret getInput _70 )
+
+real	0m6.363s
+user	0m18.442s
+sys	0m0.618s

@@ -1,0 +1,51 @@
+  T ==K ( call isA _2 ~> ret isA () ~> call isAB _20 ~> ret isAB () ~> call isABC _54 ~> ret isABC () ~> call isNone _277 ~> ret isNone () ~> call isABCD _1152 )
+#Or
+  T ==K ( call isA _2 ~> ret isA () ~> call isAB _20 ~> ret isAB () ~> call isNone _91 ~> ret isNone () ~> call isABC _275 ~> ret isABC () ~> call isABCD _1146 )
+#Or
+  T ==K ( call isA _2 ~> ret isA () ~> call isABC _7 ~> ret isABC () ~> call isAB _57 ~> ret isAB () ~> call isNone _285 ~> ret isNone () ~> call isABCD _1178 )
+#Or
+  T ==K ( call isA _2 ~> ret isA () ~> call isABC _7 ~> ret isABC () ~> call isNone _45 ~> ret isNone () ~> call isAB _286 ~> ret isAB () ~> call isABCD _1180 )
+#Or
+  T ==K ( call isA _2 ~> ret isA () ~> call isNone _16 ~> ret isNone () ~> call isAB _92 ~> ret isAB () ~> call isABC _278 ~> ret isABC () ~> call isABCD _1155 )
+#Or
+  T ==K ( call isA _2 ~> ret isA () ~> call isNone _16 ~> ret isNone () ~> call isABC _43 ~> ret isABC () ~> call isAB _281 ~> ret isAB () ~> call isABCD _1162 )
+#Or
+  T ==K ( call isAB _5 ~> ret isAB () ~> call isA _18 ~> ret isA () ~> call isABC _50 ~> ret isABC () ~> call isNone _257 ~> ret isNone () ~> call isABCD _1086 )
+#Or
+  T ==K ( call isAB _5 ~> ret isAB () ~> call isA _18 ~> ret isA () ~> call isNone _85 ~> ret isNone () ~> call isABC _255 ~> ret isABC () ~> call isABCD _1080 )
+#Or
+  T ==K ( call isAB _5 ~> ret isAB () ~> call isABC _14 ~> ret isABC () ~> call isA _51 ~> ret isA () ~> call isNone _260 ~> ret isNone () ~> call isABCD _1094 )
+#Or
+  T ==K ( call isAB _5 ~> ret isAB () ~> call isABC _14 ~> ret isABC () ~> call isNone _73 ~> ret isNone () ~> call isA _259 ~> ret isA () ~> call isABCD _1091 )
+#Or
+  T ==K ( call isAB _5 ~> ret isAB () ~> call isNone _23 ~> ret isNone () ~> call isA _84 ~> ret isA () ~> call isABC _253 ~> ret isABC () ~> call isABCD _1073 )
+#Or
+  T ==K ( call isAB _5 ~> ret isAB () ~> call isNone _23 ~> ret isNone () ~> call isABC _71 ~> ret isABC () ~> call isA _254 ~> ret isA () ~> call isABCD _1075 )
+#Or
+  T ==K ( call isABC _1 ~> ret isABC () ~> call isA _8 ~> ret isA () ~> call isAB _60 ~> ret isAB () ~> call isNone _295 ~> ret isNone () ~> call isABCD _1210 )
+#Or
+  T ==K ( call isABC _1 ~> ret isABC () ~> call isA _8 ~> ret isA () ~> call isNone _48 ~> ret isNone () ~> call isAB _296 ~> ret isAB () ~> call isABCD _1212 )
+#Or
+  T ==K ( call isABC _1 ~> ret isABC () ~> call isAB _17 ~> ret isAB () ~> call isA _58 ~> ret isA () ~> call isNone _289 ~> ret isNone () ~> call isABCD _1190 )
+#Or
+  T ==K ( call isABC _1 ~> ret isABC () ~> call isAB _17 ~> ret isAB () ~> call isNone _81 ~> ret isNone () ~> call isA _288 ~> ret isA () ~> call isABCD _1187 )
+#Or
+  T ==K ( call isABC _1 ~> ret isABC () ~> call isNone _13 ~> ret isNone () ~> call isA _47 ~> ret isA () ~> call isAB _293 ~> ret isAB () ~> call isABCD _1202 )
+#Or
+  T ==K ( call isABC _1 ~> ret isABC () ~> call isNone _13 ~> ret isNone () ~> call isAB _82 ~> ret isAB () ~> call isA _291 ~> ret isA () ~> call isABCD _1195 )
+#Or
+  T ==K ( call isNone _4 ~> ret isNone () ~> call isA _15 ~> ret isA () ~> call isAB _89 ~> ret isAB () ~> call isABC _266 ~> ret isABC () ~> call isABCD _1116 )
+#Or
+  T ==K ( call isNone _4 ~> ret isNone () ~> call isA _15 ~> ret isA () ~> call isABC _41 ~> ret isABC () ~> call isAB _269 ~> ret isAB () ~> call isABCD _1123 )
+#Or
+  T ==K ( call isNone _4 ~> ret isNone () ~> call isAB _24 ~> ret isAB () ~> call isA _87 ~> ret isA () ~> call isABC _262 ~> ret isABC () ~> call isABCD _1100 )
+#Or
+  T ==K ( call isNone _4 ~> ret isNone () ~> call isAB _24 ~> ret isAB () ~> call isABC _74 ~> ret isABC () ~> call isA _263 ~> ret isA () ~> call isABCD _1102 )
+#Or
+  T ==K ( call isNone _4 ~> ret isNone () ~> call isABC _11 ~> ret isABC () ~> call isA _42 ~> ret isA () ~> call isAB _272 ~> ret isAB () ~> call isABCD _1133 )
+#Or
+  T ==K ( call isNone _4 ~> ret isNone () ~> call isABC _11 ~> ret isABC () ~> call isAB _77 ~> ret isAB () ~> call isA _270 ~> ret isA () ~> call isABCD _1126 )
+
+real	0m19.577s
+user	0m40.651s
+sys	0m0.906s

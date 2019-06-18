@@ -1,0 +1,25 @@
+  T ==K ( call check () ~> ret check () ~> call check () ~> ret check () ~> call increase _14 ~> ret increase () ~> call increase _41 ~> ret increase () ~> call check () )
+#Or
+  T ==K ( call check () ~> ret check () ~> call increase _5 ~> ret increase () ~> call check () ~> ret check () ~> call increase _40 ~> ret increase () ~> call check () )
+#Or
+  T ==K ( call check () ~> ret check () ~> call increase _5 ~> ret increase () ~> call increase _18 ~> ret increase () ~> call check () )
+#Or
+  T ==K ( call check () ~> ret check () ~> call increase _5 ~> ret increase () ~> call increase _18 ~> ret increase () ~> call increase _47 ~> ret increase () ~> call check () )
+#Or
+  T ==K ( call increase _2 ~> ret increase () ~> call check () ~> ret check () ~> call check () ~> ret check () ~> call increase _39 ~> ret increase () ~> call check () )
+#Or
+  T ==K ( call increase _2 ~> ret increase () ~> call check () ~> ret check () ~> call increase _17 ~> ret increase () ~> call check () )
+#Or
+  T ==K ( call increase _2 ~> ret increase () ~> call check () ~> ret check () ~> call increase _17 ~> ret increase () ~> call increase _46 ~> ret increase () ~> call check () )
+#Or
+  T ==K ( call increase _2 ~> ret increase () ~> call increase _7 ~> ret increase () ~> call check () )
+#Or
+  T ==K ( call increase _2 ~> ret increase () ~> call increase _7 ~> ret increase () ~> call check () ~> ret check () ~> call increase _45 ~> ret increase () ~> call check () )
+#Or
+  T ==K ( call increase _2 ~> ret increase () ~> call increase _7 ~> ret increase () ~> call increase _20 ~> ret increase () ~> call check () )
+#Or
+  T ==K ( call increase _2 ~> ret increase () ~> call increase _7 ~> ret increase () ~> call increase _20 ~> ret increase () ~> call increase _49 ~> ret increase () ~> call check () )
+
+real	0m6.455s
+user	0m18.779s
+sys	0m0.630s

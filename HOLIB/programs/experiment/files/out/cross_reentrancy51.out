@@ -1,0 +1,5 @@
+T ==K ( call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> ret send () ~> ret claimBonus () ~> ret send () )
+
+real	0m5.192s
+user	0m13.861s
+sys	0m0.501s

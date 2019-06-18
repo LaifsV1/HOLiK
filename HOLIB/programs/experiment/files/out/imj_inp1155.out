@@ -1,0 +1,13 @@
+  T ==K ( call run () ~> call f () ~> call run () ~> ret run () ~> call run () ~> ret run () ~> call run () ~> ret run () ~> call run () ~> ret run () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call run () ~> call f () ~> call run () ~> ret run () ~> call run () ~> ret run () ~> call run () ~> ret run () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call run () ~> call f () ~> call run () ~> ret run () ~> call run () ~> ret run () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call run () ~> call f () ~> call run () ~> ret run () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call run () ~> call f () ~> call run () ~> ret run () ~> ret f () )
+
+real	0m5.510s
+user	0m15.158s
+sys	0m0.531s
