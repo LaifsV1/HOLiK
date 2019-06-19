@@ -1,5 +1,0 @@
-# set-bound 5 #
-public factorial x = { if x then (x * (factorial (x - 1))) else 1 };
-
-main x =
-factorial x

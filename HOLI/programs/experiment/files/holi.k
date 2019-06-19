@@ -1,7 +1,7 @@
 require "substitution.k"
 require "z3.k"
 
-module HOLIB-SYNTAX
+module HOLI-SYNTAX
   imports DOMAINS-SYNTAX
   imports SUBSTITUTION
 
@@ -53,8 +53,8 @@ module HOLIB-SYNTAX
   syntax TKVar ::= KVar ":" Type
 endmodule
 
-module HOLIB
-  imports HOLIB-SYNTAX
+module HOLI
+  imports HOLI-SYNTAX
   imports DOMAINS
   imports SUBSTITUTION
   imports SET

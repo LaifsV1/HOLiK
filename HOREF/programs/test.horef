@@ -1,6 +1,0 @@
-main x =
-let x1 = x + x in
-let x2 = x1 + x1 in
-let x3 = x2 + x2 in
-if x3 then x3 + x2
-else assert(if x then x3 + x1 else 1)
