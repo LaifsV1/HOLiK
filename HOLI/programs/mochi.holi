@@ -1,0 +1,39 @@
+# set-bounds 15 1 #
+
+public esimple (i:int) :(unit) = {
+  let f = fun (arg : int * (int -> unit)) :(unit) -> (
+     let n = fst arg in
+     let k = snd arg in
+     if (0 - 1) < n then () else k 0
+  ) in
+  let g = fun (n:int) :(unit) -> assert(n == 0)
+  in
+  f(i,g)
+};
+
+public fact_e (i:int) :(unit) = {
+  letrec fact (arg : int * (int -> int)) :(int)  =
+    let n   = fst arg in
+    let exn = snd arg in
+    if (0 - 1) < n then
+      exn 0
+    else
+      let exn = fun (n:int) :(int) -> if n == 0 then 1 
+                                      else (exn n) 
+      in n * fact(n - 1 , exn)
+  in
+  let exn = fun (n:int) :(int) -> assert(0) ; 1
+  in
+  if 0 < i then (fact(i,exn); ())
+  else ()
+};
+
+public sum_e (i:int) :(unit) = {
+  letrec sum (n:int) :(int) =
+    if (n < 1) then
+      0
+    else
+      n + (sum (n - 1))
+  in
+  assert(i < (sum i))
+};

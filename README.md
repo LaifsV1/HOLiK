@@ -1,21 +1,16 @@
-# HOLib-semantics
-K-Framework semantics of HORef and HOLib for symbolic execution.
+# HOLiK
+This repository contains the symbolic semantics for a language called HOLi implemented for the K-Framework. The purpose is to perform symbolic execution of HOLi.
 
-HORef and HOLib are toy languages used as a proof of concept for higher-order symbolic execution with free variables of arbitrary order.
+HOLi (**H**igher-**O**rder **Li**braries) is a toy language used as a proof of concept for higher-order symbolic execution with free variables of arbitrary order. It is a language to define libraries of higher-order stateful methods written in HORef.
 
-- HoRef is a higher-order functional language with references.
-- HOLib is a language to define libraries of higher-order stateful methods written in HORef.
-
-In the `/HOREF` directory, we have the semantics to perform symbolic execution of higher-order open terms where free variables are of ground type. That is, symbolic execution of higher-order programs where no undefined methods are being called at compile time.
-
-In the `/HOLIB` directory, we have the game semantics to perform symbolic execution of higher-order open methods, which may contain free variables of arbitrary order. That is, symbolic execution of libraries which may contain undefined methods.
+In the `/HOLI` directory, we have the game semantics to perform symbolic execution of higher-order open methods, which may contain free variables of arbitrary order. That is, symbolic execution of libraries which may contain undefined methods.
 
 ## Usage
-For `HOLIB` we require `z3` to be present in the PATH environment variable.
+For `HOLI` we require `z3` to be present in the PATH environment variable.
 
-To compile, inside either `/HOREF` or `/HOLIB`, run `kompile --backend java <holib/horef>.k`.
+To compile, inside `/HOLI`, run `kompile --backend java <holib/horef>.k`.
 
 Once compiled, use `krun --search <file-to-check>` to perform symbolic execution.
 
-For `HOLIB`, we can use `--pattern` to find traces that lead to an error.
-e.g. `krun --search --pattern "<k> fail </k> <trace> T </trace>" programs/test2.holib` finds all the traces that violate an assertion in test file `test2.holib`
+We can use `--pattern` to find traces that lead to an error.
+e.g. `krun --search --pattern "<k> fail </k> <trace> T </trace>" programs/<file>.holi` finds all the traces that violate an assertion in test file `test2.holi`
