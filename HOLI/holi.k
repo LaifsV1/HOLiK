@@ -16,7 +16,6 @@ module HOLI-SYNTAX
   syntax Term  ::= "assert" Term                         [strict(1)]
                  | EVal
                  | Val
-		 | Lambda
  		 | "!" KVar
 		 | "fst" Term                            [strict(1)]
 		 | "snd" Term                            [strict(1)]
@@ -32,17 +31,17 @@ module HOLI-SYNTAX
 		 > Term "&&" Term                        [seqstrict(1,2), right]
 		 > Term "||" Term                        [seqstrict(1,2), right]
 		 //end: arithmetic operations
+                 > Term "," Term                         [strict(1,2), left]
 		 > KVar ":=" Term                        [strict(2),  right]
-		 > Term "," Term                         [strict(1,2), left]
 		 > "if" Term "then" Term "else" Term     [strict(1)]
-		 | "let" KVar "=" Term "in" Term         [binder, strict(2)]
-		 | Term ";" Term                         [strict(1),  right]
+                 > Term ";" Term                         [strict(1),  right]
+		 > "let" KVar "=" Term "in" Term         [binder, strict(2)]
 		 | "letrec" KVar TVar TOut "=" Term "in" Term [binder]
+		 | "fun" TVar TOut "->" Term             [binder]
                  | "(" Term ")"                          [bracket]
 
   syntax Val    ::= KVar | Int | "()" | Val "," Val | "(" Val ")" [bracket]
   syntax EVal   ::= "fail" | "nil"
-  syntax Lambda ::= "fun" TVar TOut "->" Term  [binder]
 
   syntax Type ::= "int" | "unit"
                 | Type "*"  Type [left]
@@ -186,8 +185,8 @@ module HOLI
        [structural]
   //end: arithmetic operations
   
-  rule <k> F:Lambda => !N:KVar ... </k>
-       <repo> ... .Map => (!N |-> F) ... </repo>      
+  rule <k> fun X:TVar OTYPE -> Term => !N:KVar ... </k>
+       <repo> ... .Map => (!N |-> fun X OTYPE -> Term) ... </repo>
   rule if 0 then T1:Term else T0:Term => T0
   rule <k>if I:Int then T1:Term else T0:Term => T1 ... </k>
        requires (I =/=Int 0)

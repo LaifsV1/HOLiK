@@ -1,5 +1,3 @@
-// this is an example adapted from a race condition bug in concurrency
-
 # set-bounds 2 1 #
 import send_confirmation :(unit -> unit)
 
@@ -13,6 +11,7 @@ public reserve (x:int) :(unit) = {
   else ()
 };
 
+// this is an example adapted from a race condition bug in concurrency
 // this is an attempt at a reservation library to book seats
 // reentrancy bug in calling send_confirmation allows the opponent to book more seats than are available
 // trace: call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation ()

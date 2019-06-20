@@ -27,12 +27,12 @@ public initialise (u:unit) :(unit) = {
   (if !address
   then ()
   else allocate()); 
-  let user_input = getInput () in
+  (let user_input = getInput () in
   if 0 < user_input
   then update(user_input);
-       assert(read() == user_input)
+       assert(read() == user_input);
        free()
-  else ()
+  else ())
 };
 
 

@@ -10,8 +10,8 @@ public write (i:int) :(unit) = {
 };
 public read (u:unit) :(unit) = {
   is_open := 1;
-  let tmp = !secret in
+  (let tmp = !secret in
   (send(tmp);
   is_open := 0;
-  assert((!secret) == tmp))
+  assert((!secret) == tmp)))
 };

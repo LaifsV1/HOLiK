@@ -1,5 +1,3 @@
-// reentrancy attack adapted from the DAO attack
-
 # set-bounds 2 1 #
 import getUser :(unit -> int)
 
@@ -17,4 +15,5 @@ public withdraw (m:int) :(unit) = {
        else ()
   else ()};
 
+// reentrancy attack adapted from the DAO attack
 // this example shows a reentrancy error occuring in the condition

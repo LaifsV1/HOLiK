@@ -1,5 +1,3 @@
-// cross reentrancy attack adapted from smart contracts
-
 # set-bounds 4 1 #
 import send :(int -> unit)
 
@@ -20,5 +18,6 @@ public claimBonus (u:unit) :(unit) = {
 int balance := 100;
 int bonus := 1;
 
+// cross reentrancy attack adapted from smart contracts
 // error trace: call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> ret send () ~> ret claimBonus () ~> ret send ()
 // fix: update bonus before calling transfer

@@ -22,10 +22,10 @@ public write (i:int) :(unit) = {
 //opponent abuses this to open file so they can write
 public read (u:unit) :(unit) = {
   openFile();
-  let secret = !read_only in
+  (let secret = !read_only in
   send(secret);
   closeFile();
-  assert((!read_only) == secret)
+  assert((!read_only) == secret))
 };
 
 // tests whether K can find how to abuse other functions in the library to access private functions
