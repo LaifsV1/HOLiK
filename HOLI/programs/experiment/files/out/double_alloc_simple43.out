@@ -1,0 +1,9 @@
+  T ==K ( call run () ~> call getInput () ~> call run () )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> call run () )
+#Or
+  T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _5 ~> ret run () ~> call run () ~> call getInput () ~> call run () )
+
+real	0m5.384s
+user	0m14.549s
+sys	0m0.521s
