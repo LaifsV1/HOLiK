@@ -24,6 +24,6 @@
 #Or
   T ==K ( call remoteUpdate () ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _7 )
 
-real	0m6.365s
-user	0m18.538s
-sys	0m0.757s
+real	0m6.483s
+user	0m18.200s
+sys	0m0.753s

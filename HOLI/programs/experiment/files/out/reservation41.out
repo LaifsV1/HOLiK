@@ -16,6 +16,6 @@
 #Or
   T ==K ( call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
 
-real	0m5.999s
-user	0m16.665s
-sys	0m0.618s
+real	0m5.970s
+user	0m16.940s
+sys	0m0.735s

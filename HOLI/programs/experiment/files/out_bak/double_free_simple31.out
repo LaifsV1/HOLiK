@@ -1,0 +1,5 @@
+T ==K ( call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _4 ~> ret run () ~> ret getInput _6 )
+
+real	0m5.066s
+user	0m13.147s
+sys	0m0.501s

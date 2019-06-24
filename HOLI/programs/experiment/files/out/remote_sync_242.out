@@ -16,6 +16,6 @@
 #Or
   T ==K ( call updateRemote () ~> call get_ext () ~> ret get_ext _5 ~> ret updateRemote () ~> call updateRemote () ~> call get_ext () ~> call updateLocal _72 ~> ret updateLocal () ~> call updateRemote () ~> call get_ext () ~> ret get_ext _202 ~> ret updateRemote () ~> ret get_ext _405 )
 
-real	0m20.056s
-user	0m37.719s
-sys	0m2.865s
+real	0m19.991s
+user	0m37.580s
+sys	0m2.849s

@@ -1,5 +1,5 @@
 T ==K ( call increase _2 ~> ret increase () ~> call increase _7 ~> ret increase () ~> call check () )
 
-real	0m5.477s
-user	0m14.701s
-sys	0m0.480s
+real	0m5.463s
+user	0m14.717s
+sys	0m0.538s

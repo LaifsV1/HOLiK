@@ -3820,6 +3820,6 @@
 #Or
   T ==K ( call write _2 ~> ret write () ~> call write _5 ~> ret write () ~> call read () ~> call send 0 ~> call write _31 ~> ret write () ~> ret send () )
 
-real	2m29.282s
-user	3m20.089s
-sys	0m18.478s
+real	2m28.726s
+user	3m32.171s
+sys	0m19.321s

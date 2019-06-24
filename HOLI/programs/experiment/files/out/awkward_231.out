@@ -14,6 +14,6 @@
 #Or
   T ==K ( call run _1 ~> call _1 () ~> ret _1 () ~> call _1 () ~> call run _7 ~> call _7 () ~> call run _13 ~> call _13 () ~> ret _13 () ~> call _13 () ~> ret _13 () ~> ret run () ~> ret _7 () ~> call _7 () ~> ret _7 () )
 
-real	0m6.193s
-user	0m18.651s
-sys	0m0.531s
+real	0m6.055s
+user	0m17.380s
+sys	0m0.536s

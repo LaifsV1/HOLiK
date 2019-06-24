@@ -2,6 +2,6 @@
 #Or
   T ==K ( call run () ~> call f () ~> call run () ~> ret run () ~> ret f () )
 
-real	0m5.381s
-user	0m15.290s
-sys	0m0.449s
+real	0m5.316s
+user	0m13.980s
+sys	0m0.478s

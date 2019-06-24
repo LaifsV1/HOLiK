@@ -4,6 +4,6 @@
 #Or
   T ==K ( call enlist _1 ~> ret enlist () ~> call run () ~> call _1 () ~> call run () ~> call _1 () ~> ret _1 () ~> ret run () ~> ret _1 () )
 
-real	0m5.740s
-user	0m16.127s
-sys	0m0.498s
+real	0m5.681s
+user	0m16.226s
+sys	0m0.562s

@@ -162,6 +162,6 @@
 #Or
   T ==K ( call run _1 ~> call _1 () ~> ret _1 () ~> call _1 () ~> call run _6 ~> call _6 () ~> ret _6 () ~> call _6 () ~> ret _6 () ~> ret run () ~> ret _1 () )
 
-real	0m8.244s
-user	0m25.196s
-sys	0m0.636s
+real	0m8.962s
+user	0m27.260s
+sys	0m0.718s

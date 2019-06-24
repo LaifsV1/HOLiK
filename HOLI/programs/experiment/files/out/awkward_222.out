@@ -30,6 +30,6 @@
 #Or
   T ==K ( call run _1 ~> call _1 () ~> ret _1 () ~> call _1 () ~> ret _1 () ~> ret run () ~> call run _12 ~> call _12 () ~> call run _16 ~> call _16 () ~> ret _16 () ~> call _16 () ~> ret _16 () ~> ret run () ~> ret _12 () ~> call _12 () ~> ret _12 () )
 
-real	0m8.273s
-user	0m25.214s
-sys	0m0.654s
+real	0m8.049s
+user	0m25.086s
+sys	0m0.640s

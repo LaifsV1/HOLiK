@@ -70,6 +70,6 @@
 #Or
   T ==K ( call withdraw _1 ~> ret withdraw () ~> call withdraw _6 ~> call send _6 ~> call withdraw _19 ~> ret withdraw () ~> call withdraw _43 ~> call send _43 ~> ret send () ~> ret withdraw () ~> ret send () )
 
-real	0m9.636s
-user	0m25.865s
-sys	0m1.232s
+real	0m9.156s
+user	0m25.250s
+sys	0m1.111s

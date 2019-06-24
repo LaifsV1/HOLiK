@@ -1,5 +1,5 @@
 T ==K ( call withdraw _1 ~> call send _1 ~> call withdraw _5 ~> call send _5 ~> ret send () ~> ret withdraw () ~> ret send () )
 
-real	0m5.321s
-user	0m13.853s
-sys	0m0.576s
+real	0m5.473s
+user	0m14.237s
+sys	0m0.592s

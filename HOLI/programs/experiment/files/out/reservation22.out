@@ -70,6 +70,6 @@
 #Or
   T ==K ( call reserve _1 ~> ret reserve () ~> call reserve _6 ~> call send_confirmation () ~> call reserve _19 ~> ret reserve () ~> call reserve _43 ~> call send_confirmation () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
 
-real	0m9.084s
-user	0m24.342s
-sys	0m1.247s
+real	0m8.907s
+user	0m24.254s
+sys	0m1.237s

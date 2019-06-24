@@ -70,6 +70,6 @@
 #Or
   T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> ret getInput _11 ~> ret run () ~> call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _40 ~> ret run () ~> ret getInput _52 )
 
-real	0m6.501s
-user	0m19.388s
-sys	0m0.648s
+real	0m6.524s
+user	0m18.914s
+sys	0m0.625s

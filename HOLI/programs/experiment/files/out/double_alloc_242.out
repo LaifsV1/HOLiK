@@ -916,6 +916,6 @@
 #Or
   T ==K ( call initialise () ~> call getInput () ~> ret getInput _2 ~> ret initialise () ~> call initialise () ~> call getInput () ~> ret getInput _14 )
 
-real	0m47.700s
-user	1m12.403s
-sys	0m7.602s
+real	0m47.866s
+user	1m13.106s
+sys	0m7.927s

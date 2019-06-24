@@ -1,0 +1,17 @@
+  T ==K ( call localUpdate _1 ~> ret localUpdate () ~> call localUpdate _3 ~> ret localUpdate () ~> call remoteUpdate () ~> call set_ext _3 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _29 )
+#Or
+  T ==K ( call localUpdate _1 ~> ret localUpdate () ~> call remoteUpdate () ~> call set_ext _1 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _20 )
+#Or
+  T ==K ( call localUpdate _1 ~> ret localUpdate () ~> call remoteUpdate () ~> call set_ext _1 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _20 ~> ret remoteUpdate () ~> call remoteUpdate () ~> call set_ext _1 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _61 )
+#Or
+  T ==K ( call remoteUpdate () ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _13 )
+#Or
+  T ==K ( call remoteUpdate () ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _13 ~> ret remoteUpdate () ~> call localUpdate _34 ~> ret localUpdate () ~> call remoteUpdate () ~> call set_ext _34 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _65 )
+#Or
+  T ==K ( call remoteUpdate () ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _13 ~> ret remoteUpdate () ~> call remoteUpdate () ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _58 )
+#Or
+  T ==K ( call remoteUpdate () ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _13 ~> ret remoteUpdate () ~> call remoteUpdate () ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _58 ~> ret remoteUpdate () ~> call remoteUpdate () ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _90 )
+
+real	0m6.295s
+user	0m17.471s
+sys	0m0.631s

@@ -166,6 +166,6 @@
 #Or
   T ==K call sum_e _5
 
-real	0m17.153s
-user	0m35.885s
-sys	0m2.718s
+real	0m17.136s
+user	0m35.824s
+sys	0m2.944s

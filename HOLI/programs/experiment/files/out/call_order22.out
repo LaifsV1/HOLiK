@@ -26,6 +26,6 @@
 #Or
   T ==K ( call isNone _5 ~> call syscall 0 ~> call isNone _31 ~> ret isNone () ~> call isA _78 ~> call syscall 1 ~> ret syscall () ~> ret isA () ~> ret syscall () ~> ret isNone () ~> call isAB _503 ~> call syscall 2 ~> call isABC _1088 ~> call syscall 3 ~> ret syscall () ~> ret isABC () ~> call isABCD _2275 )
 
-real	0m17.525s
-user	0m35.879s
-sys	0m0.810s
+real	0m17.439s
+user	0m36.657s
+sys	0m0.870s

@@ -2,6 +2,6 @@
 #Or
   T ==K ( call isNone _3 ~> ret isNone () ~> call isA _7 ~> ret isA () ~> call isAB _19 )
 
-real	0m5.553s
-user	0m15.116s
-sys	0m0.467s
+real	0m5.416s
+user	0m14.722s
+sys	0m0.473s

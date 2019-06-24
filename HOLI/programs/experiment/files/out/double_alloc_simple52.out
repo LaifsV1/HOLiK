@@ -2,6 +2,6 @@
 #Or
   T ==K ( call run () ~> call getInput () ~> ret getInput _2 ~> ret run () ~> call run () ~> call getInput () ~> call run () )
 
-real	0m5.344s
-user	0m14.245s
-sys	0m0.482s
+real	0m5.352s
+user	0m14.005s
+sys	0m0.472s

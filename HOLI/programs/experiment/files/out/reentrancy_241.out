@@ -40,6 +40,6 @@
 #Or
   T ==K ( call withdraw _1 ~> call getUser () ~> call withdraw _5 ~> call getUser () ~> ret getUser _12 ~> ret withdraw () ~> ret getUser _39 )
 
-real	0m7.607s
-user	0m21.548s
-sys	0m0.892s
+real	0m7.428s
+user	0m20.666s
+sys	0m0.782s
