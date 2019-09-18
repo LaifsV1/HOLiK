@@ -13,4 +13,4 @@ To compile, inside `/HOLI`, run `kompile --backend java holib.k`.
 Once compiled, use `krun --search <file-to-check>` to perform symbolic execution.
 
 We can use `--pattern` to find traces that lead to an error.
-e.g. `krun --search --pattern "<k> fail </k> <trace> T </trace>" programs/<file>.holi` finds all the traces that violate an assertion in test file `test2.holi`
+e.g. `krun --search --pattern "<k> fail </k> <trace> T </trace>" programs/<file>.holi` finds all the traces that violate an assertion in test file `<file>.holi`
