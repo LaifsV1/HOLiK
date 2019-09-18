@@ -8,7 +8,7 @@ In the `/HOLI` directory, we have the game semantics to perform symbolic executi
 ## Usage
 For `HOLI` we require `z3` to be present in the PATH environment variable.
 
-To compile, inside `/HOLI`, run `kompile --backend java <holib/horef>.k`.
+To compile, inside `/HOLI`, run `kompile --backend java holib.k`.
 
 Once compiled, use `krun --search <file-to-check>` to perform symbolic execution.
 
