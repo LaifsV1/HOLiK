@@ -1,0 +1,21 @@
+  T ==K ( call updateLocal _1 ~> ret updateLocal () ~> call updateRemote () ~> call get_ext () ~> call updateLocal _11 ~> ret updateLocal () ~> call updateRemote () ~> call get_ext () ~> ret get_ext _54 ~> ret updateRemote () ~> ret get_ext _152 )
+#Or
+  T ==K ( call updateRemote () ~> call get_ext () ~> call updateLocal _6 ~> ret updateLocal () ~> call updateLocal _12 ~> ret updateLocal () ~> ret get_ext _23 ~> ret updateRemote () ~> call updateRemote () ~> call get_ext () ~> call updateLocal _157 ~> ret updateLocal () ~> call updateRemote () ~> call get_ext () ~> ret get_ext _340 ~> ret updateRemote () ~> ret get_ext _703 )
+#Or
+  T ==K ( call updateRemote () ~> call get_ext () ~> call updateLocal _6 ~> ret updateLocal () ~> call updateRemote () ~> call get_ext () ~> ret get_ext _34 ~> ret updateRemote () ~> ret get_ext _101 )
+#Or
+  T ==K ( call updateRemote () ~> call get_ext () ~> call updateLocal _6 ~> ret updateLocal () ~> call updateRemote () ~> call get_ext () ~> ret get_ext _34 ~> ret updateRemote () ~> ret get_ext _101 ~> ret updateRemote () ~> call updateRemote () ~> call get_ext () ~> call updateLocal _409 ~> ret updateLocal () ~> call updateRemote () ~> call get_ext () ~> ret get_ext _796 ~> ret updateRemote () ~> ret get_ext _1227 )
+#Or
+  T ==K ( call updateRemote () ~> call get_ext () ~> call updateLocal _6 ~> ret updateLocal () ~> ret get_ext _10 ~> ret updateRemote () ~> call updateRemote () ~> call get_ext () ~> call updateLocal _106 ~> ret updateLocal () ~> call updateRemote () ~> call get_ext () ~> ret get_ext _268 ~> ret updateRemote () ~> ret get_ext _541 )
+#Or
+  T ==K ( call updateRemote () ~> call get_ext () ~> call updateRemote () ~> call get_ext () ~> ret get_ext _18 ~> ret updateRemote () ~> call updateLocal _71 ~> ret updateLocal () ~> ret get_ext _103 ~> ret updateRemote () ~> call updateRemote () ~> call get_ext () ~> call updateLocal _411 ~> ret updateLocal () ~> call updateRemote () ~> call get_ext () ~> ret get_ext _797 ~> ret updateRemote () ~> ret get_ext _1238 )
+#Or
+  T ==K ( call updateRemote () ~> call get_ext () ~> call updateRemote () ~> call get_ext () ~> ret get_ext _18 ~> ret updateRemote () ~> call updateRemote () ~> call get_ext () ~> ret get_ext _135 ~> ret updateRemote () ~> ret get_ext _310 ~> ret updateRemote () ~> call updateRemote () ~> call get_ext () ~> call updateLocal _889 ~> ret updateLocal () ~> call updateRemote () ~> call get_ext () ~> ret get_ext _1384 ~> ret updateRemote () ~> ret get_ext _1705 )
+#Or
+  T ==K ( call updateRemote () ~> call get_ext () ~> call updateRemote () ~> call get_ext () ~> ret get_ext _18 ~> ret updateRemote () ~> ret get_ext _67 ~> ret updateRemote () ~> call updateRemote () ~> call get_ext () ~> call updateLocal _317 ~> ret updateLocal () ~> call updateRemote () ~> call get_ext () ~> ret get_ext _663 ~> ret updateRemote () ~> ret get_ext _1030 )
+#Or
+  T ==K ( call updateRemote () ~> call get_ext () ~> ret get_ext _5 ~> ret updateRemote () ~> call updateRemote () ~> call get_ext () ~> call updateLocal _72 ~> ret updateLocal () ~> call updateRemote () ~> call get_ext () ~> ret get_ext _202 ~> ret updateRemote () ~> ret get_ext _405 )
+
+real	0m19.991s
+user	0m37.580s
+sys	0m2.849s

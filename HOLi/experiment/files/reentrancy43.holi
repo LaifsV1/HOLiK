@@ -1,0 +1,16 @@
+# set-bounds 4 3 #
+import send :(int -> unit)
+
+public withdraw (m:int) :(unit) = {
+  if (not (!funds < m))
+  then send(m);
+       funds := !funds - m;
+       assert(not(!funds < 0))
+  else ()};
+int funds := 100;
+
+// reentrancy attack adapted from the DAO attack
+// this is a simplification of the smart contract involved in the DAO attack
+// error trace: call withdraw _1 ~> call send _1 ~> call withdraw _5 ~> call send _5 ~> ret send () ~> ret withdraw () ~> ret send ()
+// fix: update funds before calling send
+

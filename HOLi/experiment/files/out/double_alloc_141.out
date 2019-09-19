@@ -1,0 +1,5 @@
+T ==K ( call initialise () ~> call getInput () ~> call initialise () )
+
+real	0m5.394s
+user	0m14.605s
+sys	0m0.509s

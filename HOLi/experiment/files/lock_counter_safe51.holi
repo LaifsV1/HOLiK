@@ -1,0 +1,20 @@
+# set-bounds 5 1 #
+
+int lock := 1;
+int c := 0;
+
+public inc (f:unit -> unit) :(unit) = {
+  if !lock
+  then let old = !c in
+       lock := 0;
+       f();
+       c := !c + 1;
+       lock := 1;
+       assert( !c == old + 1 )
+  else ()
+};
+public read (u:unit) :(int) = { !c };
+
+//  Reverse counter implementation
+//  adapted from Pitts and Stark's Example 5.6 in
+//  "Operational Reasoning for Functions with Local State".

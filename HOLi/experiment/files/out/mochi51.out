@@ -1,0 +1,15 @@
+  T ==K call fact_e _8
+#Or
+  T ==K call lock_e _2
+#Or
+  T ==K call mc91_e _4
+#Or
+  T ==K call mult_e _3
+#Or
+  T ==K call repeat_e _1
+#Or
+  T ==K call sum_e _5
+
+real	0m7.105s
+user	0m20.141s
+sys	0m0.833s

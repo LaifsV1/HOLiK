@@ -1,0 +1,9 @@
+  T ==K ( call localUpdate _1 ~> ret localUpdate () ~> call remoteUpdate () ~> call set_ext _1 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _15 )
+#Or
+  T ==K ( call remoteUpdate () ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _11 )
+#Or
+  T ==K ( call remoteUpdate () ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _11 ~> ret remoteUpdate () ~> call remoteUpdate () ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _33 )
+
+real	0m5.609s
+user	0m15.205s
+sys	0m0.540s

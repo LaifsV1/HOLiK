@@ -1,0 +1,57 @@
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> ret send () ~> ret read () ~> call read () ~> call send 0 ~> ret send () ~> ret read () ~> ret send () ~> ret read () ~> call read () ~> call send 0 ~> call write _209 ~> ret write () ~> call read () ~> call send _209 ~> ret send () ~> ret read () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> ret send () ~> ret read () ~> call read () ~> call send 0 ~> ret send () ~> ret read () ~> ret send () ~> ret read () ~> call read () ~> call send 0 ~> call write _209 ~> ret write () ~> call write _256 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> ret send () ~> ret read () ~> call read () ~> call send 0 ~> ret send () ~> ret read () ~> ret send () ~> ret read () ~> call read () ~> call send 0 ~> call write _209 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> ret send () ~> ret read () ~> call write _36 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send 0 ~> call write _135 ~> ret write () ~> call read () ~> call send _135 ~> ret send () ~> ret read () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> ret send () ~> ret read () ~> call write _36 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send 0 ~> call write _135 ~> ret write () ~> call write _186 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> ret send () ~> ret read () ~> call write _36 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send 0 ~> call write _135 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> ret send () ~> ret read () ~> ret send () ~> ret read () ~> call read () ~> call send 0 ~> call write _103 ~> ret write () ~> call read () ~> call send _103 ~> ret send () ~> ret read () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> ret send () ~> ret read () ~> ret send () ~> ret read () ~> call read () ~> call send 0 ~> call write _103 ~> ret write () ~> call write _144 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> ret send () ~> ret read () ~> ret send () ~> ret read () ~> call read () ~> call send 0 ~> call write _103 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call write _7 ~> ret write () ~> call read () ~> call send _7 ~> ret send () ~> ret read () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call write _7 ~> ret write () ~> call read () ~> call send _7 ~> ret send () ~> ret read () ~> ret send () ~> ret read () ~> call read () ~> call send _7 ~> call write _127 ~> ret write () ~> call read () ~> call send _127 ~> ret send () ~> ret read () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call write _7 ~> ret write () ~> call read () ~> call send _7 ~> ret send () ~> ret read () ~> ret send () ~> ret read () ~> call read () ~> call send _7 ~> call write _127 ~> ret write () ~> call write _176 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call write _7 ~> ret write () ~> call read () ~> call send _7 ~> ret send () ~> ret read () ~> ret send () ~> ret read () ~> call read () ~> call send _7 ~> call write _127 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call write _7 ~> ret write () ~> call write _15 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call write _7 ~> ret write () ~> call write _15 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _15 ~> call write _83 ~> ret write () ~> call read () ~> call send _83 ~> ret send () ~> ret read () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call write _7 ~> ret write () ~> call write _15 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _15 ~> call write _83 ~> ret write () ~> call write _125 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call write _7 ~> ret write () ~> call write _15 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _15 ~> call write _83 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call write _7 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call write _7 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _7 ~> call write _49 ~> ret write () ~> call read () ~> call send _49 ~> ret send () ~> ret read () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call write _7 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _7 ~> call write _49 ~> ret write () ~> call write _84 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call write _7 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _7 ~> call write _49 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> ret send () ~> ret read () ~> call read () ~> call send 0 ~> call write _37 ~> ret write () ~> call read () ~> call send _37 ~> ret send () ~> ret read () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> ret send () ~> ret read () ~> call read () ~> call send 0 ~> call write _37 ~> ret write () ~> call write _62 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> ret send () ~> ret read () ~> call read () ~> call send 0 ~> call write _37 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call write _2 ~> ret write () ~> call read () ~> call send 0 ~> call write _13 ~> ret write () ~> call read () ~> call send _13 ~> ret send () ~> ret read () ~> ret send () )
+#Or
+  T ==K ( call write _2 ~> ret write () ~> call read () ~> call send 0 ~> call write _13 ~> ret write () ~> call write _28 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call write _2 ~> ret write () ~> call read () ~> call send 0 ~> call write _13 ~> ret write () ~> ret send () )
+
+real	0m7.584s
+user	0m22.138s
+sys	0m0.825s

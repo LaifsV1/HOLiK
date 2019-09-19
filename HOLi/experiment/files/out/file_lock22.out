@@ -1,0 +1,43 @@
+  T ==K ( call openFile () ~> call userExec _2 ~> call openFile () ~> call userExec _6 ~> ret userExec () ~> ret openFile () ~> call _2 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _2 ~> call openFile () ~> call userExec _6 ~> ret userExec () ~> ret openFile () ~> call _6 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _2 ~> call openFile () ~> call userExec _6 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _24 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call _2 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _2 ~> call openFile () ~> call userExec _6 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _24 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call _6 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _2 ~> call openFile () ~> call userExec _6 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _24 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call _24 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _2 ~> call openFile () ~> call userExec _6 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _24 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _67 ~> call openFile () ~> call userExec _81 ~> ret userExec () ~> ret openFile () ~> call _2 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _2 ~> call openFile () ~> call userExec _6 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _24 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _67 ~> call openFile () ~> call userExec _81 ~> ret userExec () ~> ret openFile () ~> call _6 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _2 ~> call openFile () ~> call userExec _6 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _24 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _67 ~> call openFile () ~> call userExec _81 ~> ret userExec () ~> ret openFile () ~> call _24 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _2 ~> call openFile () ~> call userExec _6 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _24 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _67 ~> call openFile () ~> call userExec _81 ~> ret userExec () ~> ret openFile () ~> call _67 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _2 ~> call openFile () ~> call userExec _6 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _24 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _67 ~> call openFile () ~> call userExec _81 ~> ret userExec () ~> ret openFile () ~> call _81 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _2 ~> call openFile () ~> call userExec _6 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call _2 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _2 ~> call openFile () ~> call userExec _6 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call _6 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _2 ~> call openFile () ~> call userExec _6 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _37 ~> call openFile () ~> call userExec _50 ~> ret userExec () ~> ret openFile () ~> call _2 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _2 ~> call openFile () ~> call userExec _6 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _37 ~> call openFile () ~> call userExec _50 ~> ret userExec () ~> ret openFile () ~> call _6 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _2 ~> call openFile () ~> call userExec _6 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _37 ~> call openFile () ~> call userExec _50 ~> ret userExec () ~> ret openFile () ~> call _37 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _2 ~> call openFile () ~> call userExec _6 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _37 ~> call openFile () ~> call userExec _50 ~> ret userExec () ~> ret openFile () ~> call _50 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _2 ~> ret userExec () ~> ret openFile () ~> call _2 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _2 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _13 ~> call openFile () ~> call userExec _23 ~> ret userExec () ~> ret openFile () ~> call _2 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _2 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _13 ~> call openFile () ~> call userExec _23 ~> ret userExec () ~> ret openFile () ~> call _13 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _2 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _13 ~> call openFile () ~> call userExec _23 ~> ret userExec () ~> ret openFile () ~> call _23 () )
+
+real	0m5.842s
+user	0m17.164s
+sys	0m0.489s
