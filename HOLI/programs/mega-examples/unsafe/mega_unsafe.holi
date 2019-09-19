@@ -1,4 +1,4 @@
-# set-bounds 1 1 #
+# set-bounds 2 1 #
 import syscall :(int -> unit)
 import send :(int -> unit)
 import getInput :(unit -> int)
@@ -68,31 +68,31 @@ public isAB (i:int) :(unit) = {
 
 //call order
 //----------
-public isNone (i:int) :(unit) = {
+public isNone2 (i:int) :(unit) = {
   if not(!a2 || !b2 || !c2 || !d2)
   then a2 := 1; syscall 0
   else ()
 };
 
-public isA (i:int) :(unit) = {
+public isA2 (i:int) :(unit) = {
   if !a2 && not(!b2 || !c2 || !d2)
   then b2 := 1; syscall 1
   else ()
 };
 
-public isAB (i:int) :(unit) = {
+public isAB2 (i:int) :(unit) = {
   if !a2 && !b2 && not(!c2 || !d2)
   then c2 := 1; syscall 2
   else ()
 };
 
-public isABC (i:int) :(unit) = {
+public isABC2 (i:int) :(unit) = {
   if !a2 && !b2 && !c2 && not(!d2)
   then d2 := 1; syscall 3
   else ()
 };
 
-public isABCD (i:int) :(unit) = {
+public isABCD2 (i:int) :(unit) = {
   if !a2 && !b2 && !c2 && !d2
   then assert(0)
   else ()
@@ -239,36 +239,36 @@ private allocate5 (u:unit) :(unit) = { if not(!addr5) then addr5 := 1 else () };
 
 private free5 (u:unit) :(unit) = { assert(!addr5); addr5 := 0 };
 
-private doSthing (i:int) :(unit) = { () };
+private doSthing2 (i:int) :(unit) = { () };
 
 public run2 (u:unit) :(unit) = {
   allocate5(); 
-  doSthing(getInput ());
+  doSthing2(getInput ());
   free5()
 };
 
 //file lock
 //---------
-private doSthing(x:unit) :(unit) = { () };
+private doSthing3(x:unit) :(unit) = { () };
 
 public openFile (u:unit) :(unit) = {
   if (!lock)
   then ()
   else lock := 1;
-       (let write = fun (x:unit) :(unit) -> (assert(!lock); doSthing()) in
+       (let write = fun (x:unit) :(unit) -> (assert(!lock); doSthing3()) in
        userExec(write);
        lock := 0) };
 
 //file lock param
 //---------------
-public read (u:unit) :(unit) = {
+public read5 (u:unit) :(unit) = {
   readMAX := !readMAX - 1;
   assert(0 < !readMAX)
 };
 
 //file write
 //----------
-private openFile (u:unit) :(unit) = {
+private openFile2 (u:unit) :(unit) = {
   is_open := 1
 };
 
@@ -284,8 +284,8 @@ public write (i:int) :(unit) = {
 };
 
 //opponent abuses this to open file so they can write
-public read (u:unit) :(unit) = {
-  openFile();
+public read6 (u:unit) :(unit) = {
+  openFile2();
   (let secret = !read_only in
   send(secret);
   closeFile();
@@ -319,17 +319,17 @@ public run3(x:unit) :(unit) = {
 
 //read
 //----
-public write (i:int) :(unit) = { 
+public write2 (i:int) :(unit) = { 
   if !is_open2
   then secret := i
   else ()
 };
-public read (u:unit) :(unit) = {
+public read7 (u:unit) :(unit) = {
   is_open2 := 1;
-  (let tmp = !secret in
-  (send(tmp);
+  (let tmpx = !secret in
+  (send(tmpx);
   is_open2 := 0;
-  assert((!secret) == tmp)))
+  assert((!secret) == tmpx)))
 };
 
 //reentrancy
@@ -354,7 +354,7 @@ public withdraw2 (m:int) :(unit) = {
 
 //reentrancy param
 //----------------
-public withdraw (m:int) :(unit) = {
+public withdraw3 (m:int) :(unit) = {
   if ((m - 1) < !param3)
   then send(m);
        balance := !balance3 - m;
@@ -364,9 +364,9 @@ public withdraw (m:int) :(unit) = {
 //remote sync 1
 //-------------
 public remoteUpdate (u:unit) :(unit) = {
-  let tmp = !local in
-  remoteSet(tmp);
-  assert(if !error then 1 else tmp == remoteGet())
+  let tmpx = !local in
+  remoteSet(tmpx);
+  assert(if !error then 1 else tmpx == remoteGet())
 };
 
 public localUpdate (i:int) :(unit) = {
@@ -379,19 +379,19 @@ private remoteSet (i:int) :(unit) = {
 };
 
 private remoteGet (u:unit) :(int) = {
-  let tmp = get_ext() in
-  if not(tmp == !remote)
-  then error := 1; tmp
-  else tmp
+  let tmpx = get_ext() in
+  if not(tmpx == !remote)
+  then error := 1; tmpx
+  else tmpx
 };
 
 //remote sync 2
 //-------------
 public updateRemote2 (u:unit) :(unit) = {
-  let tmp2 = !local2 in
-  remote2 := tmp2;
+  let tmpx = !local2 in
+  remote2 := tmpx;
   tmp := getRemote2();
-  assert(if !error2 then 1 else (!tmp == tmp2))
+  assert(if !error2 then 1 else (!tmp == tmpx))
 };
 
 public updateLocal2 (i:int) :(unit) = {
@@ -399,10 +399,10 @@ public updateLocal2 (i:int) :(unit) = {
 };
 
 private getRemote2 (u:unit) :(int) = {
-  let tmp2 = get_ext() in
-  if tmp2 == !remote2
-  then tmp2
-  else error2 := 1; tmp2
+  let tmpx = get_ext() in
+  if tmpx == !remote2
+  then tmpx
+  else error2 := 1; tmpx
 };
 
 //reservation
