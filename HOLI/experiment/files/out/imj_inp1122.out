@@ -1,7 +1,0 @@
-  T ==K ( call run () ~> call f () ~> call run () ~> ret run () ~> call run () ~> ret run () ~> ret f () )
-#Or
-  T ==K ( call run () ~> call f () ~> call run () ~> ret run () ~> ret f () )
-
-real	0m5.297s
-user	0m14.131s
-sys	0m0.541s
