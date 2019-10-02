@@ -1,5 +1,0 @@
-T ==K ( call isNone _5 ~> call syscall 0 ~> call isA _7 ~> call syscall 1 ~> call isAB _19 ~> call syscall 2 ~> call isABC _29 ~> call syscall 3 ~> call isABCD _47 )
-
-real	0m5.856s
-user	0m17.108s
-sys	0m0.460s

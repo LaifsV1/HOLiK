@@ -1,9 +1,0 @@
-  T ==K ( call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> ret send () ~> ret claimBonus () ~> call claimBonus () ~> ret claimBonus () ~> call claimBonus () ~> ret claimBonus () ~> ret send () )
-#Or
-  T ==K ( call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> ret send () ~> ret claimBonus () ~> call claimBonus () ~> ret claimBonus () ~> ret send () )
-#Or
-  T ==K ( call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> ret send () ~> ret claimBonus () ~> ret send () )
-
-real	0m5.397s
-user	0m14.340s
-sys	0m0.454s

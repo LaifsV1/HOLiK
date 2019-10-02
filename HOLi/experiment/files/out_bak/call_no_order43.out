@@ -1,7 +1,0 @@
-  T ==K ( call isA _1 ~> ret isA () ~> call isNone _6 ~> ret isNone () ~> call isAB _18 )
-#Or
-  T ==K ( call isNone _3 ~> ret isNone () ~> call isA _7 ~> ret isA () ~> call isAB _19 )
-
-real	0m5.445s
-user	0m15.058s
-sys	0m0.517s

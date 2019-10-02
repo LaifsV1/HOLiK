@@ -1,5 +1,0 @@
-T ==K ( call remoteUpdate () ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _6 )
-
-real	0m5.491s
-user	0m14.629s
-sys	0m0.446s

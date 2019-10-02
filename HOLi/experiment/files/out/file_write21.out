@@ -1,5 +1,0 @@
-T ==K ( call read () ~> call send 100 ~> call write _5 ~> ret write () ~> ret send () )
-
-real	0m5.331s
-user	0m14.195s
-sys	0m0.496s

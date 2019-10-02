@@ -1,5 +1,0 @@
-T ==K ( call reserve _1 ~> call send_confirmation () ~> call reserve _5 ~> call send_confirmation () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
-
-real	0m6.115s
-user	0m15.886s
-sys	0m0.529s

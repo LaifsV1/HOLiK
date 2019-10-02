@@ -7,19 +7,22 @@ module HOLI-SYNTAX
 
   syntax Prog  ::= "#" "set-bounds" Int Int "#" Lib | Lib
   syntax Lib   ::= Block | "import" KVar TOut Lib
-  syntax Block ::= "public"  KVar TVar TOut "=" "{" Term "}" ";"
+  syntax Block ::= "public"  KVar TVar TOut "=" "{" Term "}" ";" Block
+                 | "private" KVar TVar TOut "=" "{" Term "}" ";" Block
+		 | "fun" KVar ":=" KVar ";" Block
+                 | "int" KVar ":=" Int    ";" Block
+                 | "public"  KVar TVar TOut "=" "{" Term "}" ";"
                  | "private" KVar TVar TOut "=" "{" Term "}" ";"
 		 | "fun" KVar ":=" KVar ";"
                  | "int" KVar ":=" Int    ";"
-		 | Block Block                           [right]
-		 | Term
+
   syntax Term  ::= "assert" Term                         [strict(1)]
                  | EVal
                  | Val
  		 | "!" KVar
 		 | "fst" Term                            [strict(1)]
 		 | "snd" Term                            [strict(1)]
-		 > Term Term                             [strict(2,1)]
+		 > Term Term                             [seqstrict(1,2), left]
 		 //start: arithmetic operations
                  > "not" Term                            [seqstrict(1)]
                  > Term "*" Term                         [seqstrict(1,2), left]
@@ -154,6 +157,8 @@ module HOLI
        requires (I =/=Int 0)
        [structural]
   rule <k>I1:Int * I2:Int => I1 *Int I2 ...</k>
+       [structural]
+  rule <k>I1:Int / I2:Int => I1 /Int I2 ...</k>
        [structural]
   rule <k>I1:Int - I2:Int => I1 -Int I2 ...</k>
        [structural]
