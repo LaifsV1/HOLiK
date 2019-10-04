@@ -1,0 +1,23 @@
+  T ==K ( call check_access () ~> call file_stream () ~> call mc91_e _38 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call mult_e _45 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call repeat_e _42 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call sum_e _33 )
+#Or
+  T ==K call fact_e _1
+#Or
+  T ==K call lock_e _3
+#Or
+  T ==K call mc91_e _5
+#Or
+  T ==K call mult_e _9
+#Or
+  T ==K call repeat_e _7
+#Or
+  T ==K call sum_e _2
+
+real	0m10.048s
+user	0m25.273s
+sys	0m1.223s

@@ -1,0 +1,5 @@
+T ==K ( call read () ~> ret read () ~> call read () ~> ret read () ~> call read () )
+
+real	0m5.320s
+user	0m14.461s
+sys	0m0.484s

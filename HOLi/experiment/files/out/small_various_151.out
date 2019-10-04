@@ -1,0 +1,75 @@
+  T ==K ( call add _6 ~> call syscall _6 ~> call add _18 ~> call syscall _18 ~> call initialise () ~> call getInput () ~> call initialise () )
+#Or
+  T ==K ( call add _6 ~> call syscall _6 ~> call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> ret send () ~> ret claimBonus () ~> ret send () )
+#Or
+  T ==K ( call add _6 ~> call syscall _6 ~> call initialise () ~> call getInput () ~> call add _97 ~> call syscall _97 ~> call initialise () )
+#Or
+  T ==K ( call add _6 ~> call syscall _6 ~> call initialise () ~> call getInput () ~> call initialise () )
+#Or
+  T ==K ( call add _6 ~> call syscall _6 ~> call initialise () ~> call getInput () ~> call isNone2 _115 ~> call syscall 0 ~> call initialise () )
+#Or
+  T ==K ( call add _6 ~> call syscall _6 ~> call isNone2 _23 ~> call syscall 0 ~> call initialise () ~> call getInput () ~> call initialise () )
+#Or
+  T ==K ( call claimBonus () ~> call send 10 ~> call add _66 ~> call syscall _66 ~> call claimBonus () ~> call send 10 ~> ret send () ~> ret claimBonus () ~> ret syscall () ~> ret add () ~> ret send () )
+#Or
+  T ==K ( call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> call add _517 ~> call syscall _517 ~> ret syscall () ~> ret add () ~> ret send () ~> ret claimBonus () ~> ret send () )
+#Or
+  T ==K ( call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> call isA2 _449 ~> ret isA2 () ~> ret send () ~> ret claimBonus () ~> ret send () )
+#Or
+  T ==K ( call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> call isA _573 ~> ret isA () ~> ret send () ~> ret claimBonus () ~> ret send () )
+#Or
+  T ==K ( call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> call isAB2 _465 ~> ret isAB2 () ~> ret send () ~> ret claimBonus () ~> ret send () )
+#Or
+  T ==K ( call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> call isAB _432 ~> ret isAB () ~> ret send () ~> ret claimBonus () ~> ret send () )
+#Or
+  T ==K ( call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> call isABC2 _549 ~> ret isABC2 () ~> ret send () ~> ret claimBonus () ~> ret send () )
+#Or
+  T ==K ( call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> call isABCD2 _484 ~> ret isABCD2 () ~> ret send () ~> ret claimBonus () ~> ret send () )
+#Or
+  T ==K ( call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> call isNone2 _629 ~> call syscall 0 ~> ret syscall () ~> ret isNone2 () ~> ret send () ~> ret claimBonus () ~> ret send () )
+#Or
+  T ==K ( call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> call isNone _500 ~> ret isNone () ~> ret send () ~> ret claimBonus () ~> ret send () )
+#Or
+  T ==K ( call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> ret send () ~> ret claimBonus () ~> ret send () )
+#Or
+  T ==K ( call claimBonus () ~> call send 10 ~> call initialise () ~> call getInput () ~> call claimBonus () ~> call send 10 ~> ret send () ~> ret claimBonus () ~> ret getInput _5283 ~> ret initialise () ~> ret send () )
+#Or
+  T ==K ( call claimBonus () ~> call send 10 ~> call initialise () ~> call getInput () ~> call initialise () )
+#Or
+  T ==K ( call claimBonus () ~> call send 10 ~> call isNone2 _86 ~> call syscall 0 ~> call claimBonus () ~> call send 10 ~> ret send () ~> ret claimBonus () ~> ret syscall () ~> ret isNone2 () ~> ret send () )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call add _31 ~> call syscall _31 ~> call add _99 ~> call syscall _99 ~> call initialise () )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call add _31 ~> call syscall _31 ~> call initialise () )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call add _31 ~> call syscall _31 ~> call isNone2 _116 ~> call syscall 0 ~> call initialise () )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> ret send () ~> ret claimBonus () ~> ret send () )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call claimBonus () ~> call send 10 ~> call initialise () )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call isNone2 _40 ~> call syscall 0 ~> call add _283 ~> call syscall _283 ~> call initialise () )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call isNone2 _40 ~> call syscall 0 ~> call initialise () )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call isNone2 _40 ~> call syscall 0 ~> call isA2 _242 ~> call syscall 1 ~> call initialise () )
+#Or
+  T ==K ( call isNone2 _11 ~> call syscall 0 ~> call add _64 ~> call syscall _64 ~> call initialise () ~> call getInput () ~> call initialise () )
+#Or
+  T ==K ( call isNone2 _11 ~> call syscall 0 ~> call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> ret send () ~> ret claimBonus () ~> ret send () )
+#Or
+  T ==K ( call isNone2 _11 ~> call syscall 0 ~> call initialise () ~> call getInput () ~> call add _287 ~> call syscall _287 ~> call initialise () )
+#Or
+  T ==K ( call isNone2 _11 ~> call syscall 0 ~> call initialise () ~> call getInput () ~> call initialise () )
+#Or
+  T ==K ( call isNone2 _11 ~> call syscall 0 ~> call initialise () ~> call getInput () ~> call isA2 _245 ~> call syscall 1 ~> call initialise () )
+#Or
+  T ==K ( call isNone2 _11 ~> call syscall 0 ~> call isA2 _51 ~> call syscall 1 ~> call initialise () ~> call getInput () ~> call initialise () )
+#Or
+  T ==K ( call isNone2 _11 ~> call syscall 0 ~> call isA2 _51 ~> call syscall 1 ~> call isAB2 _310 ~> call syscall 2 ~> call isABC2 _1791 ~> call syscall 3 ~> call isABCD2 _5290 )
+
+real	1m31.306s
+user	1m51.169s
+sys	0m13.245s

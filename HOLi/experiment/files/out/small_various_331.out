@@ -1,0 +1,55 @@
+  T ==K ( call read6 () ~> call send 100 ~> call read6 () ~> call send 100 ~> call write _176 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read6 () ~> call send 100 ~> call read7 () ~> call send 0 ~> call write2 _101 ~> ret write2 () ~> ret send () )
+#Or
+  T ==K ( call read6 () ~> call send 100 ~> call read7 () ~> call send 0 ~> call write _149 ~> ret write () ~> ret send () ~> ret read7 () ~> ret send () )
+#Or
+  T ==K ( call read6 () ~> call send 100 ~> call withdraw _35 ~> call send _35 ~> call withdraw _114 ~> call send _114 ~> ret send () ~> ret withdraw () ~> ret send () )
+#Or
+  T ==K ( call read6 () ~> call send 100 ~> call withdraw _35 ~> call send _35 ~> call write _143 ~> ret write () ~> ret send () ~> ret withdraw () ~> ret send () )
+#Or
+  T ==K ( call read6 () ~> call send 100 ~> call write _41 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read7 () ~> call send 0 ~> call read6 () ~> call send 100 ~> call write2 _98 ~> ret write2 () ~> ret send () ~> ret read6 () ~> ret send () )
+#Or
+  T ==K ( call read7 () ~> call send 0 ~> call read6 () ~> call send 100 ~> call write _146 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read7 () ~> call send 0 ~> call read7 () ~> call send 0 ~> call write2 _58 ~> ret write2 () ~> ret send () )
+#Or
+  T ==K ( call read7 () ~> call send 0 ~> call withdraw _20 ~> call send _20 ~> call withdraw _70 ~> call send _70 ~> ret send () ~> ret withdraw () ~> ret send () )
+#Or
+  T ==K ( call read7 () ~> call send 0 ~> call withdraw _20 ~> call send _20 ~> call write2 _55 ~> ret write2 () ~> ret send () ~> ret withdraw () ~> ret send () )
+#Or
+  T ==K ( call read7 () ~> call send 0 ~> call write2 _14 ~> ret write2 () ~> ret send () )
+#Or
+  T ==K ( call withdraw _4 ~> call send _4 ~> call read6 () ~> call send 100 ~> call withdraw _112 ~> call send _112 ~> ret send () ~> ret withdraw () ~> ret send () ~> ret read6 () ~> ret send () )
+#Or
+  T ==K ( call withdraw _4 ~> call send _4 ~> call read6 () ~> call send 100 ~> call write _141 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call withdraw _4 ~> call send _4 ~> call read7 () ~> call send 0 ~> call withdraw _71 ~> call send _71 ~> ret send () ~> ret withdraw () ~> ret send () ~> ret read7 () ~> ret send () )
+#Or
+  T ==K ( call withdraw _4 ~> call send _4 ~> call read7 () ~> call send 0 ~> call write2 _56 ~> ret write2 () ~> ret send () )
+#Or
+  T ==K ( call withdraw _4 ~> call send _4 ~> call withdraw _19 ~> call send _19 ~> call enlist _57 ~> ret enlist () ~> ret send () ~> ret withdraw () ~> ret send () )
+#Or
+  T ==K ( call withdraw _4 ~> call send _4 ~> call withdraw _19 ~> call send _19 ~> call read5 () ~> ret read5 () ~> ret send () ~> ret withdraw () ~> ret send () )
+#Or
+  T ==K ( call withdraw _4 ~> call send _4 ~> call withdraw _19 ~> call send _19 ~> call read7 () ~> call send 0 ~> ret send () ~> ret read7 () ~> ret send () ~> ret withdraw () ~> ret send () )
+#Or
+  T ==K ( call withdraw _4 ~> call send _4 ~> call withdraw _19 ~> call send _19 ~> call run3 () ~> ret run3 () ~> ret send () ~> ret withdraw () ~> ret send () )
+#Or
+  T ==K ( call withdraw _4 ~> call send _4 ~> call withdraw _19 ~> call send _19 ~> call withdraw _68 ~> call send _68 ~> ret send () ~> ret withdraw () ~> ret send () )
+#Or
+  T ==K ( call withdraw _4 ~> call send _4 ~> call withdraw _19 ~> call send _19 ~> call withdraw _68 ~> call send _68 ~> ret send () ~> ret withdraw () ~> ret send () ~> ret withdraw () ~> ret send () )
+#Or
+  T ==K ( call withdraw _4 ~> call send _4 ~> call withdraw _19 ~> call send _19 ~> call withdraw _68 ~> ret withdraw () ~> ret send () ~> ret withdraw () ~> ret send () )
+#Or
+  T ==K ( call withdraw _4 ~> call send _4 ~> call withdraw _19 ~> call send _19 ~> call write2 _53 ~> ret write2 () ~> ret send () ~> ret withdraw () ~> ret send () )
+#Or
+  T ==K ( call withdraw _4 ~> call send _4 ~> call withdraw _19 ~> call send _19 ~> call write _92 ~> ret write () ~> ret send () ~> ret withdraw () ~> ret send () )
+#Or
+  T ==K ( call withdraw _4 ~> call send _4 ~> call withdraw _19 ~> call send _19 ~> ret send () ~> ret withdraw () ~> ret send () )
+
+real	0m11.496s
+user	0m29.377s
+sys	0m1.326s

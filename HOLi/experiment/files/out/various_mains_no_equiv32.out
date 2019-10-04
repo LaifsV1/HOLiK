@@ -1,0 +1,211 @@
+  T ==K ( call main3 _12 ~> call syscall _12 ~> ret syscall () ~> ret main3 () ~> call main1 _378 )
+#Or
+  T ==K ( call main3 _12 ~> call syscall _12 ~> ret syscall () ~> ret main3 () ~> call main12 _233 )
+#Or
+  T ==K ( call main3 _12 ~> call syscall _12 ~> ret syscall () ~> ret main3 () ~> call main14 _197 )
+#Or
+  T ==K ( call main3 _12 ~> call syscall _12 ~> ret syscall () ~> ret main3 () ~> call main18 _307 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _2889 )
+#Or
+  T ==K ( call main4 _6 ~> call send 10 ~> ret send () ~> ret main4 () ~> call main1 _3914 )
+#Or
+  T ==K ( call main4 _6 ~> call send 10 ~> ret send () ~> ret main4 () ~> call main12 _3133 )
+#Or
+  T ==K ( call main4 _6 ~> call send 10 ~> ret send () ~> ret main4 () ~> call main14 _2948 )
+#Or
+  T ==K ( call main4 _6 ~> call send 10 ~> ret send () ~> ret main4 () ~> call main18 _3537 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _7322 )
+#Or
+  T ==K ( call main5 _24 ~> call getInput () ~> ret getInput _296 ~> ret main5 () ~> call main1 _1440 )
+#Or
+  T ==K ( call main5 _24 ~> call getInput () ~> ret getInput _296 ~> ret main5 () ~> call main1 _5567 )
+#Or
+  T ==K ( call main5 _24 ~> call getInput () ~> ret getInput _296 ~> ret main5 () ~> call main5 _1975 )
+#Or
+  T ==K ( call main5 _24 ~> call getInput () ~> ret getInput _296 ~> ret main5 () ~> call main12 _4949 )
+#Or
+  T ==K ( call main5 _24 ~> call getInput () ~> ret getInput _296 ~> ret main5 () ~> call main14 _4786 )
+#Or
+  T ==K ( call main5 _24 ~> call getInput () ~> ret getInput _296 ~> ret main5 () ~> call main18 _1188 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _5346 )
+#Or
+  T ==K ( call main5 _24 ~> call getInput () ~> ret getInput _296 ~> ret main5 () ~> call main18 _5271 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _8156 )
+#Or
+  T ==K ( call main6 _4 ~> call getInput () ~> ret getInput _21 ~> ret main6 () ~> call main1 _656 )
+#Or
+  T ==K ( call main6 _4 ~> call getInput () ~> ret getInput _21 ~> ret main6 () ~> call main1 _4257 )
+#Or
+  T ==K ( call main6 _4 ~> call getInput () ~> ret getInput _21 ~> ret main6 () ~> call main6 _435 ~> call getInput () ~> ret getInput _833 )
+#Or
+  T ==K ( call main6 _4 ~> call getInput () ~> ret getInput _21 ~> ret main6 () ~> call main12 _458 )
+#Or
+  T ==K ( call main6 _4 ~> call getInput () ~> ret getInput _21 ~> ret main6 () ~> call main12 _3526 )
+#Or
+  T ==K ( call main6 _4 ~> call getInput () ~> ret getInput _21 ~> ret main6 () ~> call main14 _411 )
+#Or
+  T ==K ( call main6 _4 ~> call getInput () ~> ret getInput _21 ~> ret main6 () ~> call main14 _3322 )
+#Or
+  T ==K ( call main6 _4 ~> call getInput () ~> ret getInput _21 ~> ret main6 () ~> call main18 _551 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _4000 )
+#Or
+  T ==K ( call main6 _4 ~> call getInput () ~> ret getInput _21 ~> ret main6 () ~> call main18 _3906 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _7533 )
+#Or
+  T ==K ( call main8 _8 ~> call getInput () ~> ret getInput _153 ~> ret main8 () ~> call main1 _925 )
+#Or
+  T ==K ( call main8 _8 ~> call getInput () ~> ret getInput _153 ~> ret main8 () ~> call main1 _4900 )
+#Or
+  T ==K ( call main8 _8 ~> call getInput () ~> ret getInput _153 ~> ret main8 () ~> call main12 _660 )
+#Or
+  T ==K ( call main8 _8 ~> call getInput () ~> ret getInput _153 ~> ret main8 () ~> call main12 _4269 )
+#Or
+  T ==K ( call main8 _8 ~> call getInput () ~> ret getInput _153 ~> ret main8 () ~> call main14 _604 )
+#Or
+  T ==K ( call main8 _8 ~> call getInput () ~> ret getInput _153 ~> ret main8 () ~> call main14 _4103 )
+#Or
+  T ==K ( call main8 _8 ~> call getInput () ~> ret getInput _153 ~> ret main8 () ~> call main18 _773 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _4662 )
+#Or
+  T ==K ( call main8 _8 ~> call getInput () ~> ret getInput _153 ~> ret main8 () ~> call main18 _4579 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _7898 )
+#Or
+  T ==K ( call main9 _19 ~> call getInput () ~> ret getInput _199 ~> ret main9 () ~> call main1 _1882 )
+#Or
+  T ==K ( call main9 _19 ~> call getInput () ~> ret getInput _199 ~> ret main9 () ~> call main12 _1303 )
+#Or
+  T ==K ( call main9 _19 ~> call getInput () ~> ret getInput _199 ~> ret main9 () ~> call main14 _1179 )
+#Or
+  T ==K ( call main9 _19 ~> call getInput () ~> ret getInput _199 ~> ret main9 () ~> call main18 _1571 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _5770 )
+#Or
+  T ==K ( call main10 _7 ~> call userExec _29 ~> ret userExec () ~> ret main10 () ~> call _29 () )
+#Or
+  T ==K ( call main10 _7 ~> call userExec _29 ~> ret userExec () ~> ret main10 () ~> call main1 _413 )
+#Or
+  T ==K ( call main10 _7 ~> call userExec _29 ~> ret userExec () ~> ret main10 () ~> call main2 _191 ~> call syscall 0 ~> call _29 () )
+#Or
+  T ==K ( call main10 _7 ~> call userExec _29 ~> ret userExec () ~> ret main10 () ~> call main2 _191 ~> call syscall 0 ~> ret syscall () ~> call syscall 1 ~> call _29 () )
+#Or
+  T ==K ( call main10 _7 ~> call userExec _29 ~> ret userExec () ~> ret main10 () ~> call main2 _191 ~> call syscall 0 ~> ret syscall () ~> call syscall 1 ~> ret syscall () ~> call syscall 2 ~> call _29 () )
+#Or
+  T ==K ( call main10 _7 ~> call userExec _29 ~> ret userExec () ~> ret main10 () ~> call main3 _373 ~> call syscall _373 ~> call _29 () )
+#Or
+  T ==K ( call main10 _7 ~> call userExec _29 ~> ret userExec () ~> ret main10 () ~> call main5 _506 ~> call getInput () ~> call _29 () )
+#Or
+  T ==K ( call main10 _7 ~> call userExec _29 ~> ret userExec () ~> ret main10 () ~> call main6 _247 ~> call getInput () ~> call _29 () )
+#Or
+  T ==K ( call main10 _7 ~> call userExec _29 ~> ret userExec () ~> ret main10 () ~> call main8 _320 ~> call getInput () ~> call _29 () )
+#Or
+  T ==K ( call main10 _7 ~> call userExec _29 ~> ret userExec () ~> ret main10 () ~> call main9 _531 ~> call getInput () ~> call _29 () )
+#Or
+  T ==K ( call main10 _7 ~> call userExec _29 ~> ret userExec () ~> ret main10 () ~> call main12 _267 )
+#Or
+  T ==K ( call main10 _7 ~> call userExec _29 ~> ret userExec () ~> ret main10 () ~> call main14 _227 )
+#Or
+  T ==K ( call main10 _7 ~> call userExec _29 ~> ret userExec () ~> ret main10 () ~> call main15 _354 ~> call send _354 ~> call _29 () )
+#Or
+  T ==K ( call main10 _7 ~> call userExec _29 ~> ret userExec () ~> ret main10 () ~> call main16 _208 ~> call getUser () ~> call _29 () )
+#Or
+  T ==K ( call main10 _7 ~> call userExec _29 ~> ret userExec () ~> ret main10 () ~> call main17 _603 ~> call send _603 ~> call _29 () )
+#Or
+  T ==K ( call main10 _7 ~> call userExec _29 ~> ret userExec () ~> ret main10 () ~> call main18 _337 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _3046 )
+#Or
+  T ==K ( call main11 _15 ~> ret main11 () ~> call main1 _466 )
+#Or
+  T ==K ( call main11 _15 ~> ret main11 () ~> call main12 _308 )
+#Or
+  T ==K ( call main11 _15 ~> ret main11 () ~> call main14 _272 )
+#Or
+  T ==K ( call main11 _15 ~> ret main11 () ~> call main18 _379 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _3271 )
+#Or
+  T ==K ( call main15 _10 ~> call send _10 ~> ret send () ~> ret main15 () ~> call main1 _1032 )
+#Or
+  T ==K ( call main15 _10 ~> call send _10 ~> ret send () ~> ret main15 () ~> call main12 _718 )
+#Or
+  T ==K ( call main15 _10 ~> call send _10 ~> ret send () ~> ret main15 () ~> call main14 _663 )
+#Or
+  T ==K ( call main15 _10 ~> call send _10 ~> ret send () ~> ret main15 () ~> call main18 _840 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _4836 )
+#Or
+  T ==K ( call main15 _10 ~> ret main15 () ~> call main1 _253 )
+#Or
+  T ==K ( call main15 _10 ~> ret main15 () ~> call main12 _137 )
+#Or
+  T ==K ( call main15 _10 ~> ret main15 () ~> call main14 _119 )
+#Or
+  T ==K ( call main15 _10 ~> ret main15 () ~> call main18 _181 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _2200 )
+#Or
+  T ==K ( call main16 _2 ~> call getUser () ~> ret getUser _42 ~> ret main16 () ~> call main1 _452 )
+#Or
+  T ==K ( call main16 _2 ~> call getUser () ~> ret getUser _42 ~> ret main16 () ~> call main1 _1581 )
+#Or
+  T ==K ( call main16 _2 ~> call getUser () ~> ret getUser _42 ~> ret main16 () ~> call main12 _298 )
+#Or
+  T ==K ( call main16 _2 ~> call getUser () ~> ret getUser _42 ~> ret main16 () ~> call main12 _1066 )
+#Or
+  T ==K ( call main16 _2 ~> call getUser () ~> ret getUser _42 ~> ret main16 () ~> call main14 _263 )
+#Or
+  T ==K ( call main16 _2 ~> call getUser () ~> ret getUser _42 ~> ret main16 () ~> call main14 _954 )
+#Or
+  T ==K ( call main16 _2 ~> call getUser () ~> ret getUser _42 ~> ret main16 () ~> call main18 _367 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _3214 )
+#Or
+  T ==K ( call main16 _2 ~> call getUser () ~> ret getUser _42 ~> ret main16 () ~> call main18 _1313 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _5505 )
+#Or
+  T ==K ( call main16 _2 ~> ret main16 () ~> call main1 _132 )
+#Or
+  T ==K ( call main16 _2 ~> ret main16 () ~> call main12 _69 )
+#Or
+  T ==K ( call main16 _2 ~> ret main16 () ~> call main14 _55 )
+#Or
+  T ==K ( call main16 _2 ~> ret main16 () ~> call main18 _97 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _1520 )
+#Or
+  T ==K ( call main17 _22 ~> call send _22 ~> ret send () ~> ret main17 () ~> call main1 _1647 )
+#Or
+  T ==K ( call main17 _22 ~> call send _22 ~> ret send () ~> ret main17 () ~> call main12 _1122 )
+#Or
+  T ==K ( call main17 _22 ~> call send _22 ~> ret send () ~> ret main17 () ~> call main14 _999 )
+#Or
+  T ==K ( call main17 _22 ~> call send _22 ~> ret send () ~> ret main17 () ~> call main18 _1370 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _5562 )
+#Or
+  T ==K ( call main17 _22 ~> ret main17 () ~> call main1 _426 )
+#Or
+  T ==K ( call main17 _22 ~> ret main17 () ~> call main12 _277 )
+#Or
+  T ==K ( call main17 _22 ~> ret main17 () ~> call main14 _240 )
+#Or
+  T ==K ( call main17 _22 ~> ret main17 () ~> call main18 _348 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _3099 )
+#Or
+  T ==K ( call main18 _9 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _375 )
+#Or
+  T ==K ( call main18 _9 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _375 ~> ret main18 () ~> call main1 _3554 )
+#Or
+  T ==K ( call main18 _9 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _375 ~> ret main18 () ~> call main12 _2780 )
+#Or
+  T ==K ( call main18 _9 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _375 ~> ret main18 () ~> call main14 _2596 )
+#Or
+  T ==K ( call main18 _9 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _375 ~> ret main18 () ~> call main18 _3150 ~> call set_ext _9 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _6811 )
+#Or
+  T ==K ( call main19 _20 ~> call get_ext () ~> ret get_ext _172 ~> ret main19 () ~> call main1 _3186 )
+#Or
+  T ==K ( call main19 _20 ~> call get_ext () ~> ret get_ext _172 ~> ret main19 () ~> call main1 _3489 )
+#Or
+  T ==K ( call main19 _20 ~> call get_ext () ~> ret get_ext _172 ~> ret main19 () ~> call main12 _2436 )
+#Or
+  T ==K ( call main19 _20 ~> call get_ext () ~> ret get_ext _172 ~> ret main19 () ~> call main12 _2728 )
+#Or
+  T ==K ( call main19 _20 ~> call get_ext () ~> ret get_ext _172 ~> ret main19 () ~> call main14 _2235 )
+#Or
+  T ==K ( call main19 _20 ~> call get_ext () ~> ret get_ext _172 ~> ret main19 () ~> call main14 _2538 )
+#Or
+  T ==K ( call main19 _20 ~> call get_ext () ~> ret get_ext _172 ~> ret main19 () ~> call main18 _2823 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _6832 )
+#Or
+  T ==K ( call main19 _20 ~> call get_ext () ~> ret get_ext _172 ~> ret main19 () ~> call main18 _3093 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _7032 )
+#Or
+  T ==K ( call main20 _18 ~> ret main20 () ~> call main1 _360 )
+#Or
+  T ==K ( call main20 _18 ~> ret main20 () ~> call main12 _216 )
+#Or
+  T ==K ( call main20 _18 ~> ret main20 () ~> call main14 _184 )
+#Or
+  T ==K ( call main20 _18 ~> ret main20 () ~> call main18 _291 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _2815 )
+#Or
+  T ==K call main1 _14
+#Or
+  T ==K call main12 _5
+#Or
+  T ==K call main14 _3
+
+real	0m42.685s
+user	1m9.020s
+sys	0m3.950s

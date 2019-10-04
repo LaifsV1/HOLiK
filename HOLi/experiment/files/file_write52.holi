@@ -1,0 +1,32 @@
+# set-bounds 5 2 #
+import send :(int -> unit)
+
+int read_only := 100;
+int is_open   := 0;
+
+private openFile (u:unit) :(unit) = {
+  is_open := 1
+};
+
+private closeFile (u:unit) :(unit) = {
+  is_open := 0
+};
+
+//opponent shouldn't write since file is not open
+public write (i:int) :(unit) = {
+  if !is_open
+  then read_only := i
+  else ()
+};
+
+//opponent abuses this to open file so they can write
+public read (u:unit) :(unit) = {
+  openFile();
+  (let secret = !read_only in
+  send(secret);
+  closeFile();
+  assert((!read_only) == secret))
+};
+
+// tests whether K can find how to abuse other functions in the library to access private functions
+// here, opening and closing the file are private, but read gives the opponent access to these functions

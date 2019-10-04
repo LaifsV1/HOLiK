@@ -1,0 +1,25 @@
+  T ==K ( call run () ~> call f () ~> call mc91_e _48 )
+#Or
+  T ==K ( call run () ~> call f () ~> call mult_e _58 )
+#Or
+  T ==K ( call run () ~> call f () ~> call repeat_e _51 )
+#Or
+  T ==K ( call run () ~> call f () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call run () ~> call f () ~> call sum_e _40 )
+#Or
+  T ==K call fact_e _1
+#Or
+  T ==K call lock_e _4
+#Or
+  T ==K call mc91_e _7
+#Or
+  T ==K call mult_e _11
+#Or
+  T ==K call repeat_e _8
+#Or
+  T ==K call sum_e _3
+
+real	0m7.159s
+user	0m20.036s
+sys	0m0.827s

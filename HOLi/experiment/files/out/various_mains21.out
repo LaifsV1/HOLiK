@@ -1,0 +1,9 @@
+  T ==K call main1 _15
+#Or
+  T ==K call main12 _5
+#Or
+  T ==K call main14 _3
+
+real	0m8.541s
+user	0m26.317s
+sys	0m0.759s

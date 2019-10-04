@@ -1,0 +1,27 @@
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _53 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mult_e _59 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call read () ~> call send 100 ~> call write _120 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call repeat_e _57 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call sum_e _41 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _61 ~> ret write () ~> ret send () )
+#Or
+  T ==K call fact_e _1
+#Or
+  T ==K call lock_e _4
+#Or
+  T ==K call mc91_e _7
+#Or
+  T ==K call mult_e _11
+#Or
+  T ==K call repeat_e _9
+#Or
+  T ==K call sum_e _2
+
+real	0m7.677s
+user	0m21.163s
+sys	0m0.848s

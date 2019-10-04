@@ -1,0 +1,11 @@
+# set-bounds 4 1 #
+import syscall :(int -> unit)
+
+int a := 0;
+
+public add (i:int) :(unit) = {
+  a := !a + 1;
+  syscall(i)
+};
+
+// K lists one way to cause the error

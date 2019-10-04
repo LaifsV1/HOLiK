@@ -1,0 +1,25 @@
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call mc91_e _58 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call mult_e _68 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call repeat_e _60 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call sum_e _54 )
+#Or
+  T ==K call fact_e _1
+#Or
+  T ==K call lock_e _3
+#Or
+  T ==K call mc91_e _5
+#Or
+  T ==K call mult_e _11
+#Or
+  T ==K call repeat_e _7
+#Or
+  T ==K call sum_e _2
+
+real	0m8.196s
+user	0m21.808s
+sys	0m1.075s

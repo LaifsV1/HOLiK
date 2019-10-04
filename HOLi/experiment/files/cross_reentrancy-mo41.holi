@@ -1,0 +1,113 @@
+# set-bounds 4 1 #
+import send :(int -> unit)
+
+private transfer (m:int) :(unit) = {
+  if ((m - 1) < !balance)
+  then balance := !balance - m;
+       send m;
+       assert(not(!balance < 0))
+  else ()};
+
+public claimBonus (u:unit) :(unit) = {
+  if (0 < !bonus)
+  then transfer 10;
+       bonus := !bonus - 1;
+       assert(not(!bonus < 0))
+  else ()};
+
+int balance := 100;
+int bonus := 1;
+
+// cross reentrancy attack adapted from smart contracts
+// error trace: call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> ret send () ~> ret claimBonus () ~> ret send ()
+// fix: update bonus before calling transfer
+
+public esimple (i:int) :(unit) = {
+  let f = (fun (arg : int * (int -> unit)) :(unit) -> 
+     let n = fst arg in
+     let k = snd arg in
+     if (0 - 1) < n then () else k 0) in
+  let g = (fun (n:int) :(unit) -> assert(n == 0))
+  in
+  f(i,g)
+};
+
+public fact_e (i:int) :(unit) = {
+  letrec fact (arg : int * (int -> int)) :(int)  =
+    (let n   = fst arg in
+     let exn = snd arg in
+     if (0 - 1) < n then
+       exn 0
+     else
+       (let exn = (fun (n:int) :(int) -> 5)
+       in (n * fact(n - 1 , exn))))
+  in
+  let exn = (fun (n:int) :(int) -> assert(0) ; 1)
+  in
+  if 0 < i then (fact(i,exn); ())
+  else ()
+};
+
+public sum_e (i:int) :(unit) = {
+  letrec sum (n:int) :(int) =
+    if (n < 1) then
+      0
+    else
+      n + (sum (n - 1))
+  in
+  assert(i < (sum i))
+};
+
+public mult_e (i:int) :(unit) = {
+  letrec mult (arg:int*int) :(int) =
+    let n = fst arg in
+    let m = snd arg in
+    if n < 1 || m < 1 then
+      0
+    else
+      n + mult(n,m - 1)
+  in
+  assert(i < mult(i,i))
+};
+
+public mc91_e (i:int) :(unit) = {
+  letrec mc91 (x:int) :(int) =
+    if 100 < x then 
+      x - 10
+    else
+      mc91 (mc91 (x + 11))
+  in
+  if i < 103 then assert(mc91 i == 91)
+  else ()
+};
+
+public repeat_e (i:int) :(unit) = {
+  let succ = (fun (x:int) :(int) -> x + 1)
+  in
+  letrec repeat (arg:(int->int)*int*int) :(int) =
+    let f = fst (fst arg) in
+    let n = snd (fst arg) in
+    let s = snd arg in
+    if n == 0 then
+      s
+    else
+      f (repeat(f,n - 1,s))
+  in
+  assert (i < (repeat(succ,i,0)))
+};
+
+public lock_e (i:int) :(unit) = {
+  let lock = (fun (st:int) :(unit) -> assert (st==0); 1) in
+  let unlock = (fun (st:int) :(unit) -> assert (st==1); 0) in
+  letrec f (arg:int*int) :(int) = 
+    let n = fst arg in
+    let st = snd arg in
+    if 0 < n then lock(st) else st
+  in
+  letrec g (arg:int*int) :(int) = 
+    let n = fst arg in
+    let st = snd arg in
+    if (0 - 1) < n then unlock(st) else st
+  in
+  assert((g(i,f(i,0))) == 0)
+};

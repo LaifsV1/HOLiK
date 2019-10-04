@@ -1,0 +1,23 @@
+  T ==K ( call claimBonus () ~> call send 10 ~> call mc91_e _92 )
+#Or
+  T ==K ( call claimBonus () ~> call send 10 ~> call mult_e _98 )
+#Or
+  T ==K ( call claimBonus () ~> call send 10 ~> call repeat_e _94 )
+#Or
+  T ==K ( call claimBonus () ~> call send 10 ~> call sum_e _86 )
+#Or
+  T ==K call fact_e _1
+#Or
+  T ==K call lock_e _3
+#Or
+  T ==K call mc91_e _5
+#Or
+  T ==K call mult_e _9
+#Or
+  T ==K call repeat_e _7
+#Or
+  T ==K call sum_e _2
+
+real	0m7.706s
+user	0m21.462s
+sys	0m0.983s

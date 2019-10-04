@@ -1,0 +1,47 @@
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call mc91_e _239 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call mult_e _251 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call repeat_e _243 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call sum_e _220 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call fact_e _95 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call lock_e _104 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call mc91_e _111 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call mult_e _123 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call repeat_e _116 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call check_access () ~> call file_stream () ~> call sum_e _98 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call fact_e _30 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call lock_e _34 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call mc91_e _38 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call mult_e _45 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call repeat_e _42 )
+#Or
+  T ==K ( call check_access () ~> call file_stream () ~> call sum_e _33 )
+#Or
+  T ==K call fact_e _1
+#Or
+  T ==K call lock_e _3
+#Or
+  T ==K call mc91_e _5
+#Or
+  T ==K call mult_e _9
+#Or
+  T ==K call repeat_e _7
+#Or
+  T ==K call sum_e _2
+
+real	0m26.626s
+user	0m43.214s
+sys	0m4.071s

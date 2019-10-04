@@ -1,0 +1,496 @@
+# set-bounds 5 1 #
+import syscall :(int -> unit)
+import send :(int -> unit)
+import getInput :(unit -> int)
+import userExec :((unit -> unit) -> unit)
+import getUser :(unit -> int)
+import get_ext :(unit -> int)
+import set_ext :(int -> unit)
+import f2 :(unit -> unit)
+
+int a1 := 0;
+int b1 := 0;
+int a2 := 0;
+int b2 := 0;
+int c2 := 0;
+int d2 := 0;
+int a3 := 0;
+int balance1  := 100;
+int bonus1    := 1;
+int address   := 0;
+int address2  := 0;
+int addr      := 0;
+int address4  := 0;
+int addr5     := 0;
+int lock      := 0; 
+int readMAX   := 3;
+int read_only := 100;
+int is_open   := 0;
+fun list      := empty;
+int cnt       := 0;
+int running   := 0;
+int is_open2  := 0;
+int secret    := 0;
+int funds     := 100;
+int total     := 100;
+int balance2  := 100;
+int wallet    := 0;
+int userID    := 42;
+int balance3  := 100;
+int param3    := 50;
+int local     := 0;
+int remote    := 0;
+int error     := 0;
+int local2    := 0;
+int remote2   := 0;
+int error2    := 0;
+int tmp       := -1;
+int seats_remaining := 10;
+int x       := 0;
+int x2      := 0;
+int reached := 0;
+int x3      := 0;
+
+
+//call no order
+//-------------
+private isNone (i:int) :(unit) = {
+  a1 := 1
+};
+
+private isA (i:int) :(unit) = {
+  b1 := 1
+};
+
+private isAB (i:int) :(unit) = {
+  assert(not(!a1 && !b1))
+};
+
+public main1 (i:int) :(unit) = {
+  isNone(i); isA(i); isAB(i)
+};
+
+//call order
+//----------
+private isNone2 (i:int) :(unit) = {
+  if not(!a2 || !b2 || !c2 || !d2)
+  then a2 := 1; syscall 0
+  else ()
+};
+
+private isA2 (i:int) :(unit) = {
+  if !a2 && not(!b2 || !c2 || !d2)
+  then b2 := 1; syscall 1
+  else ()
+};
+
+private isAB2 (i:int) :(unit) = {
+  if !a2 && !b2 && not(!c2 || !d2)
+  then c2 := 1; syscall 2
+  else ()
+};
+
+private isABC2 (i:int) :(unit) = {
+  if !a2 && !b2 && !c2 && not(!d2)
+  then d2 := 1; syscall 3
+  else ()
+};
+
+private isABCD2 (i:int) :(unit) = {
+  if !a2 && !b2 && !c2 && !d2
+  then assert(0)
+  else ()
+};
+
+public main2 (i:int) :(unit) = {
+  isNone2(i); isA2(i); isAB2(i) isABC2(i); isABCD2(i)
+};
+
+//call order param
+//----------------
+private add (i:int) :(unit) = {
+  a3 := !a3 + 1;
+  syscall(i)
+};
+
+public main3 (i:int) :(unit) = {
+  add(i)
+};
+
+//cross reentrancy
+//----------------
+private transfer (m:int) :(unit) = {
+  if ((m - 1) < !balance1)
+  then balance1 := !balance1 - m;
+       send m;
+       assert(not(!balance1 < 0))
+  else ()};
+
+private claimBonus (u:unit) :(unit) = {
+  if (0 < !bonus1)
+  then transfer 10;
+       bonus1 := !bonus1 - 1;
+       assert(not(!bonus1 < 0))
+  else ()};
+
+public main4 (i:int) :(unit) = {
+  claimBonus()
+};
+
+//double alloc 1
+//--------------
+private allocate (u:unit) :(unit) = {
+  assert(not(!address));
+  address := 1
+};
+
+private free (u:unit) :(unit) = {
+  assert(!address);
+  address := 0
+};
+
+private update (i:int) :(unit) = {
+  assert(!address);
+  address := i
+};
+
+private read (u:int) :(int) = {
+  assert(!address);
+  !address
+};
+
+private initialise (u:unit) :(unit) = {
+  allocate();
+  (let user_input = getInput () in
+  if 0 < user_input
+  then update(user_input);
+       assert(read() == user_input);
+       free()
+  else ())
+};
+
+public main5 (i:int) :(unit) = {
+  initialise()
+};
+
+//double alloc 2
+//--------------
+private allocate2 (u:unit) :(unit) = {
+  assert(not(!address2));
+  address2 := 1
+};
+
+private free2 (u:unit) :(unit) = {
+  assert(!address2);
+  address2 := 0
+};
+
+private update2 (i:int) :(unit) = {
+  assert(!address2);
+  address2 := i
+};
+
+private read2 (u:int) :(int) = {
+  assert(!address2);
+  !address2
+};
+
+private initialise2 (u:unit) :(unit) = {
+  let user_input = getInput () in
+  allocate2();
+  if 0 < user_input
+  then update2(user_input);
+       assert(read2() == user_input);
+       free2()
+  else ()
+};
+
+public main6 (i:int) :(unit) = {
+  initialise2()
+};
+
+//double alloc simple
+//-------------------
+private allocate3 (u:unit) :(unit) = {  assert(not(!addr)); addr := 1  };
+
+private free3 (u:unit) :(unit) = {  if (!addr) then addr := 0 else () };
+
+private doSthing (u:int) :(unit) = { () };
+
+private run1 (u:unit) :(unit) = {
+  allocate3();
+  doSthing(getInput ());
+  free3()
+};
+
+public main7 (i:int) :(unit) = {
+  run()
+};
+
+//double free
+//-----------
+private allocate4 (u:unit) :(unit) = {
+  assert(not(!address4));
+  address4 := 1
+};
+
+private free4 (u:unit) :(unit) = {
+  assert(!address4);
+  address4 := 0
+};
+
+private update4 (i:int) :(unit) = {
+  assert(!address4);
+  address4 := i
+};
+
+private read4 (u:int) :(int) = {
+  assert(!address4);
+  !address4
+};
+
+private initialise4 (u:unit) :(unit) = {
+  (if !address4
+  then ()
+  else allocate4()); 
+  (let user_input = getInput () in
+  if 0 < user_input
+  then update4(user_input);
+       assert(read4() == user_input);
+       free4()
+  else ())
+};
+
+public main8 (i:int) :(unit) = {
+  initialise4()
+};
+
+//double free simple
+//------------------
+private allocate5 (u:unit) :(unit) = { if not(!addr5) then addr5 := 1 else () };
+
+private free5 (u:unit) :(unit) = { assert(!addr5); addr5 := 0 };
+
+private doSthing2 (i:int) :(unit) = { () };
+
+private run2 (u:unit) :(unit) = {
+  allocate5(); 
+  doSthing2(getInput ());
+  free5()
+};
+
+public main9 (i:int) :(unit) = {
+  run2()
+};
+
+//file lock
+//---------
+private doSthing3(x:unit) :(unit) = { () };
+
+private openFile (u:unit) :(unit) = {
+  if (!lock)
+  then ()
+  else lock := 1;
+       (let write = fun (x:unit) :(unit) -> (assert(!lock); doSthing3()) in
+       userExec(write);
+       lock := 0) };
+
+public main10 (i:int) :(unit) = {
+  openFile()
+};
+
+//file lock param
+//---------------
+private read5 (u:unit) :(unit) = {
+  readMAX := !readMAX - 1;
+  assert(0 < !readMAX)
+};
+
+public main11 (i:int) :(unit) = {
+  read5()
+};
+
+//file write
+//----------
+private openFile2 (u:unit) :(unit) = {
+  is_open := 1
+};
+
+private closeFile (u:unit) :(unit) = {
+  is_open := 0
+};
+
+//opponent shouldn't write since file is not open
+private write (i:int) :(unit) = {
+  if !is_open
+  then read_only := i
+  else ()
+};
+
+//opponent abuses this to open file so they can write
+private read6 (u:unit) :(unit) = {
+  openFile2();
+  (let secret = !read_only in
+  send(secret);
+  closeFile();
+  assert((!read_only) == secret))
+};
+
+public main12 (i:int) :(unit) = {
+  write(i); read()
+};
+
+//flat combiner
+//-------------
+private empty (x:int) :(unit) = { () };
+
+private enlist (f: unit -> unit) :(unit) = {
+   if (!running) then ()
+   else 
+       cnt := !cnt + 1;
+       (let c = !cnt in
+        let l = !list in 
+        list := 
+         (fun (z:int) :(unit) -> 
+         (if (z == c) then f() else l(z))))
+};
+
+private run3(x:unit) :(unit) = {
+   running := 1;
+   if (0 < !cnt) then 
+      (!list)(!cnt);
+      cnt := !cnt - 1;
+      assert(not (!cnt < 0));
+      run3()
+   else (list := empty; running := 0)       
+};
+
+public main13 (f: unit -> unit) :(unit) = {
+  enlist(f); run()
+};
+
+//read
+//----
+private write2 (i:int) :(unit) = { 
+  if !is_open2
+  then secret := i
+  else ()
+};
+private read7 (u:unit) :(unit) = {
+  is_open2 := 1;
+  (let tmpx = !secret in
+  (send(tmpx);
+  is_open2 := 0;
+  assert((!secret) == tmpx)))
+};
+
+public main14 (i:int) :(unit) = {
+  write(i); read()
+};
+
+//reentrancy
+//----------
+private withdraw (m:int) :(unit) = {
+  if (not (!funds < m))
+  then send(m);
+       funds := !funds - m;
+       assert(not(!funds < 0))
+  else ()};
+
+public main15 (i:int) :(unit) = {
+  withdraw(i)
+};
+
+//reentrancy 2
+//------------
+private withdraw2 (m:int) :(unit) = {
+  if ((m - 1) < !balance2)
+  then if (!userID == (getUser()))
+       then wallet  := !wallet  + m;
+            balance2 := !balance2 - m;
+            assert(-1 < !balance2)
+       else ()
+  else ()};
+
+public main16 (i:int) :(unit) = {
+  withdraw2(i)
+};
+
+//reentrancy param
+//----------------
+private withdraw3 (m:int) :(unit) = {
+  if ((m - 1) < !param3)
+  then send(m);
+       balance := !balance3 - m;
+       assert(not(!balance3 < 0))
+  else ()};
+
+public main17 (i:int) :(unit) = {
+  withdraw3(i)
+};
+
+//remote sync 1
+//-------------
+private remoteUpdate (u:unit) :(unit) = {
+  let tmpx = !local in
+  remoteSet(tmpx);
+  assert(if !error then 1 else tmpx == remoteGet())
+};
+
+private localUpdate (i:int) :(unit) = {
+  local := i
+};
+
+private remoteSet (i:int) :(unit) = {
+  remote := i;
+  set_ext(i)
+};
+
+private remoteGet (u:unit) :(int) = {
+  let tmpx = get_ext() in
+  if not(tmpx == !remote)
+  then error := 1; tmpx
+  else tmpx
+};
+
+public main18 (i:int) :(unit) = {
+  remoteUpdate(); localUpdate(i)
+};
+
+//remote sync 2
+//-------------
+private updateRemote2 (u:unit) :(unit) = {
+  let tmpx = !local2 in
+  remote2 := tmpx;
+  tmp := getRemote2();
+  assert(if !error2 then 1 else (!tmp == tmpx))
+};
+
+private updateLocal2 (i:int) :(unit) = {
+  local2 := i
+};
+
+private getRemote2 (u:unit) :(int) = {
+  let tmpx = get_ext() in
+  if tmpx == !remote2
+  then tmpx
+  else error2 := 1; tmpx
+};
+
+public main19 (i:int) :(unit) = {
+  updateRemote2(); updateLocal2(i)
+};
+
+//reservation
+//-----------
+private reserve (x:int) :(unit) = {
+  if (x - 1) < !seats_remaining
+  then send_confirmation();
+       seats_remaining := !seats_remaining - x;
+       assert(0 < (!seats_remaining + 1))
+  else ()
+};
+
+public main20 (i:int) :(unit) = {
+  reserve(i)
+};
