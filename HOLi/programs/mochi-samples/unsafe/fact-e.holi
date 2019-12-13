@@ -1,0 +1,17 @@
+# set-bounds 3 1 #
+
+public fact_e (i:int) :(unit) = {
+  letrec fact (arg : int * (int -> int)) :(int)  =
+    (let n   = fst arg in
+     let exn = snd arg in
+     if (0 - 1) < n then
+       exn 0
+     else
+       (let exn = (fun (n:int) :(int) -> 5)
+       in (n * fact(n - 1 , exn))))
+  in
+  let exn = (fun (n:int) :(int) -> assert(0) ; 1)
+  in
+  if 0 < i then (fact(i,exn); ())
+  else ()
+};
