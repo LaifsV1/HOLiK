@@ -1,0 +1,10 @@
+# set-bounds 2 1 #
+
+int n := 0;
+
+public f (g:unit->unit->int) :(int) = {
+  let inc = (fun (u:unit) :(unit) -> n := (1 + !n)) in
+  let res = (g inc) !n in
+  assert(0 < res); 
+  res
+};
