@@ -14,6 +14,9 @@ module Z3-SYNTAX
 		  | SMTLib SMTLib	                    [left]
   syntax SMTProp ::= Bool | SMTVal
                    | "(" "<" SMTVal SMTVal ")"              [left]
+                   | "(" ">" SMTVal SMTVal ")"              [left]
+                   | "(" "<=" SMTVal SMTVal ")"              [left]
+                   | "(" ">=" SMTVal SMTVal ")"              [left]
                    | "(" "/" SMTVal SMTVal ")"              [left]
 		   | "(" "*" SMTVal SMTVal ")"              [left]
                    | "(" "+" SMTVal SMTVal ")"              [left]
@@ -34,6 +37,9 @@ module Z3-SYNTAX
   rule PropToString(I:Int) => Int2String(I)
 
   rule PropToString( ( < V1 V2 ) ) => "( < " +String XToString(V1) +String " " +String XToString(V2) +String " )"
+  rule PropToString( ( > V1 V2 ) ) => "( > " +String XToString(V1) +String " " +String XToString(V2) +String " )"
+  rule PropToString( ( <= V1 V2 ) ) => "( <= " +String XToString(V1) +String " " +String XToString(V2) +String " )"
+  rule PropToString( ( >= V1 V2 ) ) => "( >= " +String XToString(V1) +String " " +String XToString(V2) +String " )"
   rule PropToString( ( * V1 V2 ) ) => "( * " +String XToString(V1) +String " " +String XToString(V2) +String " )"
   rule PropToString( ( / V1 V2 ) ) => "( / " +String XToString(V1) +String " " +String XToString(V2) +String " )"
   rule PropToString( ( + V1 V2 ) ) => "( + " +String XToString(V1) +String " " +String XToString(V2) +String " )"
@@ -49,7 +55,6 @@ module Z3-SYNTAX
   syntax String ::= LibToString(SMTLib)  [function]
   rule LibToString( ( declare-const X Int) ) => "( declare-const " +String XToString(X) +String " Int )"
   rule LibToString( ( check-sat ) ) => "( check-sat )"
-  rule LibToString( ( get-model ) ) => "( get-model )"
   rule LibToString( ( get-model ) ) => "( get-model )"
   rule LibToString( ( assert P ) ) => "( assert " +String PropToString(P) +String " )"
   rule LibToString( P1 P2 ) => LibToString(P1) +String LibToString(P2)

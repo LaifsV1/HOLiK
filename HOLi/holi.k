@@ -30,6 +30,9 @@ module HOLI-SYNTAX
                  > Term "+" Term                         [seqstrict(1,2), left]
 		 | Term "-" Term                         [seqstrict(1,2), left]
                  > Term "<" Term                         [seqstrict(1,2), left]
+                 | Term ">" Term                         [seqstrict(1,2), left]
+                 | Term "<=" Term                         [seqstrict(1,2), left]
+                 | Term ">=" Term                         [seqstrict(1,2), left]
 		 | Term "==" Term                        [seqstrict(1,2), left]
 		 > Term "&&" Term                        [seqstrict(1,2), right]
 		 > Term "||" Term                        [seqstrict(1,2), right]
@@ -164,25 +167,43 @@ module HOLI
        [structural]
   rule <k>I1:Int + I2:Int => I1 +Int I2 ...</k>
        [structural]
-  rule <k>I1:Int < I2:Int => 1  ...</k>
+  rule <k>I1:Int < I2:Int => 1  ...</k> //lt
        requires (I1 <Int I2)
        [structural]
   rule <k>I1:Int < I2:Int => 0  ...</k>
        requires (I1 >=Int I2)
        [structural]
-  rule <k>I1:Int == I2:Int => 1 ...</k>
+  rule <k>I1:Int > I2:Int => 1  ...</k> //gt
+       requires (I1 >Int I2)
+       [structural]
+  rule <k>I1:Int > I2:Int => 0  ...</k>
+       requires (I1 <=Int I2)
+       [structural]
+  rule <k>I1:Int <= I2:Int => 1  ...</k> //lte
+       requires (I1 <=Int I2)
+       [structural]
+  rule <k>I1:Int <= I2:Int => 0  ...</k>
+       requires (I1 >Int I2)
+       [structural]
+  rule <k>I1:Int >= I2:Int => 1  ...</k> //gte
+       requires (I1 >=Int I2)
+       [structural]
+  rule <k>I1:Int >= I2:Int => 0  ...</k>
+       requires (I1 <Int I2)
+       [structural]
+  rule <k>I1:Int == I2:Int => 1 ...</k> //eq
        requires (I1 ==Int I2)
        [structural]
   rule <k>I1:Int == I2:Int => 0 ...</k>
        requires (I1 =/=Int I2)
        [structural]
-  rule <k>I1:Int && I2:Int => 1 ...</k>
+  rule <k>I1:Int && I2:Int => 1 ...</k> //and
        requires (I1 =/=Int 0) andBool (I2 =/=Int 0)
        [structural]
   rule <k>I1:Int && I2:Int => 0 ...</k>
        requires ((I1 ==Int 0) orBool (I2 ==Int 0))
        [structural]
-  rule <k>I1:Int || I2:Int => 1 ...</k>
+  rule <k>I1:Int || I2:Int => 1 ...</k> //or
        requires (I1 =/=Int 0) orBool (I2 =/=Int 0)
        [structural]
   rule <k>I1:Int || I2:Int => 0 ...</k>
@@ -293,6 +314,30 @@ module HOLI
   rule <k> V1:Val < X2:KVar => !X:KVar ... </k>
        <state> Sigma => Sigma[!X <- V1 < X2] </state>
        <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (< ValToSMT(V1) X2) 1 0))) </sig>
+       [structural]
+  rule <k> X1:KVar > V2:Val => !X:KVar ... </k> //greaterthan
+       <state> Sigma => Sigma[!X <- X1 > V2] </state>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (> X1 ValToSMT(V2)) 1 0))) </sig>
+       [structural]
+  rule <k> V1:Val > X2:KVar => !X:KVar ... </k>
+       <state> Sigma => Sigma[!X <- V1 > X2] </state>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (> ValToSMT(V1) X2) 1 0))) </sig>
+       [structural]
+  rule <k> X1:KVar <= V2:Val => !X:KVar ... </k> //lessthaneq
+       <state> Sigma => Sigma[!X <- X1 <= V2] </state>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (<= X1 ValToSMT(V2)) 1 0))) </sig>
+       [structural]
+  rule <k> V1:Val <= X2:KVar => !X:KVar ... </k>
+       <state> Sigma => Sigma[!X <- V1 <= X2] </state>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (<= ValToSMT(V1) X2) 1 0))) </sig>
+       [structural]
+  rule <k> X1:KVar >= V2:Val => !X:KVar ... </k> //greaterthaneq
+       <state> Sigma => Sigma[!X <- X1 >= V2] </state>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (>= X1 ValToSMT(V2)) 1 0))) </sig>
+       [structural]
+  rule <k> V1:Val >= X2:KVar => !X:KVar ... </k>
+       <state> Sigma => Sigma[!X <- V1 >= X2] </state>
+       <sig> SIG => SIG (declare-const !X Int) (assert (= !X (ite (>= ValToSMT(V1) X2) 1 0))) </sig>
        [structural]
   rule <k> X1:KVar && V2:Val => !X:KVar ... </k> //and
        <state> Sigma => Sigma[!X <- X1 && V2] </state>

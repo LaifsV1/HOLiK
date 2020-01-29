@@ -1,0 +1,10 @@
+Found 1 possible error
+(1) At: arbitrary site
+    - Blaming: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-e.rkt
+    - Contract from: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-e.rkt:4:43 
+    - Expected: {(λ (cmp_396) …)}
+    - Given: {●integer?}
+
+real	0m2.692s
+user	0m2.414s
+sys	0m0.279s

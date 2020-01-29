@@ -1,0 +1,14 @@
+# set-bounds 2 1 #
+
+public mult_e (i:int) :(unit) = {
+  letrec mult (arg:int*int) :(int) =
+    let n = fst arg in
+    let m = snd arg in
+    if n <= 0 || m <= 0 then 
+      0
+    else
+      (let res = (n + mult(n,m - 1)) in
+      (assert(res >= 0); res))
+  in
+  assert(i <= mult(i,i))
+};

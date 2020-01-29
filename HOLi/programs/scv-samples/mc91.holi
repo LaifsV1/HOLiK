@@ -1,0 +1,12 @@
+# set-bounds 3 1 #
+
+public mc91_e (i:int) :(unit) = {
+  letrec mc91 (x:int) :(int) =
+    if 100 < x then 
+      x - 10
+    else
+      mc91 (mc91 (x + 11))
+  in
+  if i <= 101 then assert(mc91 i == 91)
+  else ()
+};
