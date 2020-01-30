@@ -1,0 +1,47 @@
+  T ==K ( call add _7 ~> call syscall _7 ~> call add _46 ~> call syscall _46 ~> call add _127 ~> call syscall _127 ~> call mc91_e _238 )
+#Or
+  T ==K ( call add _7 ~> call syscall _7 ~> call add _46 ~> call syscall _46 ~> call add _127 ~> call syscall _127 ~> call mult_e _254 )
+#Or
+  T ==K ( call add _7 ~> call syscall _7 ~> call add _46 ~> call syscall _46 ~> call add _127 ~> call syscall _127 ~> call repeat_e _249 )
+#Or
+  T ==K ( call add _7 ~> call syscall _7 ~> call add _46 ~> call syscall _46 ~> call add _127 ~> call syscall _127 ~> call sum_e _224 )
+#Or
+  T ==K ( call add _7 ~> call syscall _7 ~> call add _46 ~> call syscall _46 ~> call fact_e _106 )
+#Or
+  T ==K ( call add _7 ~> call syscall _7 ~> call add _46 ~> call syscall _46 ~> call lock_e _112 )
+#Or
+  T ==K ( call add _7 ~> call syscall _7 ~> call add _46 ~> call syscall _46 ~> call mc91_e _122 )
+#Or
+  T ==K ( call add _7 ~> call syscall _7 ~> call add _46 ~> call syscall _46 ~> call mult_e _137 )
+#Or
+  T ==K ( call add _7 ~> call syscall _7 ~> call add _46 ~> call syscall _46 ~> call repeat_e _134 )
+#Or
+  T ==K ( call add _7 ~> call syscall _7 ~> call add _46 ~> call syscall _46 ~> call sum_e _110 )
+#Or
+  T ==K ( call add _7 ~> call syscall _7 ~> call fact_e _34 )
+#Or
+  T ==K ( call add _7 ~> call syscall _7 ~> call lock_e _37 )
+#Or
+  T ==K ( call add _7 ~> call syscall _7 ~> call mc91_e _42 )
+#Or
+  T ==K ( call add _7 ~> call syscall _7 ~> call mult_e _52 )
+#Or
+  T ==K ( call add _7 ~> call syscall _7 ~> call repeat_e _49 )
+#Or
+  T ==K ( call add _7 ~> call syscall _7 ~> call sum_e _35 )
+#Or
+  T ==K call fact_e _1
+#Or
+  T ==K call lock_e _3
+#Or
+  T ==K call mc91_e _5
+#Or
+  T ==K call mult_e _11
+#Or
+  T ==K call repeat_e _9
+#Or
+  T ==K call sum_e _2
+
+real	0m10.958s
+user	0m26.417s
+sys	0m1.448s

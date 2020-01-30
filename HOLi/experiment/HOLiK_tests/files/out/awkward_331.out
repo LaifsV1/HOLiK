@@ -1,0 +1,31 @@
+  T ==K ( call run _1 ~> call _1 () ~> call run _3 ~> call _3 () ~> call run _7 ~> call _7 () ~> ret _7 () ~> call _7 () ~> ret _7 () ~> ret run () ~> ret _3 () ~> call _3 () ~> call run _39 ~> call _39 () ~> ret _39 () ~> call _39 () ~> ret _39 () ~> ret run () ~> ret _3 () )
+#Or
+  T ==K ( call run _1 ~> call _1 () ~> call run _3 ~> call _3 () ~> call run _7 ~> call _7 () ~> ret _7 () ~> call _7 () ~> ret _7 () ~> ret run () ~> ret _3 () ~> call _3 () ~> ret _3 () ~> ret run () ~> ret _1 () ~> call _1 () ~> call run _62 ~> call _62 () ~> call run _70 ~> call _70 () ~> ret _70 () ~> call _70 () ~> ret _70 () ~> ret run () ~> ret _62 () ~> call _62 () ~> call run _95 ~> call _95 () ~> ret _95 () ~> call _95 () ~> ret _95 () ~> ret run () ~> ret _62 () )
+#Or
+  T ==K ( call run _1 ~> call _1 () ~> call run _3 ~> call _3 () ~> call run _7 ~> call _7 () ~> ret _7 () ~> call _7 () ~> ret _7 () ~> ret run () ~> ret _3 () ~> call _3 () ~> ret _3 () ~> ret run () ~> ret _1 () ~> call _1 () ~> call run _62 ~> call _62 () ~> call run _70 ~> call _70 () ~> ret _70 () ~> call _70 () ~> ret _70 () ~> ret run () ~> ret _62 () ~> call _62 () ~> ret _62 () ~> ret run () ~> ret _1 () )
+#Or
+  T ==K ( call run _1 ~> call _1 () ~> call run _3 ~> call _3 () ~> call run _7 ~> call _7 () ~> ret _7 () ~> call _7 () ~> ret _7 () ~> ret run () ~> ret _3 () ~> call _3 () ~> ret _3 () ~> ret run () ~> ret _1 () ~> call _1 () ~> call run _62 ~> call _62 () ~> ret _62 () ~> call _62 () ~> call run _76 ~> call _76 () ~> ret _76 () ~> call _76 () ~> ret _76 () ~> ret run () ~> ret _62 () )
+#Or
+  T ==K ( call run _1 ~> call _1 () ~> call run _3 ~> call _3 () ~> call run _7 ~> call _7 () ~> ret _7 () ~> call _7 () ~> ret _7 () ~> ret run () ~> ret _3 () ~> call _3 () ~> ret _3 () ~> ret run () ~> ret _1 () ~> call _1 () ~> call run _62 ~> call _62 () ~> ret _62 () ~> call _62 () ~> ret _62 () ~> ret run () ~> ret _1 () )
+#Or
+  T ==K ( call run _1 ~> call _1 () ~> call run _3 ~> call _3 () ~> ret _3 () ~> call _3 () ~> call run _11 ~> call _11 () ~> ret _11 () ~> call _11 () ~> ret _11 () ~> ret run () ~> ret _3 () )
+#Or
+  T ==K ( call run _1 ~> call _1 () ~> call run _3 ~> call _3 () ~> ret _3 () ~> call _3 () ~> ret _3 () ~> ret run () ~> ret _1 () ~> call _1 () ~> call run _32 ~> call _32 () ~> call run _40 ~> call _40 () ~> ret _40 () ~> call _40 () ~> ret _40 () ~> ret run () ~> ret _32 () ~> call _32 () ~> call run _77 ~> call _77 () ~> ret _77 () ~> call _77 () ~> ret _77 () ~> ret run () ~> ret _32 () )
+#Or
+  T ==K ( call run _1 ~> call _1 () ~> call run _3 ~> call _3 () ~> ret _3 () ~> call _3 () ~> ret _3 () ~> ret run () ~> ret _1 () ~> call _1 () ~> call run _32 ~> call _32 () ~> call run _40 ~> call _40 () ~> ret _40 () ~> call _40 () ~> ret _40 () ~> ret run () ~> ret _32 () ~> call _32 () ~> ret _32 () ~> ret run () ~> ret _1 () )
+#Or
+  T ==K ( call run _1 ~> call _1 () ~> call run _3 ~> call _3 () ~> ret _3 () ~> call _3 () ~> ret _3 () ~> ret run () ~> ret _1 () ~> call _1 () ~> call run _32 ~> call _32 () ~> ret _32 () ~> call _32 () ~> call run _46 ~> call _46 () ~> ret _46 () ~> call _46 () ~> ret _46 () ~> ret run () ~> ret _32 () )
+#Or
+  T ==K ( call run _1 ~> call _1 () ~> call run _3 ~> call _3 () ~> ret _3 () ~> call _3 () ~> ret _3 () ~> ret run () ~> ret _1 () ~> call _1 () ~> call run _32 ~> call _32 () ~> ret _32 () ~> call _32 () ~> ret _32 () ~> ret run () ~> ret _1 () )
+#Or
+  T ==K ( call run _1 ~> call _1 () ~> ret _1 () ~> call _1 () ~> call run _6 ~> call _6 () ~> call run _12 ~> call _12 () ~> ret _12 () ~> call _12 () ~> ret _12 () ~> ret run () ~> ret _6 () ~> call _6 () ~> call run _47 ~> call _47 () ~> ret _47 () ~> call _47 () ~> ret _47 () ~> ret run () ~> ret _6 () )
+#Or
+  T ==K ( call run _1 ~> call _1 () ~> ret _1 () ~> call _1 () ~> call run _6 ~> call _6 () ~> call run _12 ~> call _12 () ~> ret _12 () ~> call _12 () ~> ret _12 () ~> ret run () ~> ret _6 () ~> call _6 () ~> ret _6 () ~> ret run () ~> ret _1 () )
+#Or
+  T ==K ( call run _1 ~> call _1 () ~> ret _1 () ~> call _1 () ~> call run _6 ~> call _6 () ~> ret _6 () ~> call _6 () ~> call run _18 ~> call _18 () ~> ret _18 () ~> call _18 () ~> ret _18 () ~> ret run () ~> ret _6 () )
+#Or
+  T ==K ( call run _1 ~> call _1 () ~> ret _1 () ~> call _1 () ~> call run _6 ~> call _6 () ~> ret _6 () ~> call _6 () ~> ret _6 () ~> ret run () ~> ret _1 () )
+
+real	0m6.184s
+user	0m17.445s
+sys	0m0.535s

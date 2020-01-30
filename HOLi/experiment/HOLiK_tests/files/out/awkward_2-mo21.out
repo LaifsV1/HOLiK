@@ -1,0 +1,17 @@
+  T ==K ( call run _2 ~> call _2 () ~> call run _30 ~> call _30 () ~> ret _30 () ~> call _30 () ~> ret _30 () ~> ret run () ~> ret _2 () ~> call _2 () ~> call fact_e _207 ~> ret fact_e () ~> ret _2 () )
+#Or
+  T ==K ( call run _2 ~> call _2 () ~> call run _30 ~> call _30 () ~> ret _30 () ~> call _30 () ~> ret _30 () ~> ret run () ~> ret _2 () ~> call _2 () ~> call mc91_e _219 ~> ret mc91_e () ~> ret _2 () )
+#Or
+  T ==K ( call run _2 ~> call _2 () ~> call run _30 ~> call _30 () ~> ret _30 () ~> call _30 () ~> ret _30 () ~> ret run () ~> ret _2 () ~> call _2 () ~> ret _2 () )
+#Or
+  T ==K call mc91_e _7
+#Or
+  T ==K call mult_e _11
+#Or
+  T ==K call repeat_e _8
+#Or
+  T ==K call sum_e _3
+
+real	0m9.145s
+user	0m25.673s
+sys	0m0.850s

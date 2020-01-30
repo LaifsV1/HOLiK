@@ -1,0 +1,10 @@
+# set-bounds 2 1 #
+
+public factorial (i:int) :(unit) = {
+  letrec factorial (z:int) :(int) =
+    if z <= 1 
+    then 1
+    else z * (factorial (z - 1))
+  in
+  if i >= 0 then assert(factorial i >= 1) else ()
+};

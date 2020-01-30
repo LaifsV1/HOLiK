@@ -1,0 +1,15 @@
+Found 2 possible errors
+(1) At: arbitrary site
+    - Blaming: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/ack-simple-e.rkt
+    - Contract from: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/ack-simple-e.rkt:3:49 
+    - Expected: {(λ (cmp_382) (and (real? cmp_382) (>= cmp_382 0)))}
+    - Given: {●integer?}
+(2) At: arbitrary site
+    - Blaming: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/ack-simple-e.rkt
+    - Contract from: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/ack-simple-e.rkt:3:49 
+    - Expected: {(λ (cmp_382) (and (real? cmp_382) (>= cmp_382 0)))}
+    - Given: {●exact-integer?}
+
+real	0m2.489s
+user	0m2.216s
+sys	0m0.272s

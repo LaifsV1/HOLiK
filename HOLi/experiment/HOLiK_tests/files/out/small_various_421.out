@@ -1,0 +1,7 @@
+  T ==K ( call remoteUpdate () ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _74 )
+#Or
+  T ==K ( call withdraw2 _7 ~> call getUser () ~> call withdraw2 _56 ~> call getUser () ~> ret getUser _125 ~> ret withdraw2 () ~> ret getUser _168 )
+
+real	0m7.495s
+user	0m22.375s
+sys	0m0.830s

@@ -1,0 +1,75 @@
+  T ==K ( call initialise () ~> call getInput () ~> call fact_e _61 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call esimple _140 ~> ret esimple () ~> ret getInput _283 ~> ret initialise () ~> ret getInput _407 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call fact_e _126 ~> ret fact_e () ~> ret getInput _203 ~> ret initialise () ~> ret getInput _371 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call fact_e _216 ~> ret fact_e () ~> ret getInput _294 ~> ret initialise () ~> ret getInput _338 ~> ret initialise () ~> ret getInput _434 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call fact_e _216 ~> ret fact_e () ~> ret getInput _294 ~> ret initialise () ~> ret getInput _417 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call fact_e _216 ~> ret fact_e () ~> ret getInput _294 ~> ret initialise () ~> ret getInput _417 ~> ret initialise () ~> ret getInput _433 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> ret getInput _301 ~> ret initialise () ~> ret getInput _345 ~> ret initialise () ~> ret getInput _374 ~> ret initialise () ~> ret getInput _448 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> ret getInput _301 ~> ret initialise () ~> ret getInput _345 ~> ret initialise () ~> ret getInput _438 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> ret getInput _301 ~> ret initialise () ~> ret getInput _345 ~> ret initialise () ~> ret getInput _438 ~> ret initialise () ~> ret getInput _447 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call mc91_e _232 ~> ret mc91_e () ~> ret getInput _295 ~> ret initialise () ~> ret getInput _339 ~> ret initialise () ~> ret getInput _436 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call mc91_e _232 ~> ret mc91_e () ~> ret getInput _295 ~> ret initialise () ~> ret getInput _418 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call mc91_e _232 ~> ret mc91_e () ~> ret getInput _295 ~> ret initialise () ~> ret getInput _418 ~> ret initialise () ~> ret getInput _435 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> ret getInput _214 ~> ret initialise () ~> ret getInput _286 ~> ret initialise () ~> ret getInput _410 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> ret getInput _214 ~> ret initialise () ~> ret getInput _383 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> ret getInput _214 ~> ret initialise () ~> ret getInput _383 ~> ret initialise () ~> ret getInput _409 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call lock_e _137 ~> ret lock_e () ~> ret getInput _344 ~> ret initialise () ~> ret getInput _437 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call mc91_e _142 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call mc91_e _142 ~> ret mc91_e () ~> ret getInput _204 ~> ret initialise () ~> ret getInput _373 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call mc91_e _142 ~> ret mc91_e () ~> ret getInput _258 ~> ret initialise () ~> ret getInput _397 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call mult_e _157 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call mult_e _157 ~> ret mult_e () ~> ret getInput _297 ~> ret initialise () ~> ret getInput _421 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call repeat_e _149 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call sum_e _131 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> call sum_e _131 ~> ret sum_e () ~> ret getInput _227 ~> ret initialise () ~> ret getInput _388 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call initialise () ~> call getInput () ~> ret getInput _122 ~> ret initialise () ~> ret getInput _333 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call lock_e _66 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call mc91_e _71 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call mult_e _81 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call repeat_e _73 )
+#Or
+  T ==K ( call initialise () ~> call getInput () ~> call sum_e _62 )
+#Or
+  T ==K call fact_e _1
+#Or
+  T ==K call lock_e _3
+#Or
+  T ==K call mc91_e _5
+#Or
+  T ==K call mult_e _11
+#Or
+  T ==K call repeat_e _7
+#Or
+  T ==K call sum_e _2
+
+real	0m13.791s
+user	0m29.619s
+sys	0m2.093s

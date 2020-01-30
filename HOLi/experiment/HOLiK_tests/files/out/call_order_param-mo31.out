@@ -1,0 +1,23 @@
+  T ==K ( call add _7 ~> call syscall _7 ~> call mc91_e _42 )
+#Or
+  T ==K ( call add _7 ~> call syscall _7 ~> call mult_e _52 )
+#Or
+  T ==K ( call add _7 ~> call syscall _7 ~> call repeat_e _49 )
+#Or
+  T ==K ( call add _7 ~> call syscall _7 ~> call sum_e _35 )
+#Or
+  T ==K call fact_e _1
+#Or
+  T ==K call lock_e _3
+#Or
+  T ==K call mc91_e _5
+#Or
+  T ==K call mult_e _11
+#Or
+  T ==K call repeat_e _9
+#Or
+  T ==K call sum_e _2
+
+real	0m7.466s
+user	0m21.447s
+sys	0m0.833s

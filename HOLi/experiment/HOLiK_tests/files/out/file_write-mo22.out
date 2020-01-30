@@ -1,0 +1,443 @@
+  T ==K ( call esimple _5 ~> ret esimple () ~> call mc91_e _219 )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call mult_e _242 )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call read () ~> call send 100 ~> call fact_e _564 ~> ret fact_e () ~> call write _1287 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call read () ~> call send 100 ~> call mc91_e _628 ~> ret mc91_e () ~> call write _1311 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call read () ~> call send 100 ~> call write _686 ~> ret write () ~> call fact_e _1204 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call read () ~> call send 100 ~> call write _686 ~> ret write () ~> call mc91_e _1313 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call read () ~> call send 100 ~> call write _686 ~> ret write () ~> call write _1401 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call read () ~> call send 100 ~> call write _686 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call repeat_e _227 )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call sum_e _191 )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call mc91_e _50 )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call mult_e _62 )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call read () ~> call send 100 ~> call fact_e _223 ~> ret fact_e () ~> call write _722 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call read () ~> call send 100 ~> call mc91_e _289 ~> ret mc91_e () ~> call write _752 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call read () ~> call send 100 ~> call write _345 ~> ret write () ~> call fact_e _640 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call read () ~> call send 100 ~> call write _345 ~> ret write () ~> call mc91_e _754 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call read () ~> call send 100 ~> call write _345 ~> ret write () ~> call write _842 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call read () ~> call send 100 ~> call write _345 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call repeat_e _55 )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call sum_e _33 )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call mc91_e _606 )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call mult_e _645 )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call read () ~> call send 100 ~> call fact_e _1183 ~> ret fact_e () ~> call write _2035 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call read () ~> call send 100 ~> call mc91_e _1285 ~> ret mc91_e () ~> call write _2062 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call read () ~> call send 100 ~> call write _1364 ~> ret write () ~> call fact_e _1962 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call read () ~> call send 100 ~> call write _1364 ~> ret write () ~> call mc91_e _2064 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call read () ~> call send 100 ~> call write _1364 ~> ret write () ~> call write _2161 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call read () ~> call send 100 ~> call write _1364 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call repeat_e _626 )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call sum_e _563 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call mc91_e _58 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call mc91_e _179 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call mult_e _73 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call mult_e _193 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call read () ~> call send 100 ~> call fact_e _244 ~> ret fact_e () ~> call write _770 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call read () ~> call send 100 ~> call fact_e _492 ~> ret fact_e () ~> call write _1170 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call read () ~> call send 100 ~> call mc91_e _323 ~> ret mc91_e () ~> call write _801 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call read () ~> call send 100 ~> call mc91_e _557 ~> ret mc91_e () ~> call write _1188 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call read () ~> call send 100 ~> call write _371 ~> ret write () ~> call fact_e _670 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call read () ~> call send 100 ~> call write _371 ~> ret write () ~> call mc91_e _803 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call read () ~> call send 100 ~> call write _371 ~> ret write () ~> call write _889 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call read () ~> call send 100 ~> call write _371 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call read () ~> call send 100 ~> call write _587 ~> ret write () ~> call fact_e _1083 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call read () ~> call send 100 ~> call write _587 ~> ret write () ~> call mc91_e _1190 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call read () ~> call send 100 ~> call write _587 ~> ret write () ~> call write _1249 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call read () ~> call send 100 ~> call write _587 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call repeat_e _67 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call repeat_e _187 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call sum_e _37 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call sum_e _151 )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call mc91_e _285 )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call mult_e _326 )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call read () ~> call send 100 ~> call fact_e _635 ~> ret fact_e () ~> call write _1441 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call read () ~> call send 100 ~> call mc91_e _745 ~> ret mc91_e () ~> call write _1476 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call read () ~> call send 100 ~> call write _833 ~> ret write () ~> call fact_e _1319 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call read () ~> call send 100 ~> call write _833 ~> ret write () ~> call mc91_e _1478 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call read () ~> call send 100 ~> call write _833 ~> ret write () ~> call write _1585 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call read () ~> call send 100 ~> call write _833 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call repeat_e _303 )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call sum_e _235 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call fact_e _224 ~> ret fact_e () ~> ret send () ~> ret read () ~> call mc91_e _1381 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call fact_e _224 ~> ret fact_e () ~> ret send () ~> ret read () ~> call mult_e _1446 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call fact_e _224 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call fact_e _2011 ~> ret fact_e () ~> call write _2924 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call fact_e _224 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call mc91_e _2165 ~> ret mc91_e () ~> call write _2966 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call fact_e _224 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _2288 ~> ret write () ~> call fact_e _2779 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call fact_e _224 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _2288 ~> ret write () ~> call mc91_e _2968 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call fact_e _224 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _2288 ~> ret write () ~> call write _3091 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call fact_e _224 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _2288 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call fact_e _224 ~> ret fact_e () ~> ret send () ~> ret read () ~> call repeat_e _1413 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call fact_e _224 ~> ret fact_e () ~> ret send () ~> ret read () ~> call sum_e _1279 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call mc91_e _292 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call mc91_e _1415 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call mc91_e _292 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call mult_e _1481 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call mc91_e _292 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call fact_e _2041 ~> ret fact_e () ~> call write _2969 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call mc91_e _292 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call mc91_e _2204 ~> ret mc91_e () ~> call write _3008 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call mc91_e _292 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _2327 ~> ret write () ~> call fact_e _2815 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call mc91_e _292 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _2327 ~> ret write () ~> call mc91_e _3010 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call mc91_e _292 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _2327 ~> ret write () ~> call write _3142 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call mc91_e _292 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _2327 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call mc91_e _292 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call repeat_e _1448 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call mc91_e _292 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call sum_e _1304 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call write _348 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call write _348 ~> ret write () ~> ret send () ~> ret read () ~> call mc91_e _1516 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call write _348 ~> ret write () ~> ret send () ~> ret read () ~> call mult_e _1590 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call write _348 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _348 ~> call fact_e _2016 ~> ret fact_e () ~> call write _2933 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call write _348 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _348 ~> call mc91_e _2172 ~> ret mc91_e () ~> call write _2974 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call write _348 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _348 ~> call write _2291 ~> ret write () ~> call fact_e _2785 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call write _348 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _348 ~> call write _2291 ~> ret write () ~> call mc91_e _2976 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call write _348 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _348 ~> call write _2291 ~> ret write () ~> call write _3101 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call write _348 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _348 ~> call write _2291 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call write _348 ~> ret write () ~> ret send () ~> ret read () ~> call repeat_e _1553 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> call write _348 ~> ret write () ~> ret send () ~> ret read () ~> call sum_e _1383 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> ret send () ~> ret read () ~> call mc91_e _790 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> ret send () ~> ret read () ~> call mult_e _848 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call fact_e _1353 ~> ret fact_e () ~> call write _2294 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call mc91_e _1518 ~> ret mc91_e () ~> call write _2331 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _1629 ~> ret write () ~> call fact_e _2135 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _1629 ~> ret write () ~> call mc91_e _2333 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _1629 ~> ret write () ~> call write _2445 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _1629 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> ret send () ~> ret read () ~> call repeat_e _820 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call fact_e _45 ~> ret fact_e () ~> ret send () ~> ret read () ~> call sum_e _682 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call fact_e _240 ~> ret fact_e () ~> ret send () ~> ret read () ~> call mc91_e _1420 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call fact_e _240 ~> ret fact_e () ~> ret send () ~> ret read () ~> call mult_e _1487 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call fact_e _240 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call fact_e _2046 ~> ret fact_e () ~> call write _2977 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call fact_e _240 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call mc91_e _2215 ~> ret mc91_e () ~> call write _3017 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call fact_e _240 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _2334 ~> ret write () ~> call fact_e _2822 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call fact_e _240 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _2334 ~> ret write () ~> call mc91_e _3019 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call fact_e _240 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _2334 ~> ret write () ~> call write _3152 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call fact_e _240 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _2334 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call fact_e _240 ~> ret fact_e () ~> ret send () ~> ret read () ~> call repeat_e _1453 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call fact_e _240 ~> ret fact_e () ~> ret send () ~> ret read () ~> call sum_e _1305 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call mc91_e _314 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call mc91_e _1455 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call mc91_e _314 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call mult_e _1522 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call mc91_e _314 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call fact_e _2076 ~> ret fact_e () ~> call write _3020 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call mc91_e _314 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call mc91_e _2259 ~> ret mc91_e () ~> call write _3064 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call mc91_e _314 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _2374 ~> ret write () ~> call fact_e _2861 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call mc91_e _314 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _2374 ~> ret write () ~> call mc91_e _3066 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call mc91_e _314 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _2374 ~> ret write () ~> call write _3201 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call mc91_e _314 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _2374 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call mc91_e _314 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call repeat_e _1489 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call mc91_e _314 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call sum_e _1329 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call write _366 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call write _366 ~> ret write () ~> ret send () ~> ret read () ~> call mc91_e _1559 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call write _366 ~> ret write () ~> ret send () ~> ret read () ~> call mult_e _1634 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call write _366 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _366 ~> call fact_e _2051 ~> ret fact_e () ~> call write _2986 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call write _366 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _366 ~> call mc91_e _2222 ~> ret mc91_e () ~> call write _3025 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call write _366 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _366 ~> call write _2337 ~> ret write () ~> call fact_e _2828 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call write _366 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _366 ~> call write _2337 ~> ret write () ~> call mc91_e _3027 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call write _366 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _366 ~> call write _2337 ~> ret write () ~> call write _3162 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call write _366 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _366 ~> call write _2337 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call write _366 ~> ret write () ~> ret send () ~> ret read () ~> call repeat_e _1597 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> call write _366 ~> ret write () ~> ret send () ~> ret read () ~> call sum_e _1422 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call mc91_e _822 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call mult_e _878 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call fact_e _1389 ~> ret fact_e () ~> call write _2340 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call mc91_e _1561 ~> ret mc91_e () ~> call write _2378 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _1668 ~> ret write () ~> call fact_e _2185 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _1668 ~> ret write () ~> call mc91_e _2380 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _1668 ~> ret write () ~> call write _2494 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _1668 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call repeat_e _850 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call mc91_e _81 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call sum_e _705 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call fact_e _278 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call fact_e _278 ~> ret fact_e () ~> ret send () ~> ret read () ~> call mc91_e _1528 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call fact_e _278 ~> ret fact_e () ~> ret send () ~> ret read () ~> call mult_e _1601 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call fact_e _278 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send _107 ~> call fact_e _2026 ~> ret fact_e () ~> call write _2953 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call fact_e _278 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send _107 ~> call mc91_e _2188 ~> ret mc91_e () ~> call write _2991 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call fact_e _278 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send _107 ~> call write _2310 ~> ret write () ~> call fact_e _2801 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call fact_e _278 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send _107 ~> call write _2310 ~> ret write () ~> call mc91_e _2993 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call fact_e _278 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send _107 ~> call write _2310 ~> ret write () ~> call write _3121 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call fact_e _278 ~> ret fact_e () ~> ret send () ~> ret read () ~> call read () ~> call send _107 ~> call write _2310 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call fact_e _278 ~> ret fact_e () ~> ret send () ~> ret read () ~> call repeat_e _1564 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call fact_e _278 ~> ret fact_e () ~> ret send () ~> ret read () ~> call sum_e _1390 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call mc91_e _368 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call mc91_e _368 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call mc91_e _1566 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call mc91_e _368 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call mult_e _1639 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call mc91_e _368 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send _107 ~> call fact_e _2057 ~> ret fact_e () ~> call write _2994 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call mc91_e _368 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send _107 ~> call mc91_e _2232 ~> ret mc91_e () ~> call write _3034 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call mc91_e _368 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send _107 ~> call write _2346 ~> ret write () ~> call fact_e _2837 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call mc91_e _368 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send _107 ~> call write _2346 ~> ret write () ~> call mc91_e _3036 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call mc91_e _368 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send _107 ~> call write _2346 ~> ret write () ~> call write _3172 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call mc91_e _368 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call read () ~> call send _107 ~> call write _2346 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call mc91_e _368 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call repeat_e _1603 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call mc91_e _368 ~> ret mc91_e () ~> ret send () ~> ret read () ~> call sum_e _1426 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call write _428 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call write _428 ~> ret write () ~> ret send () ~> ret read () ~> call mc91_e _1672 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call write _428 ~> ret write () ~> ret send () ~> ret read () ~> call mult_e _1741 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call write _428 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _428 ~> call fact_e _2151 ~> ret fact_e () ~> call write _3127 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call write _428 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _428 ~> call mc91_e _2351 ~> ret mc91_e () ~> call write _3174 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call write _428 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _428 ~> call write _2462 ~> ret write () ~> call fact_e _2964 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call write _428 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _428 ~> call write _2462 ~> ret write () ~> call mc91_e _3176 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call write _428 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _428 ~> call write _2462 ~> ret write () ~> call write _3295 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call write _428 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _428 ~> call write _2462 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call write _428 ~> ret write () ~> ret send () ~> ret read () ~> call repeat_e _1705 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> call write _428 ~> ret write () ~> ret send () ~> ret read () ~> call sum_e _1530 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> ret send () ~> ret read () ~> call mc91_e _911 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> ret send () ~> ret read () ~> call mult_e _973 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _107 ~> call fact_e _1361 ~> ret fact_e () ~> call write _2317 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _107 ~> call mc91_e _1533 ~> ret mc91_e () ~> call write _2353 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _107 ~> call write _1641 ~> ret write () ~> call fact_e _2154 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _107 ~> call write _1641 ~> ret write () ~> call mc91_e _2355 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _107 ~> call write _1641 ~> ret write () ~> call write _2469 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> ret send () ~> ret read () ~> call read () ~> call send _107 ~> call write _1641 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> ret send () ~> ret read () ~> call repeat_e _941 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> call write _107 ~> ret write () ~> ret send () ~> ret read () ~> call sum_e _792 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> ret send () ~> ret read () ~> call mc91_e _388 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> ret send () ~> ret read () ~> call mult_e _430 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call fact_e _761 ~> ret fact_e () ~> call write _1644 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call mc91_e _913 ~> ret mc91_e () ~> call write _1676 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _1002 ~> ret write () ~> call fact_e _1499 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _1002 ~> ret write () ~> call mc91_e _1678 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _1002 ~> ret write () ~> call write _1782 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> ret send () ~> ret read () ~> call read () ~> call send 100 ~> call write _1002 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 100 ~> ret send () ~> ret read () ~> call repeat_e _405 )
+#Or
+  T ==K ( call read () ~> call send 100 ~> ret send () ~> ret read () ~> call sum_e _316 )
+#Or
+  T ==K ( call sum_e _2 ~> ret sum_e () ~> call mc91_e _106 )
+#Or
+  T ==K ( call sum_e _2 ~> ret sum_e () ~> call mult_e _122 )
+#Or
+  T ==K ( call sum_e _2 ~> ret sum_e () ~> call read () ~> call send 100 ~> call fact_e _331 ~> ret fact_e () ~> call write _933 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call sum_e _2 ~> ret sum_e () ~> call read () ~> call send 100 ~> call mc91_e _422 ~> ret mc91_e () ~> call write _966 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call sum_e _2 ~> ret sum_e () ~> call read () ~> call send 100 ~> call write _470 ~> ret write () ~> call fact_e _818 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call sum_e _2 ~> ret sum_e () ~> call read () ~> call send 100 ~> call write _470 ~> ret write () ~> call mc91_e _968 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call sum_e _2 ~> ret sum_e () ~> call read () ~> call send 100 ~> call write _470 ~> ret write () ~> call write _1046 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call sum_e _2 ~> ret sum_e () ~> call read () ~> call send 100 ~> call write _470 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call sum_e _2 ~> ret sum_e () ~> call repeat_e _112 )
+#Or
+  T ==K ( call sum_e _2 ~> ret sum_e () ~> call sum_e _70 )
+#Or
+  T ==K ( call write _12 ~> ret write () ~> call mc91_e _77 )
+#Or
+  T ==K ( call write _12 ~> ret write () ~> call mult_e _93 )
+#Or
+  T ==K ( call write _12 ~> ret write () ~> call read () ~> call send 100 ~> call fact_e _271 ~> ret fact_e () ~> call write _834 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call write _12 ~> ret write () ~> call read () ~> call send 100 ~> call mc91_e _360 ~> ret mc91_e () ~> call write _863 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call write _12 ~> ret write () ~> call read () ~> call send 100 ~> call write _417 ~> ret write () ~> call fact_e _721 ~> ret fact_e () ~> ret send () )
+#Or
+  T ==K ( call write _12 ~> ret write () ~> call read () ~> call send 100 ~> call write _417 ~> ret write () ~> call mc91_e _865 ~> ret mc91_e () ~> ret send () )
+#Or
+  T ==K ( call write _12 ~> ret write () ~> call read () ~> call send 100 ~> call write _417 ~> ret write () ~> call write _959 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call write _12 ~> ret write () ~> call read () ~> call send 100 ~> call write _417 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call write _12 ~> ret write () ~> call repeat_e _85 )
+#Or
+  T ==K ( call write _12 ~> ret write () ~> call sum_e _47 )
+#Or
+  T ==K call mc91_e _7
+#Or
+  T ==K call mult_e _11
+#Or
+  T ==K call repeat_e _9
+#Or
+  T ==K call sum_e _2
+
+real	0m30.950s
+user	0m52.207s
+sys	0m4.247s

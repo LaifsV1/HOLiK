@@ -1,0 +1,29 @@
+  T ==K ( call run () ~> call getInput () ~> call mc91_e _55 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> call mult_e _59 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> call repeat_e _56 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> call run () ~> call getInput () ~> call fact_e _100 ~> ret fact_e () ~> ret getInput _144 ~> ret run () ~> ret getInput _150 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> call run () ~> call getInput () ~> call mc91_e _115 ~> ret mc91_e () ~> ret getInput _145 ~> ret run () ~> ret getInput _151 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> call run () ~> call getInput () ~> ret getInput _99 ~> ret run () ~> ret getInput _148 )
+#Or
+  T ==K ( call run () ~> call getInput () ~> call sum_e _46 )
+#Or
+  T ==K call fact_e _1
+#Or
+  T ==K call lock_e _4
+#Or
+  T ==K call mc91_e _7
+#Or
+  T ==K call mult_e _11
+#Or
+  T ==K call repeat_e _8
+#Or
+  T ==K call sum_e _3
+
+real	0m7.710s
+user	0m21.550s
+sys	0m0.764s

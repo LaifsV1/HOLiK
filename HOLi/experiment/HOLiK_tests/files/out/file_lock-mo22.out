@@ -1,0 +1,335 @@
+  T ==K ( call esimple _5 ~> ret esimple () ~> call mc91_e _228 )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call mult_e _258 )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call openFile () ~> call userExec _397 ~> call openFile () ~> call userExec _883 ~> ret userExec () ~> ret openFile () ~> call _397 () )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call openFile () ~> call userExec _397 ~> call openFile () ~> call userExec _883 ~> ret userExec () ~> ret openFile () ~> call _883 () )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call repeat_e _240 )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call sum_e _181 )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call mc91_e _52 )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call mult_e _64 )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call openFile () ~> call userExec _122 ~> call openFile () ~> call userExec _403 ~> ret userExec () ~> ret openFile () ~> call _122 () )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call openFile () ~> call userExec _122 ~> call openFile () ~> call userExec _403 ~> ret userExec () ~> ret openFile () ~> call _403 () )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call repeat_e _57 )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call sum_e _35 )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call mc91_e _708 )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call mult_e _772 )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call openFile () ~> call userExec _992 ~> call openFile () ~> call userExec _1875 ~> ret userExec () ~> ret openFile () ~> call _992 () )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call openFile () ~> call userExec _992 ~> call openFile () ~> call userExec _1875 ~> ret userExec () ~> ret openFile () ~> call _1875 () )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call repeat_e _741 )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call sum_e _609 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call mc91_e _61 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call mc91_e _162 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call mult_e _74 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call mult_e _183 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call openFile () ~> call userExec _137 ~> call openFile () ~> call userExec _440 ~> ret userExec () ~> ret openFile () ~> call _137 () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call openFile () ~> call userExec _137 ~> call openFile () ~> call userExec _440 ~> ret userExec () ~> ret openFile () ~> call _440 () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call openFile () ~> call userExec _310 ~> call openFile () ~> call userExec _744 ~> ret userExec () ~> ret openFile () ~> call _310 () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call openFile () ~> call userExec _310 ~> call openFile () ~> call userExec _744 ~> ret userExec () ~> ret openFile () ~> call _744 () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call repeat_e _70 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call repeat_e _172 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call sum_e _41 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call sum_e _136 )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call mc91_e _316 )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call mult_e _347 )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call openFile () ~> call userExec _482 ~> call openFile () ~> call userExec _1030 ~> ret userExec () ~> ret openFile () ~> call _482 () )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call openFile () ~> call userExec _482 ~> call openFile () ~> call userExec _1030 ~> ret userExec () ~> ret openFile () ~> call _1030 () )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call repeat_e _330 )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call sum_e _248 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call fact_e _188 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call fact_e _188 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call mc91_e _1069 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call fact_e _188 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call mult_e _1172 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call fact_e _188 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _1475 ~> call openFile () ~> call userExec _2374 ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call fact_e _188 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _1475 ~> call openFile () ~> call userExec _2374 ~> ret userExec () ~> ret openFile () ~> call _1475 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call fact_e _188 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _1475 ~> call openFile () ~> call userExec _2374 ~> ret userExec () ~> ret openFile () ~> call _2374 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call fact_e _188 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call repeat_e _1134 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call fact_e _188 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call sum_e _952 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call mc91_e _253 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call mc91_e _253 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call mc91_e _1101 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call mc91_e _253 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call mult_e _1211 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call mc91_e _253 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _1526 ~> call openFile () ~> call userExec _2460 ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call mc91_e _253 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _1526 ~> call openFile () ~> call userExec _2460 ~> ret userExec () ~> ret openFile () ~> call _1526 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call mc91_e _253 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _1526 ~> call openFile () ~> call userExec _2460 ~> ret userExec () ~> ret openFile () ~> call _2460 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call mc91_e _253 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call repeat_e _1174 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call mc91_e _253 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call sum_e _981 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call openFile () ~> call userExec _409 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call openFile () ~> call userExec _409 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call _409 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call openFile () ~> call userExec _409 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call mc91_e _1640 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call openFile () ~> call userExec _409 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call mult_e _1733 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call openFile () ~> call userExec _409 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2062 ~> call openFile () ~> call userExec _2976 ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call openFile () ~> call userExec _409 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2062 ~> call openFile () ~> call userExec _2976 ~> ret userExec () ~> ret openFile () ~> call _409 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call openFile () ~> call userExec _409 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2062 ~> call openFile () ~> call userExec _2976 ~> ret userExec () ~> ret openFile () ~> call _2062 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call openFile () ~> call userExec _409 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2062 ~> call openFile () ~> call userExec _2976 ~> ret userExec () ~> ret openFile () ~> call _2976 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call openFile () ~> call userExec _409 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call repeat_e _1699 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> call openFile () ~> call userExec _409 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call sum_e _1433 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call mc91_e _486 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call mult_e _540 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _731 ~> call openFile () ~> call userExec _1435 ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _731 ~> call openFile () ~> call userExec _1435 ~> ret userExec () ~> ret openFile () ~> call _731 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _731 ~> call openFile () ~> call userExec _1435 ~> ret userExec () ~> ret openFile () ~> call _1435 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call repeat_e _521 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call fact_e _34 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call sum_e _431 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call fact_e _200 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call fact_e _200 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call mc91_e _1107 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call fact_e _200 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call mult_e _1218 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call fact_e _200 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _1533 ~> call openFile () ~> call userExec _2435 ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call fact_e _200 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _1533 ~> call openFile () ~> call userExec _2435 ~> ret userExec () ~> ret openFile () ~> call _1533 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call fact_e _200 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _1533 ~> call openFile () ~> call userExec _2435 ~> ret userExec () ~> ret openFile () ~> call _2435 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call fact_e _200 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call repeat_e _1180 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call fact_e _200 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call sum_e _985 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call mc91_e _271 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call mc91_e _271 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call mc91_e _1148 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call mc91_e _271 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call mult_e _1257 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call mc91_e _271 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _1575 ~> call openFile () ~> call userExec _2477 ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call mc91_e _271 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _1575 ~> call openFile () ~> call userExec _2477 ~> ret userExec () ~> ret openFile () ~> call _1575 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call mc91_e _271 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _1575 ~> call openFile () ~> call userExec _2477 ~> ret userExec () ~> ret openFile () ~> call _2477 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call mc91_e _271 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call repeat_e _1220 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call mc91_e _271 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call sum_e _1016 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call openFile () ~> call userExec _433 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call openFile () ~> call userExec _433 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call _433 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call openFile () ~> call userExec _433 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call mc91_e _1647 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call openFile () ~> call userExec _433 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call mult_e _1741 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call openFile () ~> call userExec _433 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2080 ~> call openFile () ~> call userExec _3002 ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call openFile () ~> call userExec _433 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2080 ~> call openFile () ~> call userExec _3002 ~> ret userExec () ~> ret openFile () ~> call _433 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call openFile () ~> call userExec _433 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2080 ~> call openFile () ~> call userExec _3002 ~> ret userExec () ~> ret openFile () ~> call _2080 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call openFile () ~> call userExec _433 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2080 ~> call openFile () ~> call userExec _3002 ~> ret userExec () ~> ret openFile () ~> call _3002 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call openFile () ~> call userExec _433 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call repeat_e _1709 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> call openFile () ~> call userExec _433 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call sum_e _1486 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call mc91_e _505 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call mult_e _565 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _766 ~> call openFile () ~> call userExec _1537 ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _766 ~> call openFile () ~> call userExec _1537 ~> ret userExec () ~> ret openFile () ~> call _766 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _766 ~> call openFile () ~> call userExec _1537 ~> ret userExec () ~> ret openFile () ~> call _1537 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call repeat_e _544 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call mc91_e _54 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call sum_e _451 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call _118 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call fact_e _391 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call fact_e _391 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call _118 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call fact_e _391 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call mc91_e _1642 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call fact_e _391 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call mult_e _1737 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call fact_e _391 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2026 ~> call openFile () ~> call userExec _2896 ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call fact_e _391 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2026 ~> call openFile () ~> call userExec _2896 ~> ret userExec () ~> ret openFile () ~> call _118 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call fact_e _391 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2026 ~> call openFile () ~> call userExec _2896 ~> ret userExec () ~> ret openFile () ~> call _2026 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call fact_e _391 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2026 ~> call openFile () ~> call userExec _2896 ~> ret userExec () ~> ret openFile () ~> call _2896 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call fact_e _391 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call repeat_e _1702 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call fact_e _391 ~> ret fact_e () ~> ret userExec () ~> ret openFile () ~> call sum_e _1438 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call mc91_e _488 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call mc91_e _488 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call _118 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call mc91_e _488 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call mc91_e _1704 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call mc91_e _488 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call mult_e _1822 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call mc91_e _488 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2120 ~> call openFile () ~> call userExec _2987 ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call mc91_e _488 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2120 ~> call openFile () ~> call userExec _2987 ~> ret userExec () ~> ret openFile () ~> call _118 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call mc91_e _488 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2120 ~> call openFile () ~> call userExec _2987 ~> ret userExec () ~> ret openFile () ~> call _2120 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call mc91_e _488 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2120 ~> call openFile () ~> call userExec _2987 ~> ret userExec () ~> ret openFile () ~> call _2987 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call mc91_e _488 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call repeat_e _1775 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call mc91_e _488 ~> ret mc91_e () ~> ret userExec () ~> ret openFile () ~> call sum_e _1531 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _700 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _700 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call _118 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _700 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call _700 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _700 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call mc91_e _2278 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _700 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call mult_e _2385 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _700 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2633 ~> call openFile () ~> call userExec _3518 ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _700 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2633 ~> call openFile () ~> call userExec _3518 ~> ret userExec () ~> ret openFile () ~> call _118 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _700 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2633 ~> call openFile () ~> call userExec _3518 ~> ret userExec () ~> ret openFile () ~> call _700 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _700 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2633 ~> call openFile () ~> call userExec _3518 ~> ret userExec () ~> ret openFile () ~> call _2633 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _700 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _2633 ~> call openFile () ~> call userExec _3518 ~> ret userExec () ~> ret openFile () ~> call _3518 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _700 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call repeat_e _2347 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _700 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call sum_e _2074 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call _118 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call mc91_e _828 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call mult_e _901 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _1105 ~> call openFile () ~> call userExec _1983 ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _1105 ~> call openFile () ~> call userExec _1983 ~> ret userExec () ~> ret openFile () ~> call _118 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _1105 ~> call openFile () ~> call userExec _1983 ~> ret userExec () ~> ret openFile () ~> call _1105 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _1105 ~> call openFile () ~> call userExec _1983 ~> ret userExec () ~> ret openFile () ~> call _1983 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call repeat_e _876 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> call openFile () ~> call userExec _118 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> call sum_e _701 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> ret userExec () ~> ret openFile () ~> call mc91_e _156 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> ret userExec () ~> ret openFile () ~> call mult_e _180 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _288 ~> call openFile () ~> call userExec _704 ~> ret userExec () ~> ret openFile () ~> call _23 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _288 ~> call openFile () ~> call userExec _704 ~> ret userExec () ~> ret openFile () ~> call _288 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> ret userExec () ~> ret openFile () ~> call openFile () ~> call userExec _288 ~> call openFile () ~> call userExec _704 ~> ret userExec () ~> ret openFile () ~> call _704 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> ret userExec () ~> ret openFile () ~> call repeat_e _169 )
+#Or
+  T ==K ( call openFile () ~> call userExec _23 ~> ret userExec () ~> ret openFile () ~> call sum_e _127 )
+#Or
+  T ==K ( call sum_e _2 ~> ret sum_e () ~> call mc91_e _97 )
+#Or
+  T ==K ( call sum_e _2 ~> ret sum_e () ~> call mult_e _112 )
+#Or
+  T ==K ( call sum_e _2 ~> ret sum_e () ~> call openFile () ~> call userExec _176 ~> call openFile () ~> call userExec _516 ~> ret userExec () ~> ret openFile () ~> call _176 () )
+#Or
+  T ==K ( call sum_e _2 ~> ret sum_e () ~> call openFile () ~> call userExec _176 ~> call openFile () ~> call userExec _516 ~> ret userExec () ~> ret openFile () ~> call _516 () )
+#Or
+  T ==K ( call sum_e _2 ~> ret sum_e () ~> call repeat_e _102 )
+#Or
+  T ==K ( call sum_e _2 ~> ret sum_e () ~> call sum_e _71 )
+#Or
+  T ==K call mc91_e _7
+#Or
+  T ==K call mult_e _11
+#Or
+  T ==K call repeat_e _9
+#Or
+  T ==K call sum_e _2
+
+real	0m26.428s
+user	0m47.060s
+sys	0m3.334s

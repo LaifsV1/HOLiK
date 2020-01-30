@@ -1,0 +1,5 @@
+T ==K ( call run _1 ~> call _1 () ~> call run _3 ~> call _3 () ~> ret _3 () ~> call _3 () ~> ret _3 () ~> ret run () ~> ret _1 () ~> call _1 () ~> ret _1 () )
+
+real	0m9.160s
+user	0m17.295s
+sys	0m0.769s

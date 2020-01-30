@@ -1,0 +1,215 @@
+  T ==K ( call esimple _5 ~> ret esimple () ~> call mc91_e _184 )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call mult_e _207 )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call repeat_e _193 )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call run () ~> call f () ~> call fact_e _455 ~> ret fact_e () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call run () ~> call f () ~> call mc91_e _520 ~> ret mc91_e () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call fact_e _1154 ~> ret fact_e () ~> ret f () )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call mc91_e _1241 ~> ret mc91_e () ~> ret f () )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call run () ~> call f () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call esimple _5 ~> ret esimple () ~> call sum_e _163 )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call mc91_e _48 )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call mult_e _58 )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call repeat_e _51 )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call run () ~> call f () ~> call fact_e _177 ~> ret fact_e () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call run () ~> call f () ~> call mc91_e _232 ~> ret mc91_e () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call fact_e _759 ~> ret fact_e () ~> ret f () )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call mc91_e _837 ~> ret mc91_e () ~> ret f () )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call fact_e _1 ~> ret fact_e () ~> call sum_e _35 )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call mc91_e _518 )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call mult_e _554 )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call repeat_e _534 )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call run () ~> call f () ~> call fact_e _889 ~> ret fact_e () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call run () ~> call f () ~> call mc91_e _973 ~> ret mc91_e () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call fact_e _1451 ~> ret fact_e () ~> ret f () )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call mc91_e _1475 ~> ret mc91_e () ~> ret f () )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call lock_e _4 ~> ret lock_e () ~> call sum_e _480 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call mc91_e _54 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call mc91_e _147 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call mult_e _67 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call mult_e _160 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call repeat_e _61 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call repeat_e _153 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call run () ~> call f () ~> call fact_e _197 ~> ret fact_e () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call run () ~> call f () ~> call fact_e _391 ~> ret fact_e () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call run () ~> call f () ~> call mc91_e _256 ~> ret mc91_e () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call run () ~> call f () ~> call mc91_e _447 ~> ret mc91_e () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call fact_e _789 ~> ret fact_e () ~> ret f () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call fact_e _1040 ~> ret fact_e () ~> ret f () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call mc91_e _864 ~> ret mc91_e () ~> ret f () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call mc91_e _1140 ~> ret mc91_e () ~> ret f () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call sum_e _41 )
+#Or
+  T ==K ( call mc91_e _7 ~> ret mc91_e () ~> call sum_e _129 )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call mc91_e _245 )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call mult_e _277 )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call repeat_e _259 )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call run () ~> call f () ~> call fact_e _528 ~> ret fact_e () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call run () ~> call f () ~> call mc91_e _610 ~> ret mc91_e () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call fact_e _1244 ~> ret fact_e () ~> ret f () )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call mc91_e _1302 ~> ret mc91_e () ~> ret f () )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call mult_e _11 ~> ret mult_e () ~> call sum_e _211 )
+#Or
+  T ==K ( call run () ~> call f () ~> call fact_e _39 ~> ret fact_e () ~> call fact_e _180 ~> ret fact_e () ~> ret f () ~> ret run () ~> call mc91_e _1067 )
+#Or
+  T ==K ( call run () ~> call f () ~> call fact_e _39 ~> ret fact_e () ~> call fact_e _180 ~> ret fact_e () ~> ret f () ~> ret run () ~> call mult_e _1104 )
+#Or
+  T ==K ( call run () ~> call f () ~> call fact_e _39 ~> ret fact_e () ~> call fact_e _180 ~> ret fact_e () ~> ret f () ~> ret run () ~> call repeat_e _1085 )
+#Or
+  T ==K ( call run () ~> call f () ~> call fact_e _39 ~> ret fact_e () ~> call fact_e _180 ~> ret fact_e () ~> ret f () ~> ret run () ~> call sum_e _1004 )
+#Or
+  T ==K ( call run () ~> call f () ~> call fact_e _39 ~> ret fact_e () ~> call mc91_e _236 ~> ret mc91_e () ~> ret f () ~> ret run () ~> call mc91_e _1087 )
+#Or
+  T ==K ( call run () ~> call f () ~> call fact_e _39 ~> ret fact_e () ~> call mc91_e _236 ~> ret mc91_e () ~> ret f () ~> ret run () ~> call mult_e _1126 )
+#Or
+  T ==K ( call run () ~> call f () ~> call fact_e _39 ~> ret fact_e () ~> call mc91_e _236 ~> ret mc91_e () ~> ret f () ~> ret run () ~> call repeat_e _1105 )
+#Or
+  T ==K ( call run () ~> call f () ~> call fact_e _39 ~> ret fact_e () ~> call mc91_e _236 ~> ret mc91_e () ~> ret f () ~> ret run () ~> call sum_e _1030 )
+#Or
+  T ==K ( call run () ~> call f () ~> call fact_e _39 ~> ret fact_e () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call run () ~> call f () ~> call fact_e _39 ~> ret fact_e () ~> ret f () ~> ret run () ~> call mc91_e _655 )
+#Or
+  T ==K ( call run () ~> call f () ~> call fact_e _39 ~> ret fact_e () ~> ret f () ~> ret run () ~> call mult_e _690 )
+#Or
+  T ==K ( call run () ~> call f () ~> call fact_e _39 ~> ret fact_e () ~> ret f () ~> ret run () ~> call repeat_e _672 )
+#Or
+  T ==K ( call run () ~> call f () ~> call fact_e _39 ~> ret fact_e () ~> ret f () ~> ret run () ~> call sum_e _595 )
+#Or
+  T ==K ( call run () ~> call f () ~> call mc91_e _63 ~> ret mc91_e () ~> call fact_e _190 ~> ret fact_e () ~> ret f () ~> ret run () ~> call mc91_e _1090 )
+#Or
+  T ==K ( call run () ~> call f () ~> call mc91_e _63 ~> ret mc91_e () ~> call fact_e _190 ~> ret fact_e () ~> ret f () ~> ret run () ~> call mult_e _1131 )
+#Or
+  T ==K ( call run () ~> call f () ~> call mc91_e _63 ~> ret mc91_e () ~> call fact_e _190 ~> ret fact_e () ~> ret f () ~> ret run () ~> call repeat_e _1107 )
+#Or
+  T ==K ( call run () ~> call f () ~> call mc91_e _63 ~> ret mc91_e () ~> call fact_e _190 ~> ret fact_e () ~> ret f () ~> ret run () ~> call sum_e _1033 )
+#Or
+  T ==K ( call run () ~> call f () ~> call mc91_e _63 ~> ret mc91_e () ~> call mc91_e _250 ~> ret mc91_e () ~> ret f () ~> ret run () ~> call mc91_e _1109 )
+#Or
+  T ==K ( call run () ~> call f () ~> call mc91_e _63 ~> ret mc91_e () ~> call mc91_e _250 ~> ret mc91_e () ~> ret f () ~> ret run () ~> call mult_e _1148 )
+#Or
+  T ==K ( call run () ~> call f () ~> call mc91_e _63 ~> ret mc91_e () ~> call mc91_e _250 ~> ret mc91_e () ~> ret f () ~> ret run () ~> call repeat_e _1132 )
+#Or
+  T ==K ( call run () ~> call f () ~> call mc91_e _63 ~> ret mc91_e () ~> call mc91_e _250 ~> ret mc91_e () ~> ret f () ~> ret run () ~> call sum_e _1050 )
+#Or
+  T ==K ( call run () ~> call f () ~> call mc91_e _63 ~> ret mc91_e () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call run () ~> call f () ~> call mc91_e _63 ~> ret mc91_e () ~> ret f () ~> ret run () ~> call mc91_e _674 )
+#Or
+  T ==K ( call run () ~> call f () ~> call mc91_e _63 ~> ret mc91_e () ~> ret f () ~> ret run () ~> call mult_e _708 )
+#Or
+  T ==K ( call run () ~> call f () ~> call mc91_e _63 ~> ret mc91_e () ~> ret f () ~> ret run () ~> call repeat_e _691 )
+#Or
+  T ==K ( call run () ~> call f () ~> call mc91_e _63 ~> ret mc91_e () ~> ret f () ~> ret run () ~> call sum_e _616 )
+#Or
+  T ==K ( call run () ~> call f () ~> call run () ~> ret run () ~> call fact_e _398 ~> ret fact_e () ~> ret f () )
+#Or
+  T ==K ( call run () ~> call f () ~> call run () ~> ret run () ~> call mc91_e _451 ~> ret mc91_e () ~> ret f () )
+#Or
+  T ==K ( call run () ~> call f () ~> call run () ~> ret run () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call run () ~> call f () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call run () ~> call f () ~> ret f () ~> ret run () ~> call mc91_e _318 )
+#Or
+  T ==K ( call run () ~> call f () ~> ret f () ~> ret run () ~> call mult_e _351 )
+#Or
+  T ==K ( call run () ~> call f () ~> ret f () ~> ret run () ~> call repeat_e _333 )
+#Or
+  T ==K ( call run () ~> call f () ~> ret f () ~> ret run () ~> call sum_e _281 )
+#Or
+  T ==K ( call sum_e _3 ~> ret sum_e () ~> call mc91_e _96 )
+#Or
+  T ==K ( call sum_e _3 ~> ret sum_e () ~> call mult_e _113 )
+#Or
+  T ==K ( call sum_e _3 ~> ret sum_e () ~> call repeat_e _102 )
+#Or
+  T ==K ( call sum_e _3 ~> ret sum_e () ~> call run () ~> call f () ~> call fact_e _282 ~> ret fact_e () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call sum_e _3 ~> ret sum_e () ~> call run () ~> call f () ~> call mc91_e _353 ~> ret mc91_e () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call sum_e _3 ~> ret sum_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call fact_e _887 ~> ret fact_e () ~> ret f () )
+#Or
+  T ==K ( call sum_e _3 ~> ret sum_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call mc91_e _971 ~> ret mc91_e () ~> ret f () )
+#Or
+  T ==K ( call sum_e _3 ~> ret sum_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call sum_e _3 ~> ret sum_e () ~> call run () ~> call f () ~> call run () ~> ret run () ~> ret f () )
+#Or
+  T ==K ( call sum_e _3 ~> ret sum_e () ~> call sum_e _79 )
+#Or
+  T ==K call mc91_e _7
+#Or
+  T ==K call mult_e _11
+#Or
+  T ==K call repeat_e _8
+#Or
+  T ==K call sum_e _3
+
+real	0m16.632s
+user	0m34.978s
+sys	0m2.344s

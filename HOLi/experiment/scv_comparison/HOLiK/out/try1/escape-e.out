@@ -1,0 +1,7 @@
+  T ==K ( call f _1 ~> call _1 _2 ~> call f _5 ~> call _5 _6 ~> ret _5 _7 )
+#Or
+  T ==K ( call f _1 ~> call _1 _2 ~> ret _1 _3 )
+
+real	0m5.685s
+user	0m14.946s
+sys	0m0.548s

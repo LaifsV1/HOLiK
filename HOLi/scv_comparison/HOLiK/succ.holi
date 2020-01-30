@@ -1,7 +1,0 @@
-# set-bounds 2 1 #
-
-public succ_main (i:int) :(unit) = {
-  let succ = (fun (n:int) :(int) -> n + 1)
-  in
-  if (i >= 0) then assert(i < succ i) else ()
-};

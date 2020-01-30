@@ -1,5 +1,0 @@
-T ==K ( call claimBonus () ~> call send 10 ~> call claimBonus () ~> call send 10 ~> ret send () ~> ret claimBonus () ~> ret send () )
-
-real	0m5.722s
-user	0m15.192s
-sys	0m0.549s

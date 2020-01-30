@@ -1,0 +1,35 @@
+  T ==K ( call bid _3 ~> call refund _3 ~> call bid _33 ~> call refund _33 ~> call mc91_e _103 )
+#Or
+  T ==K ( call bid _3 ~> call refund _3 ~> call bid _33 ~> call refund _33 ~> call mult_e _111 )
+#Or
+  T ==K ( call bid _3 ~> call refund _3 ~> call bid _33 ~> call refund _33 ~> call repeat_e _108 )
+#Or
+  T ==K ( call bid _3 ~> call refund _3 ~> call bid _33 ~> call refund _33 ~> call sum_e _87 )
+#Or
+  T ==K ( call bid _3 ~> call refund _3 ~> call fact_e _29 )
+#Or
+  T ==K ( call bid _3 ~> call refund _3 ~> call lock_e _35 )
+#Or
+  T ==K ( call bid _3 ~> call refund _3 ~> call mc91_e _40 )
+#Or
+  T ==K ( call bid _3 ~> call refund _3 ~> call mult_e _45 )
+#Or
+  T ==K ( call bid _3 ~> call refund _3 ~> call repeat_e _42 )
+#Or
+  T ==K ( call bid _3 ~> call refund _3 ~> call sum_e _31 )
+#Or
+  T ==K call fact_e _1
+#Or
+  T ==K call lock_e _4
+#Or
+  T ==K call mc91_e _7
+#Or
+  T ==K call mult_e _11
+#Or
+  T ==K call repeat_e _9
+#Or
+  T ==K call sum_e _2
+
+real	0m10.785s
+user	0m25.674s
+sys	0m1.386s

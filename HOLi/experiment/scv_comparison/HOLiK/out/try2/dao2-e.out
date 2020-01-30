@@ -1,0 +1,23 @@
+  T ==K ( call withdraw1 _6 ~> call send _6 ~> call withdraw1 _103 ~> call send _103 ~> ret send () ~> ret withdraw1 () ~> ret send () )
+#Or
+  T ==K ( call withdraw2 _1 ~> call send _1 ~> call withdraw2 _30 ~> call send _30 ~> ret send () ~> ret withdraw2 () ~> ret send () )
+#Or
+  T ==K ( call withdraw3 _2 ~> call send _2 ~> call withdraw3 _38 ~> call send _38 ~> ret send () ~> ret withdraw3 () ~> ret send () )
+#Or
+  T ==K ( call withdraw4 _3 ~> call send _3 ~> call withdraw4 _48 ~> call send _48 ~> ret send () ~> ret withdraw4 () ~> ret send () )
+#Or
+  T ==K ( call withdraw5 _4 ~> call send _4 ~> call withdraw5 _62 ~> call send _62 ~> ret send () ~> ret withdraw5 () ~> ret send () )
+#Or
+  T ==K ( call withdraw6 _7 ~> call send _7 ~> call withdraw6 _127 ~> call send _127 ~> ret send () ~> ret withdraw6 () ~> ret send () )
+#Or
+  T ==K ( call withdraw7 _8 ~> call send _8 ~> call withdraw7 _155 ~> call send _155 ~> ret send () ~> ret withdraw7 () ~> ret send () )
+#Or
+  T ==K ( call withdraw8 _9 ~> call send _9 ~> call withdraw8 _187 ~> call send _187 ~> ret send () ~> ret withdraw8 () ~> ret send () )
+#Or
+  T ==K ( call withdraw9 _10 ~> call send _10 ~> call withdraw9 _222 ~> call send _222 ~> ret send () ~> ret withdraw9 () ~> ret send () )
+#Or
+  T ==K ( call withdraw10 _5 ~> call send _5 ~> call withdraw10 _80 ~> call send _80 ~> ret send () ~> ret withdraw10 () ~> ret send () )
+
+real	0m23.963s
+user	0m44.323s
+sys	0m3.190s

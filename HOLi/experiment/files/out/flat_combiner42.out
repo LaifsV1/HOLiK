@@ -1,9 +1,0 @@
-  T ==K ( call enlist _2 ~> ret enlist () ~> call run () ~> call _2 () ~> call enlist _12 ~> ret enlist () ~> call run () ~> call _12 () ~> ret _12 () ~> ret run () ~> ret _2 () )
-#Or
-  T ==K ( call enlist _2 ~> ret enlist () ~> call run () ~> call _2 () ~> call run () ~> call _2 () ~> ret _2 () ~> ret run () ~> call run () ~> ret run () ~> ret _2 () )
-#Or
-  T ==K ( call enlist _2 ~> ret enlist () ~> call run () ~> call _2 () ~> call run () ~> call _2 () ~> ret _2 () ~> ret run () ~> ret _2 () )
-
-real	0m5.857s
-user	0m16.579s
-sys	0m0.618s

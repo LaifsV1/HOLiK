@@ -1,0 +1,11 @@
+# set-bounds 3 1 #
+
+int readMAX := 3;
+
+public read (u:unit) :(unit) = {
+  readMAX := !readMAX - 1;
+  assert(0 < !readMAX)
+};
+
+// this example tests N=3 consecutive opponent questions
+// trace should contain N consecutive calls and returns to read

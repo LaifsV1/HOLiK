@@ -1,0 +1,55 @@
+Found 10 possible errors
+(1) At: arbitrary site
+    - Blaming: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt
+    - Contract from: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt:8:44 
+    - Expected: {(λ (cmp_661) …)}
+    - Given: {●integer?}
+(2) At: arbitrary site
+    - Blaming: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt
+    - Contract from: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt:10:44 
+    - Expected: {(λ (cmp_663) …)}
+    - Given: {●integer?}
+(3) At: arbitrary site
+    - Blaming: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt
+    - Contract from: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt:6:44 
+    - Expected: {(λ (cmp_659) …)}
+    - Given: {●integer?}
+(4) At: arbitrary site
+    - Blaming: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt
+    - Contract from: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt:13:47 
+    - Expected: {(λ (cmp_666) …)}
+    - Given: {●integer?}
+(5) At: arbitrary site
+    - Blaming: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt
+    - Contract from: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt:5:46 
+    - Expected: {(λ (cmp_658) …)}
+    - Given: {●integer?}
+(6) At: arbitrary site
+    - Blaming: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt
+    - Contract from: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt:4:44 
+    - Expected: {(λ (cmp_657) …)}
+    - Given: {●integer?}
+(7) At: arbitrary site
+    - Blaming: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt
+    - Contract from: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt:11:46 
+    - Expected: {(λ (cmp_664) …)}
+    - Given: {●integer?}
+(8) At: arbitrary site
+    - Blaming: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt
+    - Contract from: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt:7:46 
+    - Expected: {(λ (cmp_660) …)}
+    - Given: {●integer?}
+(9) At: arbitrary site
+    - Blaming: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt
+    - Contract from: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt:12:44 
+    - Expected: {(λ (cmp_665) …)}
+    - Given: {●integer?}
+(10) At: arbitrary site
+    - Blaming: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt
+    - Contract from: /home/yu-yang/Documents/Y3/Projects/Tool Testing/k-framework/GAMES/HOLib-semantics/HOLi/scv_comparison/SCV/dao-various.rkt:9:46 
+    - Expected: {(λ (cmp_662) …)}
+    - Given: {●integer?}
+
+real	0m3.032s
+user	0m2.781s
+sys	0m0.252s

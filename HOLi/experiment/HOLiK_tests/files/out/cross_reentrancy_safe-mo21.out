@@ -1,0 +1,11 @@
+  T ==K call mc91_e _5
+#Or
+  T ==K call mult_e _9
+#Or
+  T ==K call repeat_e _7
+#Or
+  T ==K call sum_e _2
+
+real	0m6.145s
+user	0m17.129s
+sys	0m0.584s

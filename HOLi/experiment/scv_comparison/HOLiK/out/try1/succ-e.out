@@ -1,0 +1,5 @@
+T ==K call succ_main _1
+
+real	0m5.707s
+user	0m14.362s
+sys	0m0.510s

@@ -1,0 +1,11 @@
+  T ==K ( call main18 _9 ~> call set_ext 0 ~> ret set_ext () ~> call get_ext () ~> ret get_ext _249 )
+#Or
+  T ==K call main1 _14
+#Or
+  T ==K call main12 _5
+#Or
+  T ==K call main14 _3
+
+real	0m8.659s
+user	0m26.319s
+sys	0m0.866s

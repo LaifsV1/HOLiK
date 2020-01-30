@@ -1,0 +1,35 @@
+  T ==K ( call reserve _2 ~> call send_confirmation () ~> call mc91_e _47 )
+#Or
+  T ==K ( call reserve _2 ~> call send_confirmation () ~> call mult_e _54 )
+#Or
+  T ==K ( call reserve _2 ~> call send_confirmation () ~> call repeat_e _50 )
+#Or
+  T ==K ( call reserve _2 ~> call send_confirmation () ~> call reserve _37 ~> call send_confirmation () ~> call fact_e _98 ~> ret fact_e () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _2 ~> call send_confirmation () ~> call reserve _37 ~> call send_confirmation () ~> call mc91_e _111 ~> ret mc91_e () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _2 ~> call send_confirmation () ~> call reserve _37 ~> call send_confirmation () ~> call reserve _101 ~> call send_confirmation () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _2 ~> call send_confirmation () ~> call reserve _37 ~> call send_confirmation () ~> call reserve _101 ~> call send_confirmation () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _2 ~> call send_confirmation () ~> call reserve _37 ~> call send_confirmation () ~> call reserve _101 ~> ret reserve () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _2 ~> call send_confirmation () ~> call reserve _37 ~> call send_confirmation () ~> ret send_confirmation () ~> ret reserve () ~> ret send_confirmation () )
+#Or
+  T ==K ( call reserve _2 ~> call send_confirmation () ~> call sum_e _38 )
+#Or
+  T ==K call fact_e _1
+#Or
+  T ==K call lock_e _4
+#Or
+  T ==K call mc91_e _7
+#Or
+  T ==K call mult_e _11
+#Or
+  T ==K call repeat_e _8
+#Or
+  T ==K call sum_e _3
+
+real	0m8.296s
+user	0m22.561s
+sys	0m1.019s

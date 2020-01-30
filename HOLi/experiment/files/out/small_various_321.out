@@ -1,9 +1,0 @@
-  T ==K ( call read6 () ~> call send 100 ~> call write _41 ~> ret write () ~> ret send () )
-#Or
-  T ==K ( call read7 () ~> call send 0 ~> call write2 _14 ~> ret write2 () ~> ret send () )
-#Or
-  T ==K ( call withdraw _4 ~> call send _4 ~> call withdraw _19 ~> call send _19 ~> ret send () ~> ret withdraw () ~> ret send () )
-
-real	0m8.366s
-user	0m24.522s
-sys	0m0.804s

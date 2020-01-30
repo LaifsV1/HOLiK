@@ -1,0 +1,281 @@
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call openFile () ~> call userExec _184 ~> ret userExec () ~> ret openFile () ~> ret getInput _743 ~> ret initialise2 () ~> ret getInput _3042 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call openFile () ~> call userExec _184 ~> ret userExec () ~> ret openFile () ~> ret getInput _743 ~> ret initialise2 () ~> ret getInput _4417 ~> ret initialise2 () ~> ret getInput _5135 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> ret getInput _67 ~> ret initialise2 () ~> ret getInput _662 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> ret getInput _67 ~> ret initialise2 () ~> ret getInput _3566 ~> ret initialise2 () ~> ret getInput _4380 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _1284 ~> ret initialise4 () ~> ret getInput _2558 ~> ret initialise4 () ~> ret getInput _3617 ~> ret initialise2 () ~> ret getInput _4405 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _1284 ~> ret initialise4 () ~> ret getInput _2558 ~> ret initialise4 () ~> ret getInput _4676 ~> ret initialise2 () ~> ret getInput _5310 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _806 ~> ret userExec () ~> ret openFile () ~> ret getInput _2214 ~> ret initialise4 () ~> ret getInput _3416 ~> ret initialise2 () ~> ret getInput _4282 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _806 ~> ret userExec () ~> ret openFile () ~> ret getInput _2214 ~> ret initialise4 () ~> ret getInput _4573 ~> ret initialise2 () ~> ret getInput _5229 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _308 ~> ret initialise4 () ~> ret getInput _903 ~> ret initialise2 () ~> ret getInput _3297 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _308 ~> ret initialise4 () ~> ret getInput _3777 ~> ret initialise2 () ~> ret getInput _4518 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call openFile () ~> call userExec _66 ~> call openFile () ~> call userExec _281 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> ret getInput _1974 ~> ret initialise2 () ~> ret getInput _3885 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call openFile () ~> call userExec _66 ~> ret userExec () ~> ret openFile () ~> ret getInput _282 ~> ret initialise2 () ~> ret getInput _1891 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call run1 () ~> call getInput () ~> call openFile () ~> call userExec _538 ~> ret userExec () ~> ret openFile () ~> ret getInput _1715 ~> ret run1 () ~> ret getInput _3457 ~> ret initialise2 () ~> ret getInput _4311 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call run1 () ~> call getInput () ~> ret getInput _197 ~> ret run1 () ~> ret getInput _959 ~> ret initialise2 () ~> ret getInput _3359 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call openFile () ~> call userExec _541 ~> ret userExec () ~> ret openFile () ~> ret getInput _1716 ~> ret run2 () ~> ret getInput _3567 ~> ret initialise2 () ~> ret getInput _4381 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> ret getInput _199 ~> ret run2 () ~> ret getInput _1135 ~> ret initialise2 () ~> ret getInput _3493 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> ret getInput _21 ~> ret initialise2 () ~> ret getInput _249 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _1290 ~> ret initialise4 () ~> ret getInput _2564 ~> ret initialise2 () ~> ret getInput _4046 ~> ret initialise4 () ~> ret getInput _4406 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _1290 ~> ret initialise4 () ~> ret getInput _2564 ~> ret initialise2 () ~> ret getInput _4046 ~> ret initialise4 () ~> ret getInput _5313 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call openFile () ~> call userExec _809 ~> ret userExec () ~> ret openFile () ~> ret getInput _2221 ~> ret initialise2 () ~> ret getInput _3943 ~> ret initialise4 () ~> ret getInput _4284 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call openFile () ~> call userExec _809 ~> ret userExec () ~> ret openFile () ~> ret getInput _2221 ~> ret initialise2 () ~> ret getInput _3943 ~> ret initialise4 () ~> ret getInput _5232 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> ret getInput _311 ~> ret initialise2 () ~> ret getInput _2061 ~> ret initialise4 () ~> ret getInput _3298 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> ret getInput _311 ~> ret initialise2 () ~> ret getInput _2061 ~> ret initialise4 () ~> ret getInput _4526 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _1902 ~> ret initialise4 () ~> ret getInput _3174 ~> ret initialise4 () ~> ret getInput _4851 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _1291 ~> ret userExec () ~> ret openFile () ~> ret getInput _2887 ~> ret initialise4 () ~> ret getInput _4768 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _547 ~> ret initialise4 () ~> ret getInput _3965 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call openFile () ~> call userExec _20 ~> call initialise2 () ~> call getInput () ~> call openFile () ~> call userExec _294 ~> ret userExec () ~> ret openFile () ~> ret getInput _1072 ~> ret initialise2 () ~> ret userExec () ~> ret openFile () ~> ret getInput _3902 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call openFile () ~> call userExec _20 ~> call initialise2 () ~> call getInput () ~> ret getInput _110 ~> ret initialise2 () ~> ret userExec () ~> ret openFile () ~> ret getInput _1971 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call run1 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call openFile () ~> call userExec _533 ~> ret userExec () ~> ret openFile () ~> ret getInput _1711 ~> ret initialise2 () ~> ret getInput _3798 ~> ret run1 () ~> ret getInput _4310 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call run1 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> ret getInput _194 ~> ret initialise2 () ~> ret getInput _1567 ~> ret run1 () ~> ret getInput _3357 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call run1 () ~> call getInput () ~> call run1 () )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call openFile () ~> call userExec _543 ~> ret userExec () ~> ret openFile () ~> ret getInput _1719 ~> ret initialise2 () ~> ret getInput _3800 ~> ret run2 () ~> ret getInput _4382 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> ret getInput _201 ~> ret initialise2 () ~> ret getInput _1576 ~> ret run2 () ~> ret getInput _3494 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call openFile () ~> call userExec _1286 ~> ret userExec () ~> ret openFile () ~> ret getInput _2883 ~> ret run2 () ~> ret getInput _3988 )
+#Or
+  T ==K ( call initialise2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> ret getInput _545 ~> ret run2 () ~> ret getInput _2217 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _1309 ~> ret initialise4 () ~> ret getInput _2598 ~> ret initialise2 () ~> ret getInput _4054 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call openFile () ~> call userExec _815 ~> ret userExec () ~> ret openFile () ~> ret getInput _2250 ~> ret initialise2 () ~> ret getInput _3950 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> ret getInput _315 ~> ret initialise2 () ~> ret getInput _2093 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _1930 ~> ret initialise4 () ~> ret getInput _3201 ~> ret initialise4 () ~> ret getInput _4861 ~> ret initialise2 () ~> ret getInput _5425 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _1930 ~> ret initialise4 () ~> ret getInput _3201 ~> ret initialise4 () ~> ret getInput _4861 ~> ret initialise2 () ~> ret getInput _5756 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _1310 ~> ret userExec () ~> ret openFile () ~> ret getInput _2911 ~> ret initialise4 () ~> ret getInput _4778 ~> ret initialise2 () ~> ret getInput _5372 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _1310 ~> ret userExec () ~> ret openFile () ~> ret getInput _2911 ~> ret initialise4 () ~> ret getInput _4778 ~> ret initialise2 () ~> ret getInput _5736 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _556 ~> ret initialise4 () ~> ret getInput _3974 ~> ret initialise2 () ~> ret getInput _4735 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _556 ~> ret initialise4 () ~> ret getInput _3974 ~> ret initialise2 () ~> ret getInput _5478 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _1936 ~> ret initialise4 () ~> ret getInput _3211 ~> ret initialise2 () ~> ret getInput _4220 ~> ret initialise4 () ~> ret getInput _5428 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _1936 ~> ret initialise4 () ~> ret getInput _3211 ~> ret initialise2 () ~> ret getInput _5191 ~> ret initialise4 () ~> ret getInput _5757 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call openFile () ~> call userExec _1313 ~> ret userExec () ~> ret openFile () ~> ret getInput _2918 ~> ret initialise2 () ~> ret getInput _4129 ~> ret initialise4 () ~> ret getInput _5375 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call openFile () ~> call userExec _1313 ~> ret userExec () ~> ret openFile () ~> ret getInput _2918 ~> ret initialise2 () ~> ret getInput _5099 ~> ret initialise4 () ~> ret getInput _5737 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> ret getInput _558 ~> ret initialise2 () ~> ret getInput _2768 ~> ret initialise4 () ~> ret getInput _4740 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> ret getInput _558 ~> ret initialise2 () ~> ret getInput _4326 ~> ret initialise4 () ~> ret getInput _5480 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _2610 ~> ret initialise4 () ~> ret getInput _3644 ~> ret initialise4 () ~> ret getInput _4058 ~> ret initialise4 () ~> ret getInput _5321 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _2610 ~> ret initialise4 () ~> ret getInput _3644 ~> ret initialise4 () ~> ret getInput _5033 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _2610 ~> ret initialise4 () ~> ret getInput _3644 ~> ret initialise4 () ~> ret getInput _5033 ~> ret initialise4 () ~> ret getInput _5320 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _1937 ~> ret userExec () ~> ret openFile () ~> ret getInput _3436 ~> ret initialise4 () ~> ret getInput _3953 ~> ret initialise4 () ~> ret getInput _5236 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _1937 ~> ret userExec () ~> ret openFile () ~> ret getInput _3436 ~> ret initialise4 () ~> ret getInput _4946 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _1937 ~> ret userExec () ~> ret openFile () ~> ret getInput _3436 ~> ret initialise4 () ~> ret getInput _4946 ~> ret initialise4 () ~> ret getInput _5235 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _929 ~> ret initialise4 () ~> ret getInput _2105 ~> ret initialise4 () ~> ret getInput _4541 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _929 ~> ret initialise4 () ~> ret getInput _4151 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _929 ~> ret initialise4 () ~> ret getInput _4151 ~> ret initialise4 () ~> ret getInput _4540 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _557 ~> call initialise4 () ~> call getInput () ~> ret getInput _2522 ~> ret initialise4 () ~> ret userExec () ~> ret openFile () ~> ret getInput _3979 ~> ret initialise4 () ~> ret getInput _5260 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _557 ~> call openFile () ~> call userExec _1790 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> ret getInput _3859 ~> ret initialise4 () ~> ret getInput _5161 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _557 ~> ret userExec () ~> ret openFile () ~> ret getInput _1742 ~> ret initialise4 () ~> ret getInput _4410 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call run1 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _3143 ~> ret initialise4 () ~> ret getInput _3858 ~> ret run1 () ~> ret getInput _4371 ~> ret initialise4 () ~> ret getInput _5519 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call run1 () ~> call getInput () ~> call openFile () ~> call userExec _2519 ~> ret userExec () ~> ret openFile () ~> ret getInput _3738 ~> ret run1 () ~> ret getInput _4264 ~> ret initialise4 () ~> ret getInput _5450 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call run1 () ~> call getInput () ~> ret getInput _1392 ~> ret run1 () ~> ret getInput _3210 ~> ret initialise4 () ~> ret getInput _4865 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _3146 ~> ret initialise4 () ~> ret getInput _3861 ~> ret run2 () ~> ret getInput _4429 ~> ret initialise4 () ~> ret getInput _5553 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call openFile () ~> call userExec _2523 ~> ret userExec () ~> ret openFile () ~> ret getInput _3739 ~> ret run2 () ~> ret getInput _4327 ~> ret initialise4 () ~> ret getInput _5481 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call run2 () ~> call getInput () ~> ret getInput _1394 ~> ret run2 () ~> ret getInput _3396 ~> ret initialise4 () ~> ret getInput _4922 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _206 ~> ret initialise4 () ~> ret getInput _3553 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _115 ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _2594 ~> ret initialise4 () ~> ret getInput _3637 ~> ret initialise4 () ~> ret userExec () ~> ret openFile () ~> ret getInput _5272 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _115 ~> call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _1786 ~> ret userExec () ~> ret openFile () ~> ret getInput _3322 ~> ret initialise4 () ~> ret userExec () ~> ret openFile () ~> ret getInput _5157 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _115 ~> call initialise4 () ~> call getInput () ~> ret getInput _866 ~> ret initialise4 () ~> ret userExec () ~> ret openFile () ~> ret getInput _4425 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call run1 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _3129 ~> ret initialise4 () ~> ret getInput _3852 ~> ret initialise4 () ~> ret getInput _5156 ~> ret run1 () ~> ret getInput _5518 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call run1 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _2501 ~> ret userExec () ~> ret openFile () ~> ret getInput _3733 ~> ret initialise4 () ~> ret getInput _5076 ~> ret run1 () ~> ret getInput _5446 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call run1 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _1381 ~> ret initialise4 () ~> ret getInput _4289 ~> ret run1 () ~> ret getInput _4858 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call run1 () ~> call getInput () ~> call run1 () )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _3141 ~> ret initialise4 () ~> ret getInput _3857 ~> ret initialise4 () ~> ret getInput _5158 ~> ret run2 () ~> ret getInput _5552 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _2517 ~> ret userExec () ~> ret openFile () ~> ret getInput _3737 ~> ret initialise4 () ~> ret getInput _5079 ~> ret run2 () ~> ret getInput _5479 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _1391 ~> ret initialise4 () ~> ret getInput _4293 ~> ret run2 () ~> ret getInput _4921 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _3518 ~> ret initialise4 () ~> ret getInput _4001 ~> ret run2 () ~> ret getInput _4609 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call openFile () ~> call userExec _3017 ~> ret userExec () ~> ret openFile () ~> ret getInput _3894 ~> ret run2 () ~> ret getInput _4474 )
+#Or
+  T ==K ( call initialise4 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> ret getInput _1859 ~> ret run2 () ~> ret getInput _3679 )
+#Or
+  T ==K ( call openFile () ~> call userExec _6 ~> call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call openFile () ~> call userExec _323 ~> ret userExec () ~> ret openFile () ~> ret getInput _1179 ~> ret initialise2 () ~> ret getInput _3532 )
+#Or
+  T ==K ( call openFile () ~> call userExec _6 ~> call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> ret getInput _119 ~> ret initialise2 () ~> ret getInput _1061 )
+#Or
+  T ==K ( call openFile () ~> call userExec _6 ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _2636 ~> ret initialise4 () ~> ret getInput _3655 ~> ret initialise4 () ~> ret getInput _5037 )
+#Or
+  T ==K ( call openFile () ~> call userExec _6 ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _1886 ~> ret userExec () ~> ret openFile () ~> ret getInput _3412 ~> ret initialise4 () ~> ret getInput _4926 )
+#Or
+  T ==K ( call openFile () ~> call userExec _6 ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _893 ~> ret initialise4 () ~> ret getInput _4135 )
+#Or
+  T ==K ( call openFile () ~> call userExec _6 ~> call run1 () ~> call getInput () ~> call run1 () )
+#Or
+  T ==K ( call openFile () ~> call userExec _6 ~> call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call openFile () ~> call userExec _1883 ~> ret userExec () ~> ret openFile () ~> ret getInput _3406 ~> ret run2 () ~> ret getInput _4159 )
+#Or
+  T ==K ( call openFile () ~> call userExec _6 ~> call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> ret getInput _891 ~> ret run2 () ~> ret getInput _2874 )
+#Or
+  T ==K ( call run1 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call openFile () ~> call userExec _520 ~> ret userExec () ~> ret openFile () ~> ret getInput _1686 ~> ret initialise2 () ~> ret getInput _3791 )
+#Or
+  T ==K ( call run1 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> ret getInput _188 ~> ret initialise2 () ~> ret getInput _1543 )
+#Or
+  T ==K ( call run1 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call run1 () )
+#Or
+  T ==K ( call run1 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _3088 ~> ret initialise4 () ~> ret getInput _3839 ~> ret initialise4 () ~> ret getInput _5145 )
+#Or
+  T ==K ( call run1 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _2453 ~> ret userExec () ~> ret openFile () ~> ret getInput _3714 ~> ret initialise4 () ~> ret getInput _5071 )
+#Or
+  T ==K ( call run1 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _1325 ~> ret initialise4 () ~> ret getInput _4277 )
+#Or
+  T ==K ( call run1 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call run1 () )
+#Or
+  T ==K ( call run1 () ~> call getInput () ~> call openFile () ~> call userExec _68 ~> call run1 () )
+#Or
+  T ==K ( call run1 () ~> call getInput () ~> call run1 () )
+#Or
+  T ==K ( call run1 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call run1 () )
+#Or
+  T ==K ( call run1 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call openFile () ~> call userExec _2448 ~> ret userExec () ~> ret openFile () ~> ret getInput _3711 ~> ret run2 () ~> ret getInput _4299 )
+#Or
+  T ==K ( call run1 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> ret getInput _1323 ~> ret run2 () ~> ret getInput _3339 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call openFile () ~> call userExec _549 ~> ret userExec () ~> ret openFile () ~> ret getInput _1728 ~> ret initialise2 () ~> ret getInput _3804 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> ret getInput _203 ~> ret initialise2 () ~> ret getInput _1591 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call openFile () ~> call userExec _1297 ~> ret userExec () ~> ret openFile () ~> ret getInput _2892 ~> ret run2 () ~> ret getInput _3993 ~> ret initialise2 () ~> ret getInput _4751 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call openFile () ~> call userExec _1297 ~> ret userExec () ~> ret openFile () ~> ret getInput _2892 ~> ret run2 () ~> ret getInput _3993 ~> ret initialise2 () ~> ret getInput _5492 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> ret getInput _551 ~> ret run2 () ~> ret getInput _2232 ~> ret initialise2 () ~> ret getInput _3948 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> ret getInput _551 ~> ret run2 () ~> ret getInput _2232 ~> ret initialise2 () ~> ret getInput _4933 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _3124 ~> ret initialise4 () ~> ret getInput _3851 ~> ret initialise4 () ~> ret getInput _5155 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _2496 ~> ret userExec () ~> ret openFile () ~> ret getInput _3731 ~> ret initialise4 () ~> ret getInput _5075 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _1379 ~> ret initialise4 () ~> ret getInput _4288 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _3509 ~> ret initialise4 () ~> ret getInput _3996 ~> ret run2 () ~> ret getInput _4601 ~> ret initialise4 () ~> ret getInput _4967 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _3509 ~> ret initialise4 () ~> ret getInput _3996 ~> ret run2 () ~> ret getInput _4601 ~> ret initialise4 () ~> ret getInput _5630 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call openFile () ~> call userExec _3004 ~> ret userExec () ~> ret openFile () ~> ret getInput _3891 ~> ret run2 () ~> ret getInput _4471 ~> ret initialise4 () ~> ret getInput _4855 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call openFile () ~> call userExec _3004 ~> ret userExec () ~> ret openFile () ~> ret getInput _3891 ~> ret run2 () ~> ret getInput _4471 ~> ret initialise4 () ~> ret getInput _5575 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call run2 () ~> call getInput () ~> ret getInput _1844 ~> ret run2 () ~> ret getInput _3669 ~> ret initialise4 () ~> ret getInput _4071 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call run2 () ~> call getInput () ~> ret getInput _1844 ~> ret run2 () ~> ret getInput _3669 ~> ret initialise4 () ~> ret getInput _5044 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call openFile () ~> call userExec _74 ~> call run2 () ~> call getInput () ~> call openFile () ~> call userExec _1776 ~> ret userExec () ~> ret openFile () ~> ret getInput _3302 ~> ret run2 () ~> ret userExec () ~> ret openFile () ~> ret getInput _4420 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call openFile () ~> call userExec _74 ~> call run2 () ~> call getInput () ~> ret getInput _854 ~> ret run2 () ~> ret userExec () ~> ret openFile () ~> ret getInput _3623 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run1 () ~> call getInput () ~> call run1 () )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run1 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call openFile () ~> call userExec _2482 ~> ret userExec () ~> ret openFile () ~> ret getInput _3725 ~> ret run2 () ~> ret getInput _4316 ~> ret run1 () ~> ret getInput _4883 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run1 () ~> call getInput () ~> call run2 () ~> call getInput () ~> ret getInput _1366 ~> ret run2 () ~> ret getInput _3366 ~> ret run1 () ~> ret getInput _4087 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call openFile () ~> call userExec _1299 ~> ret userExec () ~> ret openFile () ~> ret getInput _2895 ~> ret initialise2 () ~> ret getInput _4122 ~> ret run2 () ~> ret getInput _4752 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> call openFile () ~> call userExec _1299 ~> ret userExec () ~> ret openFile () ~> ret getInput _2895 ~> ret initialise2 () ~> ret getInput _5094 ~> ret run2 () ~> ret getInput _5493 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> ret getInput _553 ~> ret initialise2 () ~> ret getInput _2739 ~> ret run2 () ~> ret getInput _3949 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call initialise2 () ~> call getInput () ~> ret getInput _553 ~> ret initialise2 () ~> ret getInput _4319 ~> ret run2 () ~> ret getInput _4934 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _3506 ~> ret initialise4 () ~> ret getInput _3994 ~> ret initialise4 () ~> ret getInput _4335 ~> ret run2 () ~> ret getInput _4964 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _3506 ~> ret initialise4 () ~> ret getInput _3994 ~> ret initialise4 () ~> ret getInput _5266 ~> ret run2 () ~> ret getInput _5629 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _3001 ~> ret userExec () ~> ret openFile () ~> ret getInput _3889 ~> ret initialise4 () ~> ret getInput _4242 ~> ret run2 () ~> ret getInput _4852 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> call openFile () ~> call userExec _3001 ~> ret userExec () ~> ret openFile () ~> ret getInput _3889 ~> ret initialise4 () ~> ret getInput _5198 ~> ret run2 () ~> ret getInput _5574 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _1841 ~> ret initialise4 () ~> ret getInput _3118 ~> ret run2 () ~> ret getInput _4070 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call initialise4 () ~> call getInput () ~> ret getInput _1841 ~> ret initialise4 () ~> ret getInput _4449 ~> ret run2 () ~> ret getInput _5043 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call openFile () ~> call userExec _552 ~> call openFile () ~> call userExec _1730 ~> ret userExec () ~> ret openFile () ~> ret userExec () ~> ret openFile () ~> ret getInput _3828 ~> ret run2 () ~> ret getInput _4408 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call openFile () ~> call userExec _552 ~> ret userExec () ~> ret openFile () ~> ret getInput _1731 ~> ret run2 () ~> ret getInput _3577 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call run1 () ~> call getInput () ~> call openFile () ~> call userExec _2489 ~> ret userExec () ~> ret openFile () ~> ret getInput _3727 ~> ret run1 () ~> ret getInput _4260 ~> ret run2 () ~> ret getInput _4886 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call run1 () ~> call getInput () ~> ret getInput _1375 ~> ret run1 () ~> ret getInput _3182 ~> ret run2 () ~> ret getInput _4088 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call openFile () ~> call userExec _2422 ~> ret userExec () ~> ret openFile () ~> ret getInput _3698 ~> ret run2 () ~> ret getInput _4287 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> ret getInput _1301 ~> ret run2 () ~> ret getInput _3307 )
+#Or
+  T ==K ( call run2 () ~> call getInput () ~> call run2 () ~> call getInput () ~> ret getInput _204 ~> ret run2 () ~> ret getInput _1154 )
+
+real	1m14.696s
+user	1m36.041s
+sys	0m11.740s

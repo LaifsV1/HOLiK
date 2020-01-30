@@ -1,0 +1,13 @@
+  T ==K ( call withdraw2e _7 ~> call send _7 ~> call withdraw2e _90 ~> call send _90 ~> ret send () ~> ret withdraw2e () ~> ret send () )
+#Or
+  T ==K ( call withdraw4e _5 ~> call send _5 ~> call withdraw4e _60 ~> call send _60 ~> ret send () ~> ret withdraw4e () ~> ret send () )
+#Or
+  T ==K ( call withdraw6e _4 ~> call send _4 ~> call withdraw6e _49 ~> call send _49 ~> ret send () ~> ret withdraw6e () ~> ret send () )
+#Or
+  T ==K ( call withdraw8e _2 ~> call send _2 ~> call withdraw8e _34 ~> call send _34 ~> ret send () ~> ret withdraw8e () ~> ret send () )
+#Or
+  T ==K ( call withdraw10e _9 ~> call send _9 ~> call withdraw10e _132 ~> call send _132 ~> ret send () ~> ret withdraw10e () ~> ret send () )
+
+real	0m22.090s
+user	0m39.238s
+sys	0m2.991s

@@ -1,0 +1,15 @@
+  T ==K ( call withdraw _1 ~> call getUser () ~> call withdraw _5 ~> call getUser () ~> call withdraw _13 ~> call getUser () ~> ret getUser _26 ~> ret withdraw () ~> ret getUser _38 ~> ret withdraw () ~> ret getUser _71 )
+#Or
+  T ==K ( call withdraw _1 ~> call getUser () ~> call withdraw _5 ~> call getUser () ~> call withdraw _13 ~> call getUser () ~> ret getUser _26 ~> ret withdraw () ~> ret getUser _58 )
+#Or
+  T ==K ( call withdraw _1 ~> call getUser () ~> call withdraw _5 ~> call getUser () ~> call withdraw _13 ~> call getUser () ~> ret getUser _26 ~> ret withdraw () ~> ret getUser _58 ~> ret withdraw () ~> ret getUser _70 )
+#Or
+  T ==K ( call withdraw _1 ~> call getUser () ~> call withdraw _5 ~> call getUser () ~> call withdraw _13 ~> call getUser () ~> ret getUser _26 ~> ret withdraw () ~> ret getUser _58 ~> ret withdraw () ~> ret getUser _89 )
+#Or
+  T ==K ( call withdraw _1 ~> call getUser () ~> call withdraw _5 ~> call getUser () ~> call withdraw _13 ~> ret withdraw () ~> ret getUser _25 ~> ret withdraw () ~> ret getUser _57 )
+#Or
+  T ==K ( call withdraw _1 ~> call getUser () ~> call withdraw _5 ~> call getUser () ~> ret getUser _12 ~> ret withdraw () ~> ret getUser _37 )
+
+real	0m6.697s
+user	0m18.555s
+sys	0m0.764s

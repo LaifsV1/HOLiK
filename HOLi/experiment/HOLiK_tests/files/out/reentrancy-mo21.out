@@ -1,0 +1,13 @@
+  T ==K ( call withdraw _7 ~> call send _7 ~> call withdraw _45 ~> call send _45 ~> ret send () ~> ret withdraw () ~> ret send () )
+#Or
+  T ==K call mc91_e _5
+#Or
+  T ==K call mult_e _11
+#Or
+  T ==K call repeat_e _9
+#Or
+  T ==K call sum_e _2
+
+real	0m7.515s
+user	0m20.398s
+sys	0m0.825s

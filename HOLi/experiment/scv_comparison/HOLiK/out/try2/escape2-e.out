@@ -1,0 +1,31 @@
+  T ==K ( call f _1 ~> call _1 _2 ~> call _2 () ~> ret _2 () ~> ret _1 _15 ~> call _15 1 ~> call _2 () ~> ret _2 () ~> ret _15 _43 )
+#Or
+  T ==K ( call f _1 ~> call _1 _2 ~> call _2 () ~> ret _2 () ~> ret _1 _15 ~> call _15 1 ~> call f _29 ~> call _29 _32 ~> ret _29 _39 ~> call _39 1 ~> ret _39 _50 )
+#Or
+  T ==K ( call f _1 ~> call _1 _2 ~> call _2 () ~> ret _2 () ~> ret _1 _15 ~> call _15 1 ~> call f _29 ~> call _29 _32 ~> ret _29 _39 ~> call _39 1 ~> ret _39 _50 ~> ret f _50 ~> ret _15 _63 )
+#Or
+  T ==K ( call f _1 ~> call _1 _2 ~> call _2 () ~> ret _2 () ~> ret _1 _15 ~> call _15 1 ~> ret _15 _25 )
+#Or
+  T ==K ( call f _1 ~> call _1 _2 ~> call f _5 ~> call _5 _6 ~> ret _5 _9 ~> call _9 0 ~> ret _9 _17 )
+#Or
+  T ==K ( call f _1 ~> call _1 _2 ~> call f _5 ~> call _5 _6 ~> ret _5 _9 ~> call _9 0 ~> ret _9 _17 ~> ret f _17 ~> ret _1 _36 ~> call _36 0 ~> call _2 () ~> ret _2 () ~> ret _36 _64 )
+#Or
+  T ==K ( call f _1 ~> call _1 _2 ~> call f _5 ~> call _5 _6 ~> ret _5 _9 ~> call _9 0 ~> ret _9 _17 ~> ret f _17 ~> ret _1 _36 ~> call _36 0 ~> call _6 () ~> ret _6 () ~> ret _36 _65 )
+#Or
+  T ==K ( call f _1 ~> call _1 _2 ~> call f _5 ~> call _5 _6 ~> ret _5 _9 ~> call _9 0 ~> ret _9 _17 ~> ret f _17 ~> ret _1 _36 ~> call _36 0 ~> call f _47 ~> call _47 _56 ~> ret _47 _58 ~> call _58 0 ~> ret _58 _68 )
+#Or
+  T ==K ( call f _1 ~> call _1 _2 ~> call f _5 ~> call _5 _6 ~> ret _5 _9 ~> call _9 0 ~> ret _9 _17 ~> ret f _17 ~> ret _1 _36 ~> call _36 0 ~> call f _47 ~> call _47 _56 ~> ret _47 _58 ~> call _58 0 ~> ret _58 _68 ~> ret f _68 ~> ret _36 _75 )
+#Or
+  T ==K ( call f _1 ~> call _1 _2 ~> call f _5 ~> call _5 _6 ~> ret _5 _9 ~> call _9 0 ~> ret _9 _17 ~> ret f _17 ~> ret _1 _36 ~> call _36 0 ~> ret _36 _44 )
+#Or
+  T ==K ( call f _1 ~> call _1 _2 ~> ret _1 _3 ~> call _3 0 ~> call _2 () ~> ret _2 () ~> ret _3 _26 )
+#Or
+  T ==K ( call f _1 ~> call _1 _2 ~> ret _1 _3 ~> call _3 0 ~> call f _10 ~> call _10 _16 ~> ret _10 _18 ~> call _18 0 ~> ret _18 _33 )
+#Or
+  T ==K ( call f _1 ~> call _1 _2 ~> ret _1 _3 ~> call _3 0 ~> call f _10 ~> call _10 _16 ~> ret _10 _18 ~> call _18 0 ~> ret _18 _33 ~> ret f _33 ~> ret _3 _45 )
+#Or
+  T ==K ( call f _1 ~> call _1 _2 ~> ret _1 _3 ~> call _3 0 ~> ret _3 _7 )
+
+real	0m6.547s
+user	0m18.153s
+sys	0m0.692s

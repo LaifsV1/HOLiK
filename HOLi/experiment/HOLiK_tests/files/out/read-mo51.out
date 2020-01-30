@@ -1,0 +1,55 @@
+  T ==K ( call read () ~> call send 0 ~> call fact_e _34 )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call lock_e _39 )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call mc91_e _46 )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call mult_e _52 )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> call fact_e _105 )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> call lock_e _115 )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> call mc91_e _125 )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> call mult_e _137 )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> call read () ~> call send 0 ~> call mc91_e _243 )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> call read () ~> call send 0 ~> call mult_e _257 )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> call read () ~> call send 0 ~> call read () ~> call send 0 ~> call write _381 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> call read () ~> call send 0 ~> call repeat_e _251 )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> call read () ~> call send 0 ~> call sum_e _223 )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> call read () ~> call send 0 ~> call write _263 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> call repeat_e _132 )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> call sum_e _107 )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call read () ~> call send 0 ~> call write _146 ~> ret write () ~> ret send () )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call repeat_e _48 )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call sum_e _35 )
+#Or
+  T ==K ( call read () ~> call send 0 ~> call write _57 ~> ret write () ~> ret send () )
+#Or
+  T ==K call fact_e _1
+#Or
+  T ==K call lock_e _4
+#Or
+  T ==K call mc91_e _7
+#Or
+  T ==K call mult_e _11
+#Or
+  T ==K call repeat_e _9
+#Or
+  T ==K call sum_e _2
+
+real	0m11.295s
+user	0m27.368s
+sys	0m1.551s

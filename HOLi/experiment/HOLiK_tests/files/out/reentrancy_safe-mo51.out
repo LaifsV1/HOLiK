@@ -1,0 +1,47 @@
+  T ==K ( call withdraw _7 ~> call send _7 ~> call fact_e _53 )
+#Or
+  T ==K ( call withdraw _7 ~> call send _7 ~> call lock_e _56 )
+#Or
+  T ==K ( call withdraw _7 ~> call send _7 ~> call mc91_e _63 )
+#Or
+  T ==K ( call withdraw _7 ~> call send _7 ~> call mult_e _75 )
+#Or
+  T ==K ( call withdraw _7 ~> call send _7 ~> call repeat_e _68 )
+#Or
+  T ==K ( call withdraw _7 ~> call send _7 ~> call sum_e _54 )
+#Or
+  T ==K ( call withdraw _7 ~> call send _7 ~> call withdraw _66 ~> call send _66 ~> call fact_e _175 )
+#Or
+  T ==K ( call withdraw _7 ~> call send _7 ~> call withdraw _66 ~> call send _66 ~> call lock_e _183 )
+#Or
+  T ==K ( call withdraw _7 ~> call send _7 ~> call withdraw _66 ~> call send _66 ~> call mc91_e _193 )
+#Or
+  T ==K ( call withdraw _7 ~> call send _7 ~> call withdraw _66 ~> call send _66 ~> call mult_e _209 )
+#Or
+  T ==K ( call withdraw _7 ~> call send _7 ~> call withdraw _66 ~> call send _66 ~> call repeat_e _201 )
+#Or
+  T ==K ( call withdraw _7 ~> call send _7 ~> call withdraw _66 ~> call send _66 ~> call sum_e _178 )
+#Or
+  T ==K ( call withdraw _7 ~> call send _7 ~> call withdraw _66 ~> call send _66 ~> call withdraw _198 ~> call send _198 ~> call mc91_e _357 )
+#Or
+  T ==K ( call withdraw _7 ~> call send _7 ~> call withdraw _66 ~> call send _66 ~> call withdraw _198 ~> call send _198 ~> call mult_e _372 )
+#Or
+  T ==K ( call withdraw _7 ~> call send _7 ~> call withdraw _66 ~> call send _66 ~> call withdraw _198 ~> call send _198 ~> call repeat_e _367 )
+#Or
+  T ==K ( call withdraw _7 ~> call send _7 ~> call withdraw _66 ~> call send _66 ~> call withdraw _198 ~> call send _198 ~> call sum_e _345 )
+#Or
+  T ==K call fact_e _1
+#Or
+  T ==K call lock_e _3
+#Or
+  T ==K call mc91_e _5
+#Or
+  T ==K call mult_e _11
+#Or
+  T ==K call repeat_e _9
+#Or
+  T ==K call sum_e _2
+
+real	0m13.706s
+user	0m30.098s
+sys	0m1.969s
