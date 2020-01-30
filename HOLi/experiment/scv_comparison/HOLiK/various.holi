@@ -1,0 +1,116 @@
+# set-bounds 2 1 #
+import send :(int -> unit)
+
+private ack (arg:int*int) :(int) = {
+  let m = fst arg in
+  let n = snd arg in
+  if m == 0 then 
+    n + 1
+  else if n == 0 then 
+    ack (m - 1, 1)
+  else
+    ack (m - 1, ack (m, n - 1))
+};
+
+public main (arg:int*int) :(unit) = { () };
+
+public withdraw (m:int) :(unit) = {
+  if (not (!balance < m))
+  then balance := !balance - m;
+       send(m);
+       assert(not(!balance < 0))
+  else ()};
+int balance := 100;
+
+public withdrawe (m:int) :(unit) = {
+  if (not (!balancee < m))
+  then send(m);
+       balancee := !balancee - m;
+       assert(not(!balancee < 0))
+  else ()};
+int balancee := 100;
+
+int n := 0;
+
+public f (g:unit->unit->unit) :(int) = {
+  let inc = (fun (u:unit) :(unit) -> n := (1 + !n)) in
+  (g inc);
+  assert(-1 < !n); !n
+};
+
+int ne := 0;
+
+public fe (g:unit->unit->unit) :(int) = {
+  let inc = (fun (u:unit) :(unit) -> ne := (1 + !ne)) in
+  (g inc);
+  assert(0 < !ne); !ne
+};
+
+public factorial (i:int) :(unit) = {
+  letrec factorial (z:int) :(int) =
+    if z <= 1 
+    then 1
+    else z * (factorial (z - 1))
+  in
+  if i >= 0 then assert(factorial i >= 1) else ()
+};
+
+public mc91a (i:int) :(unit) = {
+  letrec mc91 (x:int) :(int) =
+    if 100 < x then 
+      x - 10
+    else
+      mc91 (mc91 (x + 11))
+  in
+  if i <= 101 then assert(mc91 i == 91)
+  else ()
+};
+
+public mc91_e (i:int) :(unit) = {
+  letrec mc91 (x:int) :(int) =
+    if 100 < x then 
+      x - 10
+    else
+      mc91 (mc91 (x + 11))
+  in
+  if i < 103 then assert(mc91 i == 91)
+  else ()
+};
+
+public multa (i:int) :(unit) = {
+  letrec mult (arg:int*int) :(int) =
+    let n = fst arg in
+    let m = snd arg in
+    if n <= 0 || m <= 0 then 
+      0
+    else
+      (let res = (n + mult(n,m - 1)) in
+      (assert(res >= 0); res))
+  in
+  assert(i <= mult(i,i))
+};
+
+public mult_e (i:int) :(unit) = {
+  letrec mult (arg:int*int) :(int) =
+    let n = fst arg in
+    let m = snd arg in
+    if n < 1 || m < 1 then 
+      0
+    else 
+      (let res = n + mult(n,m - 1) in
+      (assert(res >= 0); res))
+  in
+  assert(i + 1 <= mult(i,i))
+};
+
+public succ_main (i:int) :(unit) = {
+  let succ = (fun (n:int) :(int) -> n + 1)
+  in
+  if (i >= 0) then assert(i < succ i) else ()
+};
+
+public succ_e (i:int) :(unit) = {
+  let succ = (fun (n:int) :(int) -> n + 1)
+  in
+  if (i >= 0) then assert(i < succ i) else ()
+};
