@@ -14,11 +14,11 @@ Prequisites:
 - [Z3 binaries](https://github.com/Z3Prover/z3/releases) present in the PATH environment variable
 - [K Framework Package](https://github.com/kframework/k/releases)
 
-To compile, within `/HOLI`, run `kompile --backend java holi.k`. We currently only support the Java backend.
+We currently only support the Java backend. To compile, within `/HOLI`, run `kompile --backend java holi.k`. 
 
 ## Usage
 
-Once compiled, use:
+Once compiled, in the same directory where `holi-kompiled` is:
 - `krun --search <file>` will output all final configurations in the computation tree of `<file>` reachable within the bound
 - `krun --search --pattern <pattern> <file>` will output configurations as before, filtered by the pattern provided
 
